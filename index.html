@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>すまいる | 奈良の不動産・WEB制作</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .hero { background-color: #5EBEC4; color: white; }
+    .section-title { border-left: 5px solid #5EBEC4; padding-left: 1rem; font-weight: bold; }
+    .placeholder-image { background-color: #ccc; width: 100%; padding-top: 100%; position: relative; }
+    .box:hover { transform: scale(1.02); transition: all 0.3s ease; }
+    .footer { background-color: #f5f5f5; padding: 2rem 1rem; }
+    .logo { max-height: 80px; }
+    @media (max-width: 768px) {
+      .column.is-one-third { flex: 0 0 100%; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero is-small">
+    <div class="hero-body has-text-centered">
+      <img src="sumairu-logo.svg" alt="すまいるロゴ" class="logo mb-2">
+      <h1 class="title is-3">すまいる</h1>
+      <p class="subtitle is-5">不動産賃貸・管理・リフォーム／ホームページ作成・運営</p>
+      <a href="contact.html" class="button is-light is-outlined">お問い合わせ</a>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title is-size-4">事業内容</h2>
+      <div class="columns is-multiline">
+        <div class="column is-half">
+          <div class="box">
+            <div class="columns is-vcentered">
+              <div class="column is-one-third"><div class="placeholder-image"></div></div>
+              <div class="column">
+                <h3 class="title is-5">不動産事業</h3>
+                <ul><li>賃貸</li><li>管理</li><li>リフォーム</li></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="box">
+            <div class="columns is-vcentered">
+              <div class="column is-one-third"><div class="placeholder-image"></div></div>
+              <div class="column">
+                <h3 class="title is-5">ホームページ事業</h3>
+                <ul><li>作成</li><li>運営</li></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p><strong>すまいる</strong></p>
+      <p>奈良県生駒郡三郷町東信貴ケ丘２－１１－７</p>
+      <p>090-6677-0419 ｜ tksh0828@gmail.com</p>
+      <p>代表：後藤健史 ｜ since 2024</p>
+      <p><a href="https://sumairu-nara.com" target="_blank">https://sumairu-nara.com</a></p>
+    </div>
+  </footer>
+  <script>
+    gsap.from(".title", { duration: 1, y: -30, opacity: 0 });
+    gsap.from(".box", { duration: 0.7, y: 20, opacity: 0, stagger: 0.2 });
+  </script>
+</body>
+</html>
