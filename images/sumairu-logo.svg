@@ -1,0 +1,18 @@
+<!-- <svg width="120" height="120">  -->
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- 背景 -->
+  <!-- <rect width="400" height="120" fill="#ffffff"/> -->
+  
+  <!-- 家の外枠 -->
+  <path d="M60 20 L90 50 V90 H30 V50 Z" stroke="#193b59" stroke-width="6" fill="none" stroke-linejoin="round"/>
+  
+  <!-- スマイルの目 -->
+  <circle cx="50" cy="60" r="4" fill="#193b59"/>
+  <circle cx="70" cy="60" r="4" fill="#193b59"/>
+
+  <!-- スマイルの口 -->
+  <path d="M50 75 Q60 85 70 75" stroke="#193b59" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- 文字「すまいる」 -->
+
+</svg>

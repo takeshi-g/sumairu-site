@@ -1,0 +1,153 @@
+/* @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"; */
+
+:root {
+  --main: #5ebec4;
+  --accent: #0aa1dd;
+  --sub: #f5f5f5;
+  --text: #333333;
+}
+body {
+  background: var(--sub);
+  color: var(--text);
+  font-family: "Noto Sans JP", sans-serif;
+}
+/* ヘッダー */
+.navbar {
+  background: var(--main);
+  box-shadow: 0 2px 14px rgba(94, 190, 196, 0.07);
+}
+.navbar-brand .logo {
+  height: 42px;
+  margin-right: 0.7em;
+}
+.brand-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.32rem;
+}
+.contact-btn {
+  background: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: 0 3px 14px rgba(10, 161, 221, 0.15);
+  padding: 0.6em 1.2em;
+}
+.contact-btn:hover {
+  background: var(--main);
+}
+/* ヒーロー */
+.hero {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ddd;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(78%) brightness(0.98);
+  opacity: 0.6;
+  background: #bbb;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.hero-title {
+  color: var(--main);
+  font-size: 2.2rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.7em 2em;
+  border-radius: 0;
+}
+/* サービスカード */
+.service-card-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 6px 28px rgba(94, 190, 196, 0.12);
+  min-height: 220px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s, box-shadow 0.16s;
+}
+.service-card-link:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(10, 161, 221, 0.16);
+}
+.service-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.36;
+  filter: grayscale(53%) blur(1.5px);
+  background: #bbb;
+}
+.service-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  width: 90%;
+}
+.service-heading {
+  background: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  padding: 0.3em 1em;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: var(--accent);
+  border-radius: 0;
+}
+.service-lead {
+  background: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  padding: 0.2em 0.8em;
+  font-size: 1.18rem;
+  font-weight: bold;
+  margin-top: 0.5em;
+  color: var(--text);
+  border-radius: 0;
+}
+.service-sub {
+  background: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  padding: 0.2em 0.7em;
+  font-size: 0.96rem;
+  margin-top: 0.4em;
+  color: var(--main);
+  border-radius: 0;
+}
+/* フッター */
+.footer {
+  background: var(--main);
+  color: #fff;
+  padding: 2rem 0;
+}
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+.footer p {
+  margin: 0.2em 0;
+  font-size: 0.95rem;
+}

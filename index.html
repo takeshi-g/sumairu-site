@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>すまいる | sumairu-nara.com</title>
+    <!-- Bulma -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <nav class="navbar" role="navigation">
+      <div
+        class="container is-flex is-justify-content-space-between is-align-items-center"
+      >
+        <div class="is-flex is-align-items-center">
+          <a href="/" class="navbar-item"
+            ><img src="images/sumairu-logo.svg" class="logo" alt="ロゴ"
+          /></a>
+          <span class="brand-title">すまいる</span>
+        </div>
+        <a href="/contact.html" class="button contact-btn">お問い合わせ</a>
+      </div>
+    </nav>
+
+    <!-- ヒーロー -->
+    <section class="hero">
+      <img src="./images/hero001.jpg" class="hero-bg" alt="ヒーロー画像" />
+      <div class="hero-content">
+        <h1 class="hero-title">ホーム(家)なら　すまいる</h1>
+      </div>
+    </section>
+
+    <!-- サービス（PC:2カラム、SP:1カラム） -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline is-variable is-4">
+          <!-- 不動産賃貸 -->
+          <div class="column is-half-desktop is-full-mobile">
+            <a href="/real-estate.html" class="service-card-link">
+              <img
+                src="./images/kodate001.jpg"
+                class="service-bg"
+                alt="不動産画像"
+              />
+              <div class="service-content">
+                <!-- <div class="service-heading">不動産賃貸</div> -->
+                <div class="service-lead">戸建てに住もう</div>
+                <div class="service-sub">
+                  地域とともに、あなただけの暮らしを。
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- ホームページ制作 -->
+          <div class="column is-half-desktop is-full-mobile">
+            <a href="/web.html" class="service-card-link">
+              <img
+                src="./images/hp001.jpg"
+                class="service-bg"
+                alt="HP制作画像"
+              />
+              <div class="service-content">
+                <!-- <div class="service-heading">ホームページ制作</div> -->
+                <div class="service-lead">Webにもホーム(家)を</div>
+                <div class="service-sub">お店にも、趣味にも、仕事にも。</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container has-text-centered">
+        <p class="footer-title"><strong>すまいる</strong> | sumairu-nara.com</p>
+        <p>〒636-0803 奈良県生駒郡三郷町東信貴ケ丘2-11-7</p>
+        <p>
+          Tel: <a href="tel:090-6677-0419">090-6677-0419</a>　Mail:
+          <a href="mailto:tksh0828@gmail.com">tksh0828@gmail.com</a>
+        </p>
+        <p class="copyright">© 2025 すまいる All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
