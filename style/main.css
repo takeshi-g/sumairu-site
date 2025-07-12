@@ -10,6 +10,10 @@ body {
   background: var(--sub);
   color: var(--text);
   font-family: "Noto Sans JP", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100svh;
 }
 /* ヘッダー */
 .navbar {
