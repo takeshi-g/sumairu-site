@@ -2,7 +2,7 @@
 
 :root {
   --main: #5ebec4;
-  --accent: #0aa1dd;
+  --accent: #7b2e2e;
   --sub: #f5f5f5;
   --text: #333333;
 }
@@ -69,6 +69,7 @@ body {
   /* background: rgba(255, 255, 255, 0.85); */
   padding: 0.7em 2em;
   border-radius: 0;
+  text-shadow: 1px 1px #000;
 }
 /* サービスカード */
 .service-card-link {
