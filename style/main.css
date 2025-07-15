@@ -138,6 +138,7 @@ body {
   color: var(--main);
   border-radius: 0;
 }
+
 /* フッター */
 .footer {
   background: var(--main);
