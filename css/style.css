@@ -27,15 +27,16 @@ body {
 .brand-title {
   color: var(--sub);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 .contact-btn {
   background: var(--accent);
   color: #fff;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 0;
   box-shadow: 0 3px 14px rgba(10, 161, 221, 0.15);
-  padding: 0.6em 1.2em;
+  padding: 0.5em 1em;
 }
 .contact-btn:hover {
   background: var(--main);
