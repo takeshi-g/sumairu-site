@@ -158,3 +158,33 @@ body {
   margin: 0.2em 0;
   font-size: 0.95rem;
 }
+
+/* 不動産賃貸・管理 */
+
+.property-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.property-card.is-full {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: var(--accent); /* アクセントカラーに変更 */
+  color: white;
+  font-size: 1.5rem; /* 2倍サイズに拡大 */
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 10;
+}
