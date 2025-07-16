@@ -14,23 +14,28 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
   </head>
   <body>
     <!-- ヘッダー -->
-    <nav class="navbar" role="navigation">
+    <div id="header"></div>
+    <!-- <nav class="navbar" role="navigation">
       <div
-        class="container is-flex is-justify-content-space-between is-align-items-center"
+        class="container is-flex is-justify-content-space-between is-align-items-center py-1"
       >
         <div class="is-flex is-align-items-center">
-          <a href="/" class="navbar-item"
+          <a href="index.html"
             ><img src="images/sumairu-logo.svg" class="logo" alt="ロゴ"
           /></a>
           <span class="brand-title">すまいる</span>
         </div>
-        <a href="/contact.html" class="button contact-btn">お問い合わせ</a>
+        <a href="https://forms.gle/kPViy726Gx5xb2mC9" class="button contact-btn"
+          >お問い合わせ</a
+        >
       </div>
-    </nav>
+    </nav> -->
 
     <!-- ヒーロー -->
     <section class="hero">
@@ -45,7 +50,7 @@
       <div class="container">
         <div class="columns is-multiline is-variable is-4">
           <!-- 不動産賃貸 -->
-          <div class="column is-half-desktop is-full-mobile">
+          <div class="column is-half-desktop is-full-mobile business-card">
             <a href="/real-estate.html" class="service-card-link">
               <img
                 src="./images/kodate002.jpg"
@@ -62,7 +67,7 @@
             </a>
           </div>
           <!-- ホームページ制作 -->
-          <div class="column is-half-desktop is-full-mobile">
+          <div class="column is-half-desktop is-full-mobile business-card">
             <a href="/web.html" class="service-card-link">
               <img
                 src="./images/hp001.jpg"
@@ -80,7 +85,8 @@
       </div>
     </section>
     <!-- フッター -->
-    <footer class="footer">
+    <div id="footer"></div>
+    <!-- <footer class="footer">
       <div class="container has-text-centered">
         <p class="footer-title"><strong>すまいる</strong> | sumairu-nara.com</p>
         <p>〒636-0803 奈良県生駒郡三郷町東信貴ケ丘2-11-7</p>
@@ -90,6 +96,7 @@
         </p>
         <p class="copyright">© 2025 すまいる All rights reserved.</p>
       </div>
-    </footer>
+    </footer> -->
+    <script src="js/script.js"></script>
   </body>
 </html>

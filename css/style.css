@@ -25,9 +25,9 @@ body {
   margin-right: 0.7em;
 }
 .brand-title {
-  color: #fff;
+  color: var(--sub);
   font-weight: bold;
-  font-size: 1.32rem;
+  font-size: 2rem;
 }
 .contact-btn {
   background: var(--accent);
