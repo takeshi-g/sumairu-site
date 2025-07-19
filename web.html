@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ホームページ制作 | すまいる</title>
+
+    <!-- Bulma -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
+    <!-- Font Awesome（アイコン用）-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- カスタムCSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- GSAP（既に読み込んでいれば不要）-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- 共通ヘッダー -->
+    <div id="header"></div>
+
+    <!-- ===== ヒーローセクション ===== -->
+    <section class="hero is-medium is-relative has-background">
+      <img
+        src="https://via.placeholder.com/1600x600?text=Web+Design+Hero+Image"
+        alt="パソコンでサイト制作をするイメージ"
+        class="hero-background is-cover"
+      />
+      <div class="hero-body has-text-centered">
+        <div class="container">
+          <h1 class="title is-2 has-text-white has-text-shadow">
+            あなたの“ホーム”を、世界へ届けよう。
+          </h1>
+          <p class="subtitle is-5 has-text-white has-text-shadow">
+            独自ドメインの取得から公開まで、すべてお任せください。<br />
+            もちろん、データのお渡しだけでもOK。<br />
+            奈良の制作者が直接対応するから、安心して相談できます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 特色3つ ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="title is-4 has-text-centered mb-6">
+          すまいるのホームページ制作 3つの特徴
+        </h2>
+
+        <div class="columns is-multiline">
+          <!-- 特徴 1 -->
+          <div class="column is-4 has-text-centered">
+            <span class="icon is-large has-text-info mb-3">
+              <i class="fas fa-globe fa-2x"></i>
+            </span>
+            <h3 class="title is-5">独自ドメインで本格公開</h3>
+            <p>
+              ドメイン取得・設定から公開・運用まで<br />
+              トータルでサポートします。
+            </p>
+          </div>
+
+          <!-- 特徴 2 -->
+          <div class="column is-4 has-text-centered">
+            <span class="icon is-large has-text-info mb-3">
+              <i class="fas fa-file-code fa-2x"></i>
+            </span>
+            <h3 class="title is-5">データ納品にも対応</h3>
+            <p>
+              公開せずに、ファイル一式でのお渡しだけも可能。<br />
+              柔軟に対応します。
+            </p>
+          </div>
+
+          <!-- 特徴 3 -->
+          <div class="column is-4 has-text-centered">
+            <span class="icon is-large has-text-info mb-3">
+              <i class="fas fa-handshake fa-2x"></i>
+            </span>
+            <h3 class="title is-5">顔が見える安心サポート</h3>
+            <p>
+              奈良県内で直接相談OK。<br />
+              じっくり話して、納得のサイトを一緒に作ります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 実績への導線 ===== -->
+    <section class="section has-text-centered">
+      <div class="container">
+        <a
+          href="works.html"
+          class="button is-medium"
+          style="background: #0aa1dd; color: #fff; border-radius: 0"
+        >
+          制作実績を見る
+        </a>
+      </div>
+    </section>
+
+    <!-- 共通フッター -->
+    <div id="footer"></div>
+
+    <!-- 共通スクリプト（header / footer 読込 & GSAP etc.） -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
