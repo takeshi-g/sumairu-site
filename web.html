@@ -20,9 +20,10 @@
     <!-- カスタムCSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- GSAP（既に読み込んでいれば不要）-->
+    <!-- GSAP（Greensock）-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   </head>
+
   <body>
     <!-- 共通ヘッダー -->
     <div id="header"></div>
@@ -63,8 +64,7 @@
             </span>
             <h3 class="title is-5">独自ドメインで本格公開</h3>
             <p>
-              ドメイン取得・設定から公開・運用まで<br />
-              トータルでサポートします。
+              ドメイン取得・設定から公開・運用まで<br />トータルでサポートします。
             </p>
           </div>
 
@@ -75,8 +75,7 @@
             </span>
             <h3 class="title is-5">データ納品にも対応</h3>
             <p>
-              公開せずに、ファイル一式でのお渡しだけも可能。<br />
-              柔軟に対応します。
+              公開せずに、ファイル一式でのお渡しだけも可能。<br />柔軟に対応します。
             </p>
           </div>
 
@@ -87,31 +86,89 @@
             </span>
             <h3 class="title is-5">顔が見える安心サポート</h3>
             <p>
-              奈良県内で直接相談OK。<br />
-              じっくり話して、納得のサイトを一緒に作ります。
+              奈良県内で直接相談OK。<br />じっくり話して、納得のサイトを一緒に作ります。
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== 実績への導線 ===== -->
-    <section class="section has-text-centered">
+    <!-- ===== 制作実績一覧 ===== -->
+    <section class="section">
       <div class="container">
-        <a
-          href="works.html"
-          class="button is-medium"
-          style="background: #0aa1dd; color: #fff; border-radius: 0"
-        >
-          制作実績を見る
-        </a>
+        <h2 class="title is-4 has-text-centered mb-6">制作実績一覧</h2>
+
+        <div class="columns is-multiline">
+          <!-- 制作実績1 -->
+          <div class="column is-4">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src="https://via.placeholder.com/800x600?text=Sample+Site+1"
+                    alt="制作実績1"
+                  />
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">カフェ向けホームページ</p>
+                <p>ロゴ作成とスマホ対応デザインを含むトータル制作。</p>
+                <a href="works/work01.html" class="button is-small mt-3 is-info"
+                  >詳しく見る</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 制作実績2 -->
+          <div class="column is-4">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src="https://via.placeholder.com/800x600?text=Sample+Site+2"
+                    alt="制作実績2"
+                  />
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">工務店の紹介サイト</p>
+                <p>信頼感を大切にしたレイアウトと施工事例の掲載。</p>
+                <a href="works/work02.html" class="button is-small mt-3 is-info"
+                  >詳しく見る</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 制作実績3 -->
+          <div class="column is-4">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img
+                    src="https://via.placeholder.com/800x600?text=Sample+Site+3"
+                    alt="制作実績3"
+                  />
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">個人作家の作品紹介</p>
+                <p>シンプルで見やすいギャラリーページとSNS連携。</p>
+                <a href="works/work03.html" class="button is-small mt-3 is-info"
+                  >詳しく見る</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- 共通フッター -->
     <div id="footer"></div>
 
-    <!-- 共通スクリプト（header / footer 読込 & GSAP etc.） -->
+    <!-- 共通スクリプト -->
     <script src="js/script.js"></script>
   </body>
 </html>
