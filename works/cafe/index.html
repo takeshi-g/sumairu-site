@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>カフェ向けサイト例 | すまいる</title>
+    <!-- Bulma CSSの読み込み -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <h1 class="title">まちのカフェ「こはる」</h1>
+        <p class="subtitle">あなたの居場所、ここにあります。</p>
+      </div>
+    </header>
+
+    <section class="about">
+      <div class="container">
+        <h2>カフェのご紹介</h2>
+        <p>
+          毎日丁寧にハンドドリップで淹れる珈琲と、季節のスイーツをご用意しています。お一人でも、ご家族でも、ゆったりとお過ごしいただけます。
+        </p>
+      </div>
+    </section>
+
+    <section class="image-section cafe-hero">
+      <img
+        src="./images/cafe-gaikan.jpg"
+        alt="カフェ外観"
+        class="cafe-hero-image"
+      />
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="title is-4 has-text-centered">人気メニュー</h2>
+        <div class="columns is-multiline">
+          <!-- カード1 -->
+          <div class="column is-4-desktop is-6-tablet is-12-mobile">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="./images/cafelatte.jpg" alt="カフェラテ" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">カフェラテ</p>
+                <p class="content">
+                  香り豊かなエスプレッソに、ふんわりミルクを加えた定番の一杯。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- カード2 -->
+          <div class="column is-4-desktop is-6-tablet is-12-mobile">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="./images/cake.jpg" alt="チーズケーキ" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">濃厚チーズケーキ</p>
+                <p class="content">
+                  とろけるような食感と濃厚な味わいが魅力の手作りケーキ。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- カード3 -->
+          <div class="column is-4-desktop is-6-tablet is-12-mobile">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="./images/clubsand.jpg" alt="クラブサンド" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">クラブサンド</p>
+                <p class="content">
+                  ボリューム満点！新鮮野菜とチキンの相性抜群の一品。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 Cafe Koharu | 奈良県生駒郡三郷町こはる１－１－１ tel:
+          0745-00-1234
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
