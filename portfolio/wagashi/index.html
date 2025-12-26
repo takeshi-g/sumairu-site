@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+  </head>
+  <body></body>
+</html>
+
+<body class="wagashi-style">
+  <header class="bg-white sticky-top shadow-sm">
+    <div class="container">
+      <div class="text-center py-4">
+        <h1
+          class="display-6 fw-bold mb-0"
+          style="letter-spacing: 0.2em; color: var(--color-main)"
+        >
+          信貴山 よもぎ屋
+        </h1>
+        <p class="small text-secondary mb-0">無添加・手作り 伝統の味</p>
+      </div>
+      <nav class="navbar navbar-expand-md navbar-light border-top">
+        <div class="container-fluid justify-content-center">
+          <ul class="navbar-nav gap-md-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">こだわり</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">お品書き</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#access">アクセス</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section
+      id="hero-carousel"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <div
+            class="hero-bg"
+            style="background-image: url('https://picsum.photos/900/400')"
+          ></div>
+          <div
+            class="carousel-caption d-flex align-items-center justify-content-center"
+          >
+            <div class="text-center">
+              <h2 class="display-3 fw-bold vertical-text-md">
+                信貴山の清風を、<br />その一粒に。
+              </h2>
+              <p class="lead">よもぎの香りが、心を解きほぐす。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <div
+            class="hero-bg"
+            style="background-image: url('https://picsum.photos/800/400')"
+          ></div>
+          <div
+            class="carousel-caption d-flex align-items-center justify-content-center"
+          >
+            <div class="text-center">
+              <h2 class="display-3 fw-bold vertical-text-md">
+                毎朝、丁寧に。<br />手作りのこだわり。
+              </h2>
+              <p class="lead">無添加だからこそ伝わる、素材の力。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <div
+            class="hero-bg"
+            style="background-image: url('https://picsum.photos/800/300')"
+          ></div>
+          <div
+            class="carousel-caption d-flex align-items-center justify-content-center"
+          >
+            <div class="text-center">
+              <h2 class="display-3 fw-bold vertical-text-md">
+                信貴山のお膝元で、<br />お待ちしております。
+              </h2>
+              <p class="lead">参拝のお帰りに、心温まるひとときを。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero 文字だけバージョン -->
+    <!-- <section
+      class="hero d-flex align-items-center justify-content-center text-white"
+    >
+      <div class="hero-overlay"></div>
+      <div class="hero-content text-center position-relative">
+        <h2 class="display-3 fw-bold mb-4 vertical-text-md">
+          信貴山の清風を、<br />その一粒に。
+        </h2>
+        <p class="lead mb-5">よもぎの香りが、心を解きほぐす。</p>
+      </div>
+    </section> -->
+
+    <section id="about" class="py-5 container text-center">
+      <div class="py-5">
+        <span class="text-accent fw-bold small d-block mb-2">CONCEPT</span>
+        <h3 class="section-title mb-4">職人のこだわり</h3>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <p class="lh-lg">
+              信貴山の麓で育った天然よもぎを、その日の朝に摘み取り、<br />
+              昔ながらの製法で、毎日丁寧に蒸し上げております。<br />
+              保存料を一切使わない、素材本来の香りと力強さをご堪能ください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-5" style="background-color: #fff">
+      <div class="container py-5">
+        <h2 class="section-title text-center mb-5">お品書き</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="card border-0">
+              <img
+                src="https://picsum.photos/200/300"
+                class="card-img-top rounded-0 shadow-sm"
+                alt="よもぎ饅頭"
+              />
+              <div class="card-body px-0 text-center">
+                <h4 class="h5 fw-bold">よもぎ饅頭（つぶあん）</h4>
+                <p class="small text-muted mb-2">
+                  信貴山天然よもぎをたっぷり使用
+                </p>
+                <p class="fw-bold" style="color: var(--color-accent)">
+                  150円 <small>(税込)</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-0">
+              <img
+                src="https://picsum.photos/200/100"
+                class="card-img-top rounded-0 shadow-sm"
+                alt="季節の和菓子"
+              />
+              <div class="card-body px-0 text-center">
+                <h4 class="h5 fw-bold">季節の詰め合わせ</h4>
+                <p class="small text-muted mb-2">
+                  手土産に最適な六個入りパック
+                </p>
+                <p class="fw-bold" style="color: var(--color-accent)">
+                  1,000円 <small>(税込)</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="py-5 bg-alt">
+      <div class="container py-5">
+        <h2 class="section-title text-center mb-5">アクセス</h2>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <div class="ratio ratio-16x9 shadow-sm">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6333137663746!2d135.66752010652752!3d34.61343276622554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600127c6e43de353%3A0xf2292c8041a5a2ac!2z5L-h6LK05bGx5Z-O5Z2A!5e0!3m2!1sja!2sjp!4v1766698619934!5m2!1sja!2sjp"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div
+              class="p-4 bg-white shadow-sm border-start border-4"
+              style="border-color: var(--color-main) !important"
+            >
+              <h4 class="fw-bold mb-4">店舗情報</h4>
+              <dl class="row mb-0">
+                <dt class="col-4 mb-3">住所</dt>
+                <dd class="col-8">奈良県生駒郡三郷町信貴山</dd>
+                <dt class="col-4 mb-3">電話</dt>
+                <dd class="col-8">0745-XX-XXXX</dd>
+                <dt class="col-4 mb-3">営業時間</dt>
+                <dd class="col-8">9:00 〜 17:00</dd>
+                <dt class="col-4 mb-0">定休日</dt>
+                <dd class="col-8 mb-0">不定休（信貴山に準ずる）</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-5 text-white" style="background-color: var(--color-main)">
+      <div class="container text-center">
+        <h3 class="h4 mb-4" style="letter-spacing: 0.1em">信貴山 よもぎ屋</h3>
+
+        <hr class="bg-white opacity-25" />
+        <p class="small mb-0 opacity-75">
+          &copy; 2025 信貴山 よもぎ屋. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </main>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>

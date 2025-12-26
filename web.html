@@ -2,247 +2,373 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>ホームページ制作 | すまいる</title>
-
-    <!-- Bulma -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web制作のご案内|すまいる</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+      href="./bootstrap-icons-1.13.1/bootstrap-icons.min.css"
     />
-
-    <!-- Font Awesome（アイコン用）-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <!-- カスタムCSS -->
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- GSAP（Greensock）-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-
-  <body>
-    <!-- 共通ヘッダー -->
-    <div id="header"></div>
-
-    <!-- ===== ヒーローセクション ===== -->
-    <section class="hero is-medium is-relative has-background">
-      <img
-        src="./images/web-hero.jpg"
-        alt="パソコンでサイト制作をするイメージ"
-        class="hero-background is-cover"
-      />
-      <div class="hero-body has-text-centered">
-        <div class="container">
-          <h1 class="title is-2 has-text-white has-text-shadow">
-            あなたの“ホーム”を、世界へ届けよう。
-          </h1>
-          <p class="subtitle is-5 has-text-white has-text-shadow">
-            独自ドメインの取得から公開まで、すべてお任せください。<br />
-            もちろん、データのお渡しだけでもOK。<br />
-            奈良の制作者が直接対応するから、安心して相談できます。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 特色3つ ===== -->
-    <section class="section">
+  <div id="common-header"></div>
+  <main class="flex-grow-1" style="background-color: var(--smile-base)">
+    <section class="py-5 text-center">
       <div class="container">
-        <h2 class="title is-4 has-text-centered mb-6">
-          すまいるのホームページ制作 3つの特徴
-        </h2>
-
-        <div class="columns is-multiline">
-          <!-- 特徴 1 -->
-          <div class="column is-4 has-text-centered">
-            <span class="icon is-large has-text-info mb-3">
-              <i class="fas fa-globe fa-2x"></i>
-            </span>
-            <h3 class="title is-5">独自ドメインで本格公開</h3>
-            <p>
-              ドメイン取得・設定から公開・運用まで<br />トータルでサポートします。
-            </p>
-          </div>
-
-          <!-- 特徴 2 -->
-          <div class="column is-4 has-text-centered">
-            <span class="icon is-large has-text-info mb-3">
-              <i class="fas fa-file-code fa-2x"></i>
-            </span>
-            <h3 class="title is-5">データ納品にも対応</h3>
-            <p>
-              公開せずに、ファイル一式でのお渡しだけも可能。<br />柔軟に対応します。
-            </p>
-          </div>
-
-          <!-- 特徴 3 -->
-          <div class="column is-4 has-text-centered">
-            <span class="icon is-large has-text-info mb-3">
-              <i class="fas fa-handshake fa-2x"></i>
-            </span>
-            <h3 class="title is-5">顔が見える安心サポート</h3>
-            <p>
-              奈良県内で直接相談OK。<br />じっくり話して、納得のサイトを一緒に作ります。
-            </p>
-          </div>
-        </div>
+        <h1 class="hero-title display-5 fw-bold mb-3">Web制作のご案内</h1>
+        <p class="lead text-secondary">
+          「ネットで何か始めたい」その一歩を、地元・奈良で支えます。
+        </p>
       </div>
     </section>
 
-    <!-- ===== 制作実績一覧 ===== -->
-    <section class="section">
+    <section class="py-5 bg-white">
       <div class="container">
-        <h2 class="title is-4 has-text-centered mb-6">制作実績一覧</h2>
-
-        <div class="columns is-multiline">
-          <!-- 制作実績1 -->
-          <div class="column is-4">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="./images/cafe-gaikan.jpg" alt="制作実績1" />
-                </figure>
-              </div>
-              <div class="card-content">
-                <p class="title is-5">カフェ向けホームページ</p>
-                <p>スマホ対応デザインのページ制作。</p>
-                <a href="works/cafe" class="button is-small mt-3 is-info"
-                  >詳しく見る</a
-                >
-              </div>
-            </div>
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <img
+              src="./images/web02.jpg"
+              class="img-fluid rounded-4 shadow"
+              alt="対面相談"
+            />
           </div>
-
-          <!-- 制作実績2 -->
-          <div class="column is-4">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="https://via.placeholder.com/800x600?text=Sample+Site+2"
-                    alt="制作実績2"
-                  />
-                </figure>
-              </div>
-              <div class="card-content">
-                <p class="title is-5">工務店の紹介サイト</p>
-                <p>信頼感を大切にしたレイアウトと施工事例の掲載。</p>
-                <a href="works/work02.html" class="button is-small mt-3 is-info"
-                  >詳しく見る</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- 制作実績3 -->
-          <div class="column is-4">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="https://via.placeholder.com/800x600?text=Sample+Site+3"
-                    alt="制作実績3"
-                  />
-                </figure>
-              </div>
-              <div class="card-content">
-                <p class="title is-5">個人作家の作品紹介</p>
-                <p>シンプルで見やすいギャラリーページとSNS連携。</p>
-                <a href="works/work03.html" class="button is-small mt-3 is-info"
-                  >詳しく見る</a
-                >
-              </div>
-            </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-4">「直接会って話す」から見つかる答え。</h2>
+            <p>
+              Webサイトは単なる道具にすぎません。大切なのは、その中身（コンセプト）です。
+            </p>
+            <p>
+              私は三郷町・奈良市を中心に、実際にお会いしての打ち合わせを大切にしています。メールや電話だけでは伝わらない「あなたのビジネスの熱量」を、直接肌で感じてサイト作りに活かしたいと考えています。
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                地域密着：奈良県内ならフットワーク軽く伺います。
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                初心者歓迎：専門用語を使わず、分かりやすく丁寧に進めます。
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                再生マインド：今ある資源を活かした、無理のないWeb活用を提案。
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="py-5 bg-white">
       <div class="container">
-        <h2 class="title is-3 has-text-centered mb-6">制作プランと料金</h2>
-
-        <div class="columns is-multiline">
-          <!-- ライトプラン -->
-          <div class="column is-4">
-            <div class="card">
-              <div class="card-content">
-                <p class="title is-4">ライトプラン</p>
-                <p class="subtitle is-5 has-text-weight-bold">
-                  ¥30,000（税込）
+        <h2 class="text-center mb-5 hero-title">初期制作費用</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4">
+            <div
+              class="card h-100 border-0 shadow-sm rounded-4 text-center overflow-hidden pricing-card"
+            >
+              <div
+                class="py-3 text-white fw-bold"
+                style="background-color: var(--smile-green)"
+              >
+                ライト1枚
+              </div>
+              <div class="card-body p-4 d-flex flex-column">
+                <div class="mb-3">
+                  <i
+                    class="bi bi-file-earmark-text fs-1"
+                    style="color: var(--smile-green)"
+                  ></i>
+                </div>
+                <p class="small text-secondary mb-4">
+                  名刺代わりの1ページ構成。<br />まずはネット上に看板を。
                 </p>
-                <ul>
-                  <li>・ペライチ構成</li>
-                  <li>・スマホ対応</li>
-                  <li>・写真3枚まで</li>
-                  <!-- <li>・お問い合わせリンクなし</li> -->
-                </ul>
+                <div class="mt-auto py-2">
+                  <span class="h2 fw-bold" style="color: var(--smile-green)"
+                    >¥55,000</span
+                  >
+                  <small class="text-secondary">(税込)</small>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- ベーシックプラン -->
-          <div class="column is-4">
-            <div class="card">
-              <div class="card-content">
-                <p class="title is-4">ベーシックプラン</p>
-                <p class="subtitle is-5 has-text-weight-bold">
-                  ¥100,000（税込）
+          <div class="col-lg-4">
+            <div
+              class="card h-100 border-0 shadow-lg rounded-4 text-center overflow-hidden pricing-card scale-up"
+            >
+              <div
+                class="py-3 text-white fw-bold"
+                style="background-color: var(--smile-orange)"
+              >
+                店舗紹介3枚
+              </div>
+              <div class="card-body p-4 d-flex flex-column">
+                <div class="mb-3">
+                  <i
+                    class="bi bi-shop fs-1"
+                    style="color: var(--smile-orange)"
+                  ></i>
+                </div>
+                <p class="small text-secondary mb-4">
+                  トップ＋サービス＋店舗情報。<br />お店の魅力をしっかり伝えます。
                 </p>
-                <ul>
-                  <li>・3ページ構成</li>
-                  <li>・スマホ対応</li>
-                  <li>・お問い合わせフォーム付き</li>
-                  <!-- <li>・ドメイン/サーバー設定なし</li> -->
-                </ul>
+                <div class="mt-auto py-2">
+                  <span class="h2 fw-bold" style="color: var(--smile-orange)"
+                    >¥88,000</span
+                  >
+                  <small class="text-secondary">(税込)</small>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- スタンダードプラン -->
-          <div class="column is-4">
-            <div class="card">
-              <div class="card-content">
-                <p class="title is-4">スタンダードプラン</p>
-                <p class="subtitle is-5 has-text-weight-bold">
-                  ¥150,000（税込）
+          <div class="col-lg-4">
+            <div
+              class="card h-100 border-0 shadow-sm rounded-4 text-center overflow-hidden pricing-card"
+            >
+              <div
+                class="py-3 text-white fw-bold"
+                style="background-color: #6d4c41"
+              >
+                ビジネス5枚
+              </div>
+              <div class="card-body p-4 d-flex flex-column">
+                <div class="mb-3">
+                  <i class="bi bi-building fs-1" style="color: #6d4c41"></i>
+                </div>
+                <p class="small text-secondary mb-4">
+                  5ページまでの複数構成。<br />信頼感を重視する法人様向け。
                 </p>
-                <ul>
-                  <li>・5ページ構成</li>
-                  <li>・スマホ対応</li>
-                  <li>・自動返信付きフォーム</li>
-                  <!-- <li>・ドメイン/サーバー設定なし</li> -->
-                </ul>
+                <div class="mt-auto py-2">
+                  <span class="h2 fw-bold" style="color: #6d4c41"
+                    >¥110,000</span
+                  >
+                  <small class="text-secondary">(税込)</small>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="py-5" style="background-color: var(--smile-base)">
+      <div class="container">
+        <h2 class="text-center mb-5 hero-title">月額運用費用</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5">
+            <div class="p-4 rounded-4 bg-white shadow-sm h-100">
+              <div class="d-flex align-items-center mb-3">
+                <div
+                  class="rounded-circle p-2 me-3"
+                  style="background-color: #e8f5e9"
+                >
+                  <i class="bi bi-link-45deg text-success fs-4"></i>
+                </div>
+                <h5 class="fw-bold mb-0">サブディレクトリ</h5>
+              </div>
+              <p class="small text-secondary">URL: sumairu-nara.com/○○/</p>
+              <div class="h4 fw-bold">
+                ¥1,100 <small class="fs-6 fw-normal text-muted">/ 月</small>
+              </div>
+              <p class="small mt-3 mb-0">
+                ドメイン取得・更新料が不要。最も手軽に維持できます。
+              </p>
+            </div>
+          </div>
 
-        <!-- 運用費 -->
-        <div class="box has-background-info-light mt-5">
-          <p class="title is-5">運用について</p>
-          <ul>
-            <li>
-              ・独自ドメインでの運用：年額
-              <strong>¥10,000</strong>（ドメイン費別途）
-            </li>
-            <li>
-              ・<strong>sumairu-nara.com</strong> ドメイン下での運用：年額
-              <strong>¥5,000</strong>
-            </li>
-          </ul>
-          <p class="mt-2">※いずれもインターネット公開・維持管理を含みます。</p>
+          <div class="col-md-5">
+            <div class="p-4 rounded-4 bg-white shadow-sm h-100">
+              <div class="d-flex align-items-center mb-3">
+                <div
+                  class="rounded-circle p-2 me-3"
+                  style="background-color: #fff3e0"
+                >
+                  <i class="bi bi-globe2 text-warning fs-4"></i>
+                </div>
+                <h5 class="fw-bold mb-0">独自ドメイン</h5>
+              </div>
+              <p class="small text-secondary">URL: あなたの店名.com</p>
+              <div class="h4 fw-bold">
+                ¥3,300 <small class="fs-6 fw-normal text-muted">/ 月</small>
+              </div>
+              <p class="small mt-3 mb-0">
+                専用URLとメールアドレス。ビジネスの信頼を築くならこちら。
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 共通フッター -->
-    <div id="footer"></div>
+    <section class="py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center mb-5 hero-title">制作の流れ</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="text-center">
+              <div
+                class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  background-color: var(--smile-base);
+                  color: var(--smile-orange);
+                "
+              >
+                <span class="fs-3 fw-bold">1</span>
+              </div>
+              <h5 class="fw-bold">お問い合わせ</h5>
+              <p class="small text-secondary">
+                まずはフォームよりお気軽にご連絡ください。2営業日以内に返信いたします。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <div
+                class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  background-color: var(--smile-base);
+                  color: var(--smile-orange);
+                "
+              >
+                <span class="fs-3 fw-bold">2</span>
+              </div>
+              <h5 class="fw-bold">対面ヒアリング</h5>
+              <p class="small text-secondary">
+                奈良県内（三郷町周辺）なら直接お会いして、活動の想いや目的をじっくり伺います。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <div
+                class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  background-color: var(--smile-base);
+                  color: var(--smile-orange);
+                "
+              >
+                <span class="fs-3 fw-bold">3</span>
+              </div>
+              <h5 class="fw-bold">制作・確認</h5>
+              <p class="small text-secondary">
+                ヒアリングを元に作成。途中経過をネット上で確認いただきながら細部を調整します。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="text-center">
+              <div
+                class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  background-color: var(--smile-orange);
+                  color: white;
+                "
+              >
+                <span class="fs-3 fw-bold">4</span>
+              </div>
+              <h5 class="fw-bold">公開・運用開始</h5>
+              <p class="small text-secondary">
+                全ての確認が完了したら公開！その後の管理やメールの設定もサポートします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- 共通スクリプト -->
-    <script src="js/script.js"></script>
-  </body>
+    <section class="py-5" style="background-color: var(--smile-base)">
+      <div class="container">
+        <h2 class="text-center mb-5 hero-title">よくある質問</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion shadow-sm" id="faqAccordion">
+              <div
+                class="accordion-item border-0 mb-2 rounded-3 overflow-hidden"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    Q. 自分で更新（ブログ投稿など）はできますか？
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    当サービスは、セキュリティと表示速度を優先するため、プログラムを使わない「静的なサイト」を制作します。そのため、お客様自身でブログを更新する機能はございませんが、情報の修正や追記が必要な際は、月額管理費の中で迅速に対応いたします。
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item border-0 mb-2 rounded-3 overflow-hidden"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    Q. 制作費以外に追加で費用がかかることはありますか？
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    基本的にはプラン料金内で完結します。ただし、特殊な有料素材の購入や、大幅な仕様変更、多ページへの拡張などが発生する場合は、事前にお見積りをご提示し、ご納得いただいた上で進めますのでご安心ください。
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item border-0 mb-2 rounded-3 overflow-hidden"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    Q. 奈良県外ですが依頼できますか？
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    可能です！ただし「対面での打ち合わせ」は奈良県近郊に限定させていただいております。遠方の場合は、Zoom等のビデオ通話やお電話でのヒアリングにて対応させていただきます。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="common-footer"></div>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/common-loader.js"></script>
 </html>

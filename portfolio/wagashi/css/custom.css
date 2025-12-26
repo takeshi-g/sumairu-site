@@ -1,0 +1,177 @@
+:root {
+  /* メイン：よもぎ色（ロゴ、見出し、フッター背景などに） */
+  --color-main: #56713d;
+
+  /* アクセント：虎の朱赤（注文ボタン、重要なバッジ、強調箇所に） */
+  --color-accent: #c2402a;
+
+  /* サブ/背景：和紙の白（全体の背景、セクションの区切りに） */
+  --color-sub: #f5f1e9;
+
+  /* テキスト用：深い墨色（読みやすさ重視） */
+  --color-text: #2d2d2d;
+}
+body {
+  /* Noto Serif JP を優先し、ダメなら一般的な明朝体を使う設定 */
+  font-family: "Noto Serif JP", serif;
+}
+
+.wagashi-style {
+  font-family: "Noto Serif JP", serif; /* 明朝体を適用 */
+  background-color: var(--color-sub);
+}
+
+/* メインビジュアルをドラマチックに */
+.hero {
+  height: 80vh;
+  background: url("../images/yomogi-bg.jpg") center/cover no-repeat; /* ここに綺麗な写真を！ */
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* 画像を少し暗くして文字を浮かせる */
+}
+
+/* 縦書き（PCのみ） */
+@media (min-width: 768px) {
+  .vertical-text-md {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    height: 350px;
+    margin: 0 auto;
+  }
+}
+
+/* ボタンを和風に */
+.btn-yomogi {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-yomogi:hover {
+  background-color: #a03522;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* タイトルの装飾 */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.section-title::after {
+  content: "■";
+  color: var(--color-accent);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-alt {
+  background-color: #ebe4d8;
+}
+
+/* ナビゲーションの文字間隔を広げて「和」を演出 */
+.nav-link {
+  font-weight: bold;
+  color: #444 !important;
+  letter-spacing: 0.1em;
+  padding: 1rem 1.5rem !important;
+}
+
+.nav-link:hover {
+  color: var(--color-main) !important;
+}
+
+/* リスト形式の店舗情報のフォントサイズ調整 */
+dt {
+  font-size: 0.9rem;
+  color: var(--color-main);
+}
+dd {
+  font-size: 1rem;
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* これで正方形（1対1）に固定 */
+  object-fit: cover; /* 画像を歪ませず、中央で切り抜く */
+  object-position: center; /* 切り抜き位置を中央に合わせる */
+}
+
+.card {
+  padding: 10px;
+  background-color: transparent;
+}
+
+/* マップの親要素（ratioクラスなど）に対して指定 */
+.ratio iframe {
+  /* 彩度を50%に落とし、わずかにセピア（茶色系）を混ぜる */
+  filter: saturate(0.5) sepia(0.2) brightness(0.9);
+
+  /* マウスを乗せた時だけ元の色に戻す（オプション） */
+  transition: filter 0.5s ease;
+}
+
+/* ユーザーが地図を操作しようとした時は色を戻すと親切です */
+.ratio iframe:hover {
+  filter: saturate(1) sepia(0) brightness(1);
+}
+
+/* カルーセル全体の高さ */
+#hero-carousel {
+  height: 85vh; /* 画面の85%程度を使って迫力を出す */
+  background-color: #000;
+}
+
+/* 背景画像の設定 */
+.hero-bg {
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7); /* 文字を読みやすくするため、画像を少し暗くする */
+}
+
+/* キャプション（文字部分）の配置調整 */
+.carousel-caption {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+
+/* インジケーターの形を和風に */
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* 丸にする */
+  margin: 0 8px;
+  background-color: var(--color-sub);
+}
+
+/* 縦書き設定（以前のものを継続） */
+@media (min-width: 768px) {
+  .vertical-text-md {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    height: 380px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+  }
+}

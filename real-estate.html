@@ -2,121 +2,25 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>すまいる| 不動産賃貸・管理</title>
-    <!-- Bulma -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>すまいる|Web制作</title>
+    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
   </head>
-  <!-- Font Awesome CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-..."
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <body>
-    <!-- ヘッダー -->
-    <div id="header"></div>
-
-    <!-- ヒーロー -->
-    <section class="hero is-medium is-relative has-background">
-      <img
-        src="./images/real-estate/real-estate-hero001.jpg"
-        alt="戸建てでくつろぐ家族"
-        class="hero-background is-cover"
-      />
-      <div class="hero-body has-text-centered">
-        <div class="container">
-          <h1 class="title is-2 has-text-white has-text-shadow">
-            家族の時間が、暮らしになる。
-          </h1>
-          <p class="subtitle is-5 has-text-white has-text-shadow">
-            奈良の戸建てで、ぬくもりある毎日を。
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- 特徴 -->
-
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-4 has-text-centered mb-6">
-          すまいるの戸建て賃貸 3つの特徴
-        </h2>
-        <div class="columns is-multiline">
-          <!-- 特徴1 -->
-          <div class="column is-4 has-text-centered">
-            <span class="icon is-large has-text-info mb-3">
-              <i class="fas fa-house fa-2x"></i>
-            </span>
-            <h3 class="title is-5">戸建ての静かな暮らし</h3>
-            <p>のびのびと過ごせる一戸建ての生活。</p>
-          </div>
-
-          <!-- 特徴2 -->
-          <div class="column is-4 has-text-centered">
-            <span class="icon is-large has-text-info mb-3">
-              <i class="fas fa-yen-sign fa-2x"></i>
-            </span>
-            <h3 class="title is-5">無駄を省いて適正価格</h3>
-            <p>過不足のないリフォームで、適正な家賃を実現。</p>
-          </div>
-
-          <!-- 特徴3 -->
-          <div class="column is-4 has-text-centered">
-            <span class="icon is-large has-text-info mb-3">
-              <i class="fas fa-user-shield fa-2x"></i>
-            </span>
-            <h3 class="title is-5">奈良密着の安心対応</h3>
-            <p>奈良県生まれのオーナーが、入居後も丁寧にサポートします。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 物件一覧 -->
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-4">奈良県内の戸建て</h2>
-        <div class="columns is-multiline">
-          <div class="column is-12-tablet is-6-desktop">
-            <div class="card property-card is-full" style="position: relative">
-              <span class="badge">満室</span>
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img
-                    src="images/real-estate/kodate01-kobayashi.jpg"
-                    alt="物件画像"
-                  />
-                </figure>
-              </div>
-              <div class="card-content">
-                <p class="title is-5">奈良県大和郡山市小林町</p>
-                <p class="subtitle is-6">間取り：3LDK　広さ：69m²</p>
-                <p class="has-text-danger is-size-7 mt-2">
-                  ※ 現在賃貸中のため募集は行っておりません
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- フッター -->
-    <div id="footer"></div>
-
-    <script src="js/script.js"></script>
-  </body>
+  <div id="common-header"></div>
+  <main class="container py-5">
+    <h2 class="border-bottom pb-3 mb-4">不動産賃貸・管理</h2>
+    <p>地域に根ざした賃貸管理・空き家相談を承っております。</p>
+    <div class="card bg-light p-4">
+      <h5>主な業務内容</h5>
+      <ul class="mb-0">
+        <li>賃貸物件の入居者管理・建物維持</li>
+        <li>空き家・遊休地の管理相談</li>
+        <li>不動産業界向けIT活用のコンサルティング</li>
+      </ul>
+    </div>
+  </main>
+  <div id="common-footer"></div>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/common-loader.js"></script>
 </html>
