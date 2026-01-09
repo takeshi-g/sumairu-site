@@ -50,3 +50,40 @@
 .pricing-card.shadow-lg {
   z-index: 1; /* 左のカードより少し前に出す */
 }
+
+/* ロゴを囲む枠を正方形にする */
+.partner-logo-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 縦横比を1:1に固定 */
+  display: flex;
+  align-items: center; /* 垂直方向中央 */
+  justify-content: center; /* 水平方向中央 */
+  background-color: #fff;
+  padding: 15px; /* ロゴの周りの余白 */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo-wrapper {
+  width: 100%;
+  /* PCでの最大サイズを制限（大きすぎるのを防ぐ） */
+  max-width: 250px;
+  margin: 0 auto; /* 中央寄せ */
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px; /* 余白を少し広げると高級感が出ます */
+  overflow: hidden;
+}
+
+.partner-logo-wrapper img {
+  /* 画像を枠いっぱいに表示させる設定 */
+  width: 80%; /* 枠に対しての画像の大きさ */
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
