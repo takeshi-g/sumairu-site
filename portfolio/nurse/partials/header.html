@@ -1,25 +1,48 @@
-<header class="site-header">
-  <div class="header-container">
-    <div class="header-logo">
-      <a href="/index.html">
-        <img src="/img/logo.png" alt="訪問看護ステーション名" />
-        <span class="logo-text">〇〇訪問看護ステーション</span>
+<header class="site-header border-bottom bg-white sticky-top">
+  <div class="container">
+    <div
+      class="d-flex flex-wrap align-items-center justify-content-between py-3"
+    >
+      <a
+        href="index.html"
+        class="d-flex align-items-center mb-2 mb-md-0 text-dark text-decoration-none"
+      >
+        <img
+          src="img/logo.png"
+          alt="ロゴ"
+          width="40"
+          height="40"
+          class="me-2"
+        />
+        <span class="fs-4 fw-bold text-primary">〇〇訪問看護ステーション</span>
       </a>
-    </div>
 
-    <nav class="header-nav">
-      <ul>
-        <li><a href="/index.html">ホーム</a></li>
-        <li><a href="/service.html">サービス内容</a></li>
-        <li><a href="/flow.html">ご利用の流れ</a></li>
-        <li><a href="/staff.html">スタッフ紹介</a></li>
-        <li><a href="/contact.html">お問い合わせ</a></li>
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li>
+          <a href="index.html" class="nav-link px-2 link-secondary">ホーム</a>
+        </li>
+        <li>
+          <a href="service.html" class="nav-link px-2 link-dark"
+            >サービス内容</a
+          >
+        </li>
+        <li>
+          <a href="flow.html" class="nav-link px-2 link-dark">ご利用の流れ</a>
+        </li>
+        <li>
+          <a href="staff.html" class="nav-link px-2 link-dark">スタッフ紹介</a>
+        </li>
       </ul>
-    </nav>
 
-    <div class="header-contact">
-      <p class="tel-label">お気軽にご相談ください</p>
-      <a href="tel:000-0000-0000" class="tel-number">000-0000-0000</a>
+      <div class="col-md-3 text-end d-none d-lg-block">
+        <p class="small mb-0 text-muted">お気軽にご相談ください</p>
+        <a
+          href="tel:000-0000-0000"
+          class="text-decoration-none fw-bold fs-5 text-dark"
+        >
+          <i class="bi bi-telephone-fill me-1"></i>000-0000-0000
+        </a>
+      </div>
     </div>
   </div>
 </header>

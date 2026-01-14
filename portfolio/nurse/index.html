@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>〇〇訪問看護ステーション</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
@@ -13,7 +12,7 @@
     />
   </head>
   <body>
-    <div id="header-placeholder"></div>
+    <div data-include="partials/header.html"></div>
 
     <main>
       <section class="hero">
@@ -39,7 +38,12 @@
       </section>
     </main>
 
-    <div id="footer-placeholder"></div>
+    <div data-include="partials/footer.html"></div>
+
+    <div
+      id="sticky-nav-placeholder"
+      data-include="partials/sticky-nav.html"
+    ></div>
 
     <script src="js/main.js"></script>
   </body>
