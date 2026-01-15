@@ -1,3 +1,20 @@
+body {
+  /* フォント名を M PLUS Rounded 1c に変更 */
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  letter-spacing: 0.05em; /* 丸文字は少しだけ間隔を広げるとより可愛く、読みやすくなります */
+  line-height: 1.8;
+  color: #444; /* 少し柔らかいグレーにするとさらに温かみが出ます */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
 .hero {
   position: relative;
   height: 100vh; /* 画面の高さ100% */

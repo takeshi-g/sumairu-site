@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>〇〇訪問看護ステーション</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-icons-1.13.1/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <div data-include="partials/header.html"></div>
+
+    <main class="flex-fill py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="fw-bold">よくあるご質問</h1>
+          <p class="text-muted">
+            皆さまから寄せられる代表的なご質問をまとめました。
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div
+                class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button fw-bold bg-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    <span class="text-primary me-2">Q.</span>
+                    訪問看護はどのような人が利用できますか？
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body bg-light text-muted">
+                    病気や障害を持ちながら、ご自宅での療養を希望されるすべての方が対象です。主治医が「訪問看護が必要」と判断した場合にご利用いただけます。まずはケアマネジャーさんか当ステーションへご相談ください。
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold bg-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    <span class="text-primary me-2">Q.</span>
+                    夜間や休日に具合が悪くなった時は対応してもらえますか？
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body bg-light text-muted">
+                    「24時間緊急訪問体制」を整えております。ご契約者様には専用の電話番号をお伝えし、夜間や休日でも看護師に繋がり、必要に応じて緊急訪問できる体制を維持しています。
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold bg-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    <span class="text-primary me-2">Q.</span>
+                    費用はどのくらいかかりますか？
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body bg-light text-muted">
+                    ご利用になる保険（介護保険・医療保険）や、自己負担割合、訪問回数によって異なります。目安としては介護保険の1割負担の方で、1回あたり約500円〜1,000円程度（加算等により変動）となります。詳細はお見積りも可能です。
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden"
+              >
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed fw-bold bg-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    <span class="text-primary me-2">Q.</span>
+                    家族が不在の時でも来てもらえますか？
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body bg-light text-muted">
+                    はい、可能です。お一人暮らしの方や、ご家族がお仕事で不在の時間帯にも多くの方がご利用されています。鍵の預かり方法など、安全な訪問方法を事前にご相談させていただきます。
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-5 p-4 bg-primary-subtle rounded-4">
+              <p class="mb-3 fw-bold">
+                他にも気になることがあれば、お気軽にお聞きください
+              </p>
+              <a
+                href="tel:00-0000-0000"
+                class="btn btn-primary rounded-pill px-4"
+                >お問い合わせはこちら</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <div
+      id="sticky-nav-placeholder"
+      data-include="partials/sticky-nav.html"
+    ></div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
