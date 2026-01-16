@@ -1,9 +1,53 @@
+/* style.css の一番上に追加 */
+
+/* --- カラー変数定義 --- */
+:root {
+  --main-color: #5698c3; /* 誠実な空色 */
+  --base-color: #f8f9fa; /* 優しいグレー（背景） */
+  --accent-color: #f08080; /* 温かいコーラル（ボタン等） */
+  --text-color: #444444; /* 読みやすい濃いグレー */
+}
+
+/* --- 全体設定 --- */
 body {
-  /* フォント名を M PLUS Rounded 1c に変更 */
+  background-color: var(--base-color);
+  color: var(--text-color);
   font-family: "M PLUS Rounded 1c", sans-serif;
-  letter-spacing: 0.05em; /* 丸文字は少しだけ間隔を広げるとより可愛く、読みやすくなります */
   line-height: 1.8;
-  color: #444; /* 少し柔らかいグレーにするとさらに温かみが出ます */
+  letter-spacing: 0.05em; /* 丸文字は少しだけ間隔を広げるとより可愛く、読みやすくなります */
+}
+
+/* --- Bootstrapクラスの上書き --- */
+
+/* テキスト色（text-primary）を空色に */
+.text-primary {
+  color: var(--main-color) !important;
+}
+
+/* 背景色（bg-primary）を空色に */
+.bg-primary {
+  background-color: var(--main-color) !important;
+}
+
+/* ボタン（btn-primary）の設定 */
+.btn-primary {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* ボタンにマウスを乗せた時、アクセントカラー（コーラル）に変化 */
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+}
+
+/* アコーディオン（FAQ）のボタンがクリックされた時の色 */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(86, 152, 195, 0.1); /* メインカラーの薄い色 */
+  color: var(--main-color);
 }
 
 h1,
@@ -24,6 +68,8 @@ h6 {
   align-items: center;
   justify-content: center;
   color: #fff;
+  position: relative;
+  background-color: #000; /* ビデオが読み込まれるまでの背景色 */
 }
 
 .hero-video {
@@ -34,7 +80,7 @@ h6 {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover; /* 比率を保って画面を埋める */
-  z-index: -1;
+  z-index: 0;
 }
 
 .video-overlay {
@@ -58,4 +104,43 @@ h6 {
   body {
     padding-bottom: 80px; /* ボタンの高さに合わせて調整 */
   }
+}
+
+/* カードにマウスを乗せた時の動き */
+.features .card {
+  transition: transform 0.3s ease, shadow 0.3s ease;
+}
+
+.features .card:hover {
+  transform: translateY(-5px); /* 少し上に浮く */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* カード上部のアクセントライン */
+.border-top-main {
+  border-top: 5px solid var(--main-color) !important;
+}
+
+/* アイコンを囲む円のサイズ調整 */
+.feature-icon-sm {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* カード自体の背景を白に、全体の背景を薄いグレーにするとコントラストが出て綺麗です */
+main.flex-fill {
+  background-color: #fcfcfc;
+}
+
+/* STEP 4用のアクセントライン */
+.border-top-accent {
+  border-top: 5px solid var(--accent-color) !important;
+}
+
+/* ページ全体のトーンを統一 */
+main.bg-light-subtle {
+  background-color: #f8f9fa;
 }

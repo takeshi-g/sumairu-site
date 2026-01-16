@@ -20,127 +20,217 @@
   <body class="d-flex flex-column min-vh-100">
     <div data-include="partials/header.html"></div>
 
-    <main class="flex-fill py-5">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h1 class="fw-bold">よくあるご質問</h1>
-          <p class="text-muted">
-            皆さまから寄せられる代表的なご質問をまとめました。
-          </p>
+    <main class="flex-fill bg-light-subtle">
+      <section class="py-5 bg-primary-subtle">
+        <div class="container py-4">
+          <div class="text-center">
+            <h1 class="fw-bold display-5 mb-3">よくあるご質問</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px">
+              皆さまからよく寄せられるご質問をまとめました。<br
+                class="d-none d-md-block"
+              />
+              こちらにない疑問については、お電話等で丁寧にお答えいたします。
+            </p>
+          </div>
         </div>
+      </section>
 
+      <div class="container py-5">
         <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <div class="accordion accordion-flush" id="faqAccordion">
-              <div
-                class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden"
+          <div class="col-lg-10">
+            <div class="mb-5">
+              <h2
+                class="h4 fw-bold mb-4 border-start border-primary border-4 ps-3"
               >
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button fw-bold bg-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq1"
-                  >
-                    <span class="text-primary me-2">Q.</span>
-                    訪問看護はどのような人が利用できますか？
-                  </button>
-                </h2>
+                サービス利用について
+              </h2>
+              <div class="accordion accordion-flush" id="faqAccordion1">
                 <div
-                  id="faq1"
-                  class="accordion-collapse collapse show"
-                  data-bs-parent="#faqAccordion"
+                  class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden border-top-main bg-white"
                 >
-                  <div class="accordion-body bg-light text-muted">
-                    病気や障害を持ちながら、ご自宅での療養を希望されるすべての方が対象です。主治医が「訪問看護が必要」と判断した場合にご利用いただけます。まずはケアマネジャーさんか当ステーションへご相談ください。
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button fw-bold bg-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1"
+                    >
+                      <span class="text-primary me-2">Q.</span>
+                      訪問看護はどのような人が利用できますか？
+                    </button>
+                  </h2>
+                  <div
+                    id="faq1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#faqAccordion1"
+                  >
+                    <div class="accordion-body bg-light-subtle text-muted">
+                      病気や障害を持ちながら、ご自宅での療養を希望されるすべての方が対象です。主治医が「訪問看護が必要」と判断した場合にご利用いただけます。まずはケアマネジャーさんか当ステーションへご相談ください。
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div
-                class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden"
-              >
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed fw-bold bg-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq2"
-                  >
-                    <span class="text-primary me-2">Q.</span>
-                    夜間や休日に具合が悪くなった時は対応してもらえますか？
-                  </button>
-                </h2>
                 <div
-                  id="faq2"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
+                  class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden border-top-main bg-white"
                 >
-                  <div class="accordion-body bg-light text-muted">
-                    「24時間緊急訪問体制」を整えております。ご契約者様には専用の電話番号をお伝えし、夜間や休日でも看護師に繋がり、必要に応じて緊急訪問できる体制を維持しています。
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed fw-bold bg-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2"
+                    >
+                      <span class="text-primary me-2">Q.</span>
+                      家族が不在の時でも来てもらえますか？
+                    </button>
+                  </h2>
+                  <div
+                    id="faq2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion1"
+                  >
+                    <div class="accordion-body bg-light-subtle text-muted">
+                      はい、可能です。お一人暮らしの方や、ご家族がお仕事で不在の時間帯にも多くの方がご利用されています。鍵の預かり方法など、安全な訪問方法を事前にご相談させていただきます。
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div
-                class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden"
-              >
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed fw-bold bg-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq3"
-                  >
-                    <span class="text-primary me-2">Q.</span>
-                    費用はどのくらいかかりますか？
-                  </button>
-                </h2>
                 <div
-                  id="faq3"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
+                  class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden border-top-main bg-white"
                 >
-                  <div class="accordion-body bg-light text-muted">
-                    ご利用になる保険（介護保険・医療保険）や、自己負担割合、訪問回数によって異なります。目安としては介護保険の1割負担の方で、1回あたり約500円〜1,000円程度（加算等により変動）となります。詳細はお見積りも可能です。
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden"
-              >
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed fw-bold bg-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq4"
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed fw-bold bg-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3"
+                    >
+                      <span class="text-primary me-2">Q.</span>
+                      他の訪問看護ステーションとの併用は可能ですか？
+                    </button>
+                  </h2>
+                  <div
+                    id="faq3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion1"
                   >
-                    <span class="text-primary me-2">Q.</span>
-                    家族が不在の時でも来てもらえますか？
-                  </button>
-                </h2>
-                <div
-                  id="faq4"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="accordion-body bg-light text-muted">
-                    はい、可能です。お一人暮らしの方や、ご家族がお仕事で不在の時間帯にも多くの方がご利用されています。鍵の預かり方法など、安全な訪問方法を事前にご相談させていただきます。
+                    <div class="accordion-body bg-light-subtle text-muted">
+                      原則として、介護保険をご利用の場合は1つのステーションをご利用いただきます。ただし、医療保険の場合や、リハビリ目的など特別な事情がある場合は併用が可能なケースもございますので、ご相談ください。
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="text-center mt-5 p-4 bg-primary-subtle rounded-4">
-              <p class="mb-3 fw-bold">
-                他にも気になることがあれば、お気軽にお聞きください
+
+            <div class="mb-5">
+              <h2
+                class="h4 fw-bold mb-4 border-start border-primary border-4 ps-3"
+              >
+                費用・体制について
+              </h2>
+              <div class="accordion accordion-flush" id="faqAccordion2">
+                <div
+                  class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden border-top-main bg-white"
+                >
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed fw-bold bg-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq4"
+                    >
+                      <span class="text-primary me-2">Q.</span>
+                      夜間や休日に具合が悪くなった時は対応してもらえますか？
+                    </button>
+                  </h2>
+                  <div
+                    id="faq4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion2"
+                  >
+                    <div class="accordion-body bg-light-subtle text-muted">
+                      「24時間緊急訪問体制」を整えております。ご契約者様には専用の電話番号をお伝えし、夜間や休日でも看護師に繋がり、必要に応じて緊急訪問できる体制を維持しています。
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden border-top-main bg-white"
+                >
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed fw-bold bg-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq5"
+                    >
+                      <span class="text-primary me-2">Q.</span>
+                      費用はどのくらいかかりますか？
+                    </button>
+                  </h2>
+                  <div
+                    id="faq5"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion2"
+                  >
+                    <div class="accordion-body bg-light-subtle text-muted">
+                      ご利用になる保険や自己負担割合によって異なります。目安として、介護保険1割負担の方で1回あたり約500円〜1,000円程度（加算等により変動）です。詳しくはお見積りを作成いたします。
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="accordion-item mb-3 border shadow-sm rounded-4 overflow-hidden border-top-main bg-white"
+                >
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed fw-bold bg-white"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq6"
+                    >
+                      <span class="text-primary me-2">Q.</span>
+                      交通費はかかりますか？
+                    </button>
+                  </h2>
+                  <div
+                    id="faq6"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion2"
+                  >
+                    <div class="accordion-body bg-light-subtle text-muted">
+                      当ステーションが指定する通常の訪問エリア内であれば、交通費はいただいておりません。エリア外の場合は、別途実費をいただく場合がございますので、事前にお伝えいたします。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="text-center mt-5 p-5 bg-white border border-primary-subtle rounded-4 shadow-sm"
+            >
+              <div class="mb-3">
+                <i
+                  class="bi bi-patch-question text-primary"
+                  style="font-size: 3rem"
+                ></i>
+              </div>
+              <h3 class="fw-bold h5 mb-3">
+                解決しない場合はお気軽にお電話ください
+              </h3>
+              <p class="text-muted small mb-4">
+                「こんなことも頼めるの？」「費用が心配…」など、<br />
+                どんな小さな不安でも、私たちの専門スタッフが丁寧にお答えします。
               </p>
               <a
                 href="tel:00-0000-0000"
-                class="btn btn-primary rounded-pill px-4"
-                >お問い合わせはこちら</a
+                class="btn btn-primary btn-lg rounded-pill px-5 shadow"
               >
+                <i class="bi bi-telephone-fill me-2"></i>00-0000-0000
+              </a>
+              <p class="small text-muted mt-3 mb-0">
+                受付時間：月〜金 9:00〜18:00
+              </p>
             </div>
           </div>
         </div>

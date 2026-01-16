@@ -21,24 +21,257 @@
     <div data-include="partials/header.html"></div>
 
     <main class="flex-fill">
-      <section class="hero">
-        <div class="video-overlay"></div>
+      <section
+        class="hero position-relative overflow-hidden"
+        style="min-height: 80vh; display: flex; align-items: center"
+      >
+        <div
+          class="video-overlay position-absolute top-0 start-0 w-100 h-100"
+          style="background: rgba(0, 0, 0, 0.3); z-index: 1"
+        ></div>
+
         <video
           src="video/nurse-hero.mp4"
-          type="video/mp4"
+          poster="img/video-poster.jpg"
           autoplay
           loop
           muted
           playsinline
-          class="hero-video"
+          class="hero-video position-absolute top-50 start-50 translate-middle min-w-100 min-h-100"
+          style="
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: 0;
+          "
         ></video>
 
-        <div class="hero-content">
-          <h1>住み慣れた家で、<br />あなたらしい毎日を。</h1>
-          <p>24時間365日、プロの看護師が寄り添います。</p>
-          <div class="hero-buttons">
-            <a href="/service.html" class="btn-primary">サービスを見る</a>
-            <a href="/contact.html" class="btn-outline">相談してみる</a>
+        <div
+          class="container position-relative hero-content text-white text-center"
+          style="z-index: 2"
+        >
+          <h1
+            class="display-4 fw-bold mb-3"
+            style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5)"
+          >
+            住み慣れた家で、<br class="d-md-none" />あなたらしい毎日を。
+          </h1>
+          <p
+            class="lead mb-4"
+            style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5)"
+          >
+            24時間365日、プロの看護師が寄り添います。
+          </p>
+          <div class="hero-buttons d-flex justify-content-center gap-3">
+            <a
+              href="service.html"
+              class="btn btn-primary btn-lg rounded-pill px-5 shadow"
+              >サービスを見る</a
+            >
+            <a
+              href="faq.html"
+              class="btn btn-outline-light btn-lg rounded-pill px-5 shadow"
+              >よくある質問</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="features py-5">
+        <div class="container py-md-5">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold display-6 mb-3">当ステーションの3つの特徴</h2>
+            <p class="text-muted">
+              私たちは、利用者さまとご家族の「安心」を第一に考えています。
+            </p>
+            <div
+              class="mx-auto"
+              style="
+                width: 60px;
+                height: 4px;
+                background-color: var(--main-color);
+                border-radius: 2px;
+              "
+            ></div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div
+                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+              >
+                <div class="card-body">
+                  <div
+                    class="feature-icon mb-4 mx-auto d-flex align-items-center justify-content-center bg-primary-subtle rounded-circle"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i class="bi bi-clock-history fs-1 text-primary"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-3">
+                    24時間365日の<br />緊急対応体制
+                  </h3>
+                  <p class="card-text text-muted small">
+                    夜間や休日、容態が急変した際もご安心ください。専用の電話番号で看護師と24時間連絡が取れ、必要に応じて緊急訪問いたします。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+              >
+                <div class="card-body">
+                  <div
+                    class="feature-icon mb-4 mx-auto d-flex align-items-center justify-content-center bg-primary-subtle rounded-circle"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i class="bi bi-person-hearts fs-1 text-primary"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-3">
+                    一人ひとりに寄り添う<br />専門性の高いケア
+                  </h3>
+                  <p class="card-text text-muted small">
+                    経験豊富な看護師が、主治医と密に連携。医療処置だけでなく、心のケアも含めたオーダーメイドの看護を提供します。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+              >
+                <div class="card-body">
+                  <div
+                    class="feature-icon mb-4 mx-auto d-flex align-items-center justify-content-center bg-primary-subtle rounded-circle"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i class="bi bi-house-check fs-1 text-primary"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-3">
+                    住み慣れた地域での<br />生活を全力サポート
+                  </h3>
+                  <p class="card-text text-muted small">
+                    地域に根ざし、ケアマネジャーや他職種と強力なチームを形成。自分らしい暮らしを最後まで維持できるよう伴走します。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials py-5 bg-light">
+        <div class="container py-md-5">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold display-6 mb-3">ご利用者様・ご家族様の声</h2>
+            <p class="text-muted">
+              当ステーションをご利用いただいている皆さまから届いた温かいメッセージです。
+            </p>
+            <div
+              class="mx-auto"
+              style="
+                width: 60px;
+                height: 4px;
+                background-color: var(--main-color);
+                border-radius: 2px;
+              "
+            ></div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+                <div class="card-body">
+                  <div class="text-primary mb-3">
+                    <i class="bi bi-chat-quote-fill fs-1 opacity-25"></i>
+                  </div>
+                  <p
+                    class="card-text mb-4 text-muted"
+                    style="font-size: 0.95rem"
+                  >
+                    「夜間に体調を崩した際、電話ですぐに的確なアドバイスをいただき、本当に救われました。24時間つながる安心感は、家で介護をする私たち家族にとって何よりの支えです。」
+                  </p>
+                  <div class="d-flex align-items-center border-top pt-3">
+                    <div
+                      class="bg-primary-subtle rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="width: 45px; height: 45px"
+                    >
+                      <i class="bi bi-person text-primary"></i>
+                    </div>
+                    <div>
+                      <div class="fw-bold small">70代・女性のご家族様</div>
+                      <div class="text-muted" style="font-size: 0.75rem">
+                        ご利用歴：1年
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+                <div class="card-body">
+                  <div class="text-primary mb-3">
+                    <i class="bi bi-chat-quote-fill fs-1 opacity-25"></i>
+                  </div>
+                  <p
+                    class="card-text mb-4 text-muted"
+                    style="font-size: 0.95rem"
+                  >
+                    「リハビリの先生がいつも明るく励ましてくださるので、父も訪問の日を楽しみにしています。少しずつ歩ける距離が伸び、本人に自信がついてきたのが何より嬉しいです。」
+                  </p>
+                  <div class="d-flex align-items-center border-top pt-3">
+                    <div
+                      class="bg-primary-subtle rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="width: 45px; height: 45px"
+                    >
+                      <i class="bi bi-person text-primary"></i>
+                    </div>
+                    <div>
+                      <div class="fw-bold small">80代・男性のご家族様</div>
+                      <div class="text-muted" style="font-size: 0.75rem">
+                        ご利用歴：6ヶ月
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm rounded-4 p-3">
+                <div class="card-body">
+                  <div class="text-primary mb-3">
+                    <i class="bi bi-chat-quote-fill fs-1 opacity-25"></i>
+                  </div>
+                  <p
+                    class="card-text mb-4 text-muted"
+                    style="font-size: 0.95rem"
+                  >
+                    「看護師さんが医療的なことだけでなく、私の悩みも優しく聞いてくださるので、介護の疲れが癒されます。プロの目で見守ってもらえることで、家での生活を続けられています。」
+                  </p>
+                  <div class="d-flex align-items-center border-top pt-3">
+                    <div
+                      class="bg-primary-subtle rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="width: 45px; height: 45px"
+                    >
+                      <i class="bi bi-person text-primary"></i>
+                    </div>
+                    <div>
+                      <div class="fw-bold small">60代・女性（ご本人様）</div>
+                      <div class="text-muted" style="font-size: 0.75rem">
+                        ご利用歴：2年
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
