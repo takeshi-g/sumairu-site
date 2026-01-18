@@ -1,6 +1,91 @@
+/* Google Fonts の読み込み（明朝体とゴシック体） */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap");
+
+:root {
+  /* 色の定義 */
+  --smile-green: #2d5a27;
+  --smile-orange: #d97706;
+  --smile-base: #fdfcf0;
+  --smile-text: #4a4238;
+}
+
+/* メインのキャッチコピーに明朝体を適用 */
+.hero-title {
+  font-family: "Noto Serif JP", serif;
+  color: var(--smile-green);
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+}
+
+/* 説明文などは読みやすいゴシック体 */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  background-color: var(--smile-base);
+  color: var(--smile-text);
+  font-family:
+    "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    Meiryo, sans-serif;
+}
+
+/* メインカラーのボタン */
+.btn-primary {
+  background-color: var(--smile-green);
+  border-color: var(--smile-green);
+}
+.btn-primary:hover {
+  background-color: #23471e;
+  border-color: #23471e;
+}
+
+/* アクセントカラーのボタン（お問い合わせなど） */
+.btn-accent {
+  background-color: var(--smile-orange);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+.btn-accent:hover {
+  background-color: #b36205;
+  color: #fff;
+}
+
+/* ヘッダーの文字色などを調整 */
+.navbar-brand {
+  color: var(--smile-green) !important;
+}
+
+.hero-video-section {
+  background-color: #000; /* 動画読み込み前の背景色 */
+}
+
+.serif-font {
+  font-family: "Sawarabi Mincho", serif; /* 奈良らしい和風の明朝体を推奨 */
+}
+
+/* オレンジのボタン（変数を活用） */
+.btn-orange {
+  background-color: var(--smile-orange);
+  color: white;
+  border: none;
+}
+.btn-orange:hover {
+  background-color: #e67e00; /* 少し濃いオレンジ */
+  color: white;
+}
+
+/* タイトルに少し影をつけて読みやすくする */
+.hero-video-section h1 {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
 /* カードのホバーエフェクト */
 .card-hover-effect {
-  transition: transform 0.3s ease, shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    shadow 0.3s ease;
   background-color: #fff; /* 背景を白に固定 */
 }
 
@@ -86,4 +171,28 @@
   filter: grayscale(100%);
   opacity: 0.6;
   transition: all 0.3s ease;
+}
+
+.hero-video-section {
+  background-color: #000; /* 動画読み込み前の背景色 */
+}
+
+.serif-font {
+  font-family: "Sawarabi Mincho", serif; /* 奈良らしい和風の明朝体を推奨 */
+}
+
+/* オレンジのボタン（変数を活用） */
+.btn-orange {
+  background-color: var(--smile-orange);
+  color: white;
+  border: none;
+}
+.btn-orange:hover {
+  background-color: #e67e00; /* 少し濃いオレンジ */
+  color: white;
+}
+
+/* タイトルに少し影をつけて読みやすくする */
+.hero-video-section h1 {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
