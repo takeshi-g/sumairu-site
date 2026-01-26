@@ -1,0 +1,101 @@
+:root {
+  --main-pink: #fdf2f2; /* 薄ピンク（背景用） */
+  --accent-yellow: #fff176; /* 菜の花イエロー（ボタン用） */
+  --sub-beige: #fcf8f2; /* 薄ベージュ（全体背景） */
+  --text-brown: #5d4037; /* チョコブラウン（文字色） */
+}
+
+/* 全体の背景色と文字色 */
+body {
+  background-color: var(--sub-beige) !important;
+  color: var(--text-brown);
+}
+
+.serif-font {
+  font-family: "Sawarabi Mincho", serif;
+}
+
+/* ヘッダーを薄ピンクに */
+.navbar {
+  background-color: var(--main-pink) !important;
+}
+
+/* ヒーローセクションの設定 */
+.hero {
+  height: 60vh;
+  background:
+    linear-gradient(rgba(253, 242, 242, 0.3), rgba(253, 242, 242, 0.3)),
+    url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 菜の花イエローのボタン */
+.btn-accent {
+  background-color: var(--accent-yellow) !important;
+  color: var(--text-brown) !important;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4px 0 #e6d85a;
+}
+.btn-accent:hover {
+  background-color: #fdec3e !important;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #e6d85a;
+}
+
+/* SNSボタン */
+.btn-instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  color: white !important;
+  border: none;
+}
+.btn-facebook {
+  background-color: #1877f2;
+  color: white !important;
+  border: none;
+}
+
+/* フローティングボタン（スマホ専用） */
+.floating-call {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  text-decoration: none !important;
+}
+
+.call-pill {
+  background-color: #28a745; /* 電話とすぐわかる緑色 */
+  color: var(--text-brown) !important;
+  padding: 12px 20px;
+  border-radius: 50px; /* カプセル型 */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.call-pill:active {
+  transform: scale(0.95); /* 押した感が出る */
+}
+
+/* セクションごとの背景色塗り分け */
+.bg-pink {
+  background-color: var(--main-pink) !important;
+}
+.bg-beige {
+  background-color: var(--sub-beige) !important;
+}
