@@ -148,7 +148,9 @@
 
 /* カードの装飾 */
 .product-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .product-item:hover {
@@ -214,4 +216,11 @@ table th {
 table td {
   font-size: 1rem;
   line-height: 1.6;
+}
+/* プロダクトカードの画像を正方形にする */
+#products .product-card .card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* これで正方形を維持します */
+  object-fit: cover; /* 画像を切り抜いて枠いっぱいに表示します */
+  object-position: center; /* 中央を基準に切り抜き */
 }
