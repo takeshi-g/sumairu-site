@@ -1,26 +1,242 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>すまいる|Web制作</title>
-    <link rel="stylesheet" href="./css/bootstrap-reboot.min.css" />
+
+    <meta
+      name="description"
+      content="奈良県三郷町の空き家再生・不動産管理なら「すまいる」。古い家をDIYで再生し、賃貸物件として蘇らせます。所有する空き家のお悩み、ご相談ください。"
+    />
+    <meta property="og:title" content="空き家再生・不動産管理 | すまいる" />
+    <meta
+      property="og:description"
+      content="「負債」を「資産」へ。奈良・三郷町で空き家に新しい灯をともす活動をしています。"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://sumari-nara.com/real-estate.html"
+    />
+    <meta
+      property="og:image"
+      content="https://sumari-nara.com/images/ogp-house.jpg"
+    />
+
+    <title>空き家再生・不動産管理 | すまいる</title>
+    <link rel="icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap-icons-1.13.1/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <div id="common-header"></div>
-  <main class="container py-5">
-    <h2 class="border-bottom pb-3 mb-4">不動産賃貸・管理</h2>
-    <p>地域に根ざした賃貸管理・空き家相談を承っております。</p>
-    <div class="card bg-light p-4">
-      <h5>主な業務内容</h5>
-      <ul class="mb-0">
-        <li>賃貸物件の入居者管理・建物維持</li>
-        <li>空き家・遊休地の管理相談</li>
-        <li>不動産業界向けIT活用のコンサルティング</li>
-      </ul>
-    </div>
-  </main>
-  <div id="common-footer"></div>
-  <script src="./js/bootstrap.bundle.min.js"></script>
-  <script src="./js/common-loader.js"></script>
+
+  <body class="d-flex flex-column min-vh-100">
+    <div id="common-header"></div>
+
+    <main class="flex-grow-1" style="background-color: var(--smile-base)">
+      <section
+        class="position-relative text-white text-center py-5"
+        style="background-color: #5d4037; overflow: hidden"
+      >
+        <div class="container position-relative" style="z-index: 2">
+          <h1 class="display-5 fw-bold mb-3 serif-font">
+            空き家に、<br />もう一度「すまいる」を。
+          </h1>
+          <p class="lead opacity-90">
+            奈良の眠っている家を、<br
+              class="d-md-none"
+            />DIYとアイデアで再生させます。
+          </p>
+        </div>
+      </section>
+
+      <section class="py-5 bg-white">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2">
+              <img
+                src="./images/house01.jpg"
+                class="img-fluid rounded-4 shadow"
+                alt="リノベーション後の室内"
+                loading="lazy"
+              />
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <span class="badge bg-secondary mb-3 px-3 py-2 rounded-pill"
+                >Concept</span
+              >
+              <h2 class="fw-bold mb-4">
+                「負債」を「資産」へ。<br />地域に灯をともす循環作り。
+              </h2>
+              <p class="text-secondary">
+                誰も住まなくなった実家、維持費だけがかかる古民家。<br />
+                これらは放置すれば「負債」ですが、少し手を加えれば、誰かにとっての心地よい「住まい（資産）」に変わります。
+              </p>
+              <p class="text-secondary">
+                私たちは管理業務だけでなく、自ら工具を握り、床を張り、壁を塗る「実践者」として、建物のポテンシャルを最大限に引き出します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" style="background-color: var(--smile-base)">
+        <div class="container">
+          <h2 class="text-center mb-5 hero-title">主な活動・サービス</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div
+                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+              >
+                <div class="mb-3 text-center">
+                  <div
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-light"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i class="bi bi-tools fs-1" style="color: #5d4037"></i>
+                  </div>
+                </div>
+                <h4 class="fw-bold mb-3">空き家再生・DIY</h4>
+                <p class="text-secondary small">
+                  古くなった設備を修繕し、現代の暮らしに合わせてリノベーション。低予算でのDIY施工も行っています。
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+              >
+                <div class="mb-3 text-center">
+                  <div
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-light"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i
+                      class="bi bi-house-door fs-1"
+                      style="color: var(--smile-green)"
+                    ></i>
+                  </div>
+                </div>
+                <h4 class="fw-bold mb-3">賃貸・入居者管理</h4>
+                <p class="text-secondary small">
+                  再生した物件の入居者募集から、日々のトラブル対応、家賃管理まで。顔の見える距離感で入居者様の対応を行います。
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div
+                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+              >
+                <div class="mb-3 text-center">
+                  <div
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-light"
+                    style="width: 80px; height: 80px"
+                  >
+                    <i
+                      class="bi bi-pc-display fs-1"
+                      style="color: var(--smile-orange)"
+                    ></i>
+                  </div>
+                </div>
+                <h4 class="fw-bold mb-3">大家さん向けIT相談</h4>
+                <p class="text-secondary small">
+                  「物件のホームページを作りたい」そんな大家さんのためのWeb活用サポートやコンサルティングも可能です。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-white">
+        <div class="container">
+          <h2 class="text-center mb-5 hero-title">再生事例 (Before/After)</h2>
+
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+            <div class="row g-0">
+              <div class="col-md-6 position-relative">
+                <img
+                  src="https://picsum.photos/600/400?random=10"
+                  class="img-fluid w-100 h-100"
+                  style="object-fit: cover; min-height: 250px"
+                  alt="Before After"
+                  loading="lazy"
+                />
+                <div
+                  class="position-absolute top-50 start-50 translate-middle bg-white px-3 py-1 rounded-pill shadow opacity-75 fw-bold"
+                >
+                  Image Sample
+                </div>
+              </div>
+              <div class="col-md-6 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5">
+                  <h5 class="fw-bold text-success mb-2">
+                    築50年の木造平屋を再生
+                  </h5>
+                  <h3 class="fw-bold mb-3">三郷町の古民家「●●邸」</h3>
+                  <p class="text-secondary">
+                    長年空き家だった平屋を、床の張り替えから壁の漆喰塗りまでDIYで施工。
+                    レトロな雰囲気を残しつつ、水回りは最新設備に入れ替え、若い世代が住みたくなる空間へ生まれ変わりました。
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary rounded-pill px-4 btn-sm mt-2 disabled"
+                    >詳細記事Coming Soon...</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" style="background-color: #f8f9fa">
+        <div class="container text-center">
+          <h2 class="fw-bold mb-4 text-dark">空き家の管理・活用のご相談</h2>
+          <p
+            class="lead mb-5 text-secondary"
+            style="max-width: 700px; margin: 0 auto"
+          >
+            「手放したい」「貸したい」「リフォームしたい」。<br
+              class="d-none d-md-block"
+            />
+            物件の状況に合わせて、最適なプランを一緒に考えましょう。
+          </p>
+
+          <div
+            class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center"
+          >
+            <a
+              href="mailto:info@sumairu-nara.com?subject=空き家の相談&body=ご相談内容：%0D%0A"
+              class="btn btn-orange btn-lg rounded-pill px-5 shadow"
+            >
+              <i class="bi bi-envelope-fill me-2"></i>メールで相談する
+            </a>
+            <a
+              href="tel:09066770419"
+              class="btn btn-outline-dark btn-lg rounded-pill px-5 shadow-sm"
+              style="background-color: #fff"
+            >
+              <i class="bi bi-telephone-fill me-2"></i>電話をかける
+            </a>
+          </div>
+          <p class="small text-muted mt-3 mb-0">
+            ※作業中（DIY中）は電話に出られない場合がございます。<br
+              class="d-block d-md-none"
+            />留守番電話を残していただければ折り返しご連絡いたします。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div id="common-footer"></div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/common-loader.js"></script>
+  </body>
 </html>
