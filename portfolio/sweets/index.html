@@ -90,6 +90,42 @@
         </div>
       </section>
 
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="text-center mb-4">
+            <h3 class="fw-bold" style="color: #6d4c41">
+              <i class="bi bi-calendar-check me-2"></i>営業日カレンダー
+            </h3>
+            <p class="text-muted">定休日やイベント情報をリアルタイムで更新中</p>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                <div class="card-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe
+                      src="https://calendar.google.com/calendar/embed?src=ja.japanese%23holiday%40group.v.calendar.google.com&ctz=Asia%2FTokyo"
+                      style="border: 0"
+                      width="800"
+                      height="600"
+                      frameborder="0"
+                      scrolling="no"
+                    >
+                    </iframe>
+                  </div>
+                </div>
+                <div class="card-footer bg-white text-center py-3">
+                  <small class="text-muted"
+                    >※スマホのカレンダーアプリから予定を入れるだけで、ここに自動反映されます。</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about" class="py-5">
         <div class="container py-5">
           <div class="row align-items-center">
@@ -205,6 +241,7 @@
         </section>
       </section>
     </main>
+
     <div id="footer-placeholder"></div>
 
     <script src="./js/bootstrap.bundle.min.js"></script>
