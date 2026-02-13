@@ -6,24 +6,24 @@
 
     <meta
       name="description"
-      content="奈良県三郷町の空き家再生・不動産管理なら「すまいる」。古い家をDIYで再生し、賃貸物件として蘇らせます。所有する空き家のお悩み、ご相談ください。"
+      content="奈良県三郷町の空き家再生「すまいる」。所有する空き家をDIYで再生し、賃貸物件として提供しています。"
     />
-    <meta property="og:title" content="空き家再生・不動産管理 | すまいる" />
+    <meta property="og:title" content="空き家再生・活動紹介 | すまいる" />
     <meta
       property="og:description"
-      content="「負債」を「資産」へ。奈良・三郷町で空き家に新しい灯をともす活動をしています。"
+      content="「負債」を「資産」へ。奈良・三郷町で自ら空き家を再生し、新しい灯をともす活動をしています。"
     />
     <meta property="og:type" content="article" />
     <meta
       property="og:url"
-      content="https://sumari-nara.com/real-estate.html"
+      content="https://sumairu-nara.com/real-estate.html"
     />
     <meta
       property="og:image"
-      content="https://sumari-nara.com/images/ogp-house.jpg"
+      content="https://sumairu-nara.com/images/ogp-house.jpg"
     />
 
-    <title>空き家再生・不動産管理 | すまいる</title>
+    <title>空き家再生・活動紹介 | すまいる（奈良・三郷町）</title>
     <link rel="icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link
@@ -32,6 +32,56 @@
     />
     <link rel="stylesheet" href="./css/custom.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+      /* サイト共通のフォント設定（安全策） */
+      body {
+        font-family:
+          "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+          Meiryo, sans-serif;
+        color: #333;
+        line-height: 1.8;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .serif-font {
+        font-family: inherit;
+        font-weight: 700;
+      }
+
+      .hero-bg-renovation {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("./images/renovation-hero.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .before-after-card .badge-before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #6c757d;
+        z-index: 10;
+      }
+      .before-after-card .badge-after {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: var(--smile-orange, #fd7e14);
+        z-index: 10;
+      }
+      :root {
+        --smile-base: #fffaf0;
+        --smile-orange: #fd7e14;
+        --smile-green: #198754;
+      }
+    </style>
   </head>
 
   <body class="d-flex flex-column min-vh-100">
@@ -39,17 +89,21 @@
 
     <main class="flex-grow-1" style="background-color: var(--smile-base)">
       <section
-        class="position-relative text-white text-center py-5"
-        style="background-color: #5d4037; overflow: hidden"
+        class="position-relative text-white text-center py-5 hero-bg-renovation d-flex align-items-center"
+        style="min-height: 400px; background-color: #5d4037"
       >
         <div class="container position-relative" style="z-index: 2">
-          <h1 class="display-5 fw-bold mb-3 serif-font">
-            空き家に、<br />もう一度「すまいる」を。
+          <span
+            class="d-inline-block py-1 px-3 border border-light rounded-pill mb-3 small"
+          >
+            奈良・三郷町の空き家再生プロジェクト
+          </span>
+          <h1 class="display-4 fw-bold mb-4">
+            古い家に、<br />もう一度「すまいる」を。
           </h1>
-          <p class="lead opacity-90">
-            奈良の眠っている家を、<br
-              class="d-md-none"
-            />DIYとアイデアで再生させます。
+          <p class="lead opacity-90 fs-6 fs-md-5">
+            放置された空き家を、自らの手で再生。<br />
+            DIY大家として、地域に新しい住まいをつくっています。
           </p>
         </div>
       </section>
@@ -58,26 +112,32 @@
         <div class="container">
           <div class="row align-items-center g-5">
             <div class="col-lg-6 order-lg-2">
-              <img
-                src="./images/house01.jpg"
-                class="img-fluid rounded-4 shadow"
-                alt="リノベーション後の室内"
-                loading="lazy"
-              />
+              <div class="position-relative">
+                <div
+                  class="position-absolute top-0 start-0 w-100 h-100 border border-3 border-warning rounded-4 translate-middle-sm"
+                  style="transform: translate(15px, 15px); z-index: 0"
+                ></div>
+                <img
+                  src="./images/house01.jpg"
+                  class="img-fluid rounded-4 shadow position-relative"
+                  alt="リノベーション後の室内"
+                  loading="lazy"
+                  style="z-index: 1"
+                />
+              </div>
             </div>
             <div class="col-lg-6 order-lg-1">
-              <span class="badge bg-secondary mb-3 px-3 py-2 rounded-pill"
-                >Concept</span
-              >
               <h2 class="fw-bold mb-4">
-                「負債」を「資産」へ。<br />地域に灯をともす循環作り。
+                <span class="text-warning small d-block mb-2">Policy</span>
+                「自ら直し、自ら貸す」<br />顔の見える大家業。
               </h2>
               <p class="text-secondary">
-                誰も住まなくなった実家、維持費だけがかかる古民家。<br />
-                これらは放置すれば「負債」ですが、少し手を加えれば、誰かにとっての心地よい「住まい（資産）」に変わります。
+                すまいるは、不動産仲介業者や管理会社ではありません。<br />
+                三郷町を中心に、古くなった空き家を自分たちで購入・借り受けし、再生させて賃貸に出す「大家（オーナー）」です。
               </p>
               <p class="text-secondary">
-                私たちは管理業務だけでなく、自ら工具を握り、床を張り、壁を塗る「実践者」として、建物のポテンシャルを最大限に引き出します。
+                誰も住まなくなった実家、維持費だけがかかる古民家。<br />
+                これらを「負債」のままにせず、DIYとアイデアで、若い世代や地域の方が住みたくなる「資産」へと生まれ変わらせています。
               </p>
             </div>
           </div>
@@ -86,67 +146,67 @@
 
       <section class="py-5" style="background-color: var(--smile-base)">
         <div class="container">
-          <h2 class="text-center mb-5 hero-title">主な活動・サービス</h2>
+          <h2 class="text-center mb-5 fw-bold">主な活動内容</h2>
           <div class="row g-4">
             <div class="col-md-4">
               <div
-                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 hover-lift"
               >
                 <div class="mb-3 text-center">
                   <div
-                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-light"
-                    style="width: 80px; height: 80px"
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white shadow-sm"
+                    style="width: 70px; height: 70px"
                   >
-                    <i class="bi bi-tools fs-1" style="color: #5d4037"></i>
+                    <i class="bi bi-tools fs-2" style="color: #5d4037"></i>
                   </div>
                 </div>
                 <h4 class="fw-bold mb-3">空き家再生・DIY</h4>
-                <p class="text-secondary small">
-                  古くなった設備を修繕し、現代の暮らしに合わせてリノベーション。低予算でのDIY施工も行っています。
+                <p class="text-secondary small text-start">
+                  築年数の古い戸建てを中心に取得。業者任せにせず、床張りや壁の塗装など可能な限り自分たちの手で修繕（DIY）を行い、建物の魅力を引き出します。
                 </p>
               </div>
             </div>
 
             <div class="col-md-4">
               <div
-                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 hover-lift"
               >
                 <div class="mb-3 text-center">
                   <div
-                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-light"
-                    style="width: 80px; height: 80px"
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white shadow-sm"
+                    style="width: 70px; height: 70px"
                   >
                     <i
-                      class="bi bi-house-door fs-1"
+                      class="bi bi-house-heart fs-2"
                       style="color: var(--smile-green)"
                     ></i>
                   </div>
                 </div>
-                <h4 class="fw-bold mb-3">賃貸・入居者管理</h4>
-                <p class="text-secondary small">
-                  再生した物件の入居者募集から、日々のトラブル対応、家賃管理まで。顔の見える距離感で入居者様の対応を行います。
+                <h4 class="fw-bold mb-3">リーズナブルな賃貸</h4>
+                <p class="text-secondary small text-start">
+                  自社所有・自主施工を行うことで、コストを大幅に圧縮。綺麗にリノベーションされた戸建て住宅を、相場よりも借りやすい家賃設定で提供しています。
                 </p>
               </div>
             </div>
 
             <div class="col-md-4">
               <div
-                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+                class="card h-100 border-0 shadow-sm rounded-4 text-center p-4 hover-lift"
               >
                 <div class="mb-3 text-center">
                   <div
-                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-light"
-                    style="width: 80px; height: 80px"
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white shadow-sm"
+                    style="width: 70px; height: 70px"
                   >
                     <i
-                      class="bi bi-pc-display fs-1"
+                      class="bi bi-megaphone fs-2"
                       style="color: var(--smile-orange)"
                     ></i>
                   </div>
                 </div>
-                <h4 class="fw-bold mb-3">大家さん向けIT相談</h4>
-                <p class="text-secondary small">
-                  「物件のホームページを作りたい」そんな大家さんのためのWeb活用サポートやコンサルティングも可能です。
+                <h4 class="fw-bold mb-3">活動の発信</h4>
+                <p class="text-secondary small text-start">
+                  再生の様子やビフォーアフターをWebやSNSで発信。「こんな家に住んでみたい」と思ってくれる入居者様と、直接つながる場を作っています。
                 </p>
               </div>
             </div>
@@ -156,39 +216,78 @@
 
       <section class="py-5 bg-white">
         <div class="container">
-          <h2 class="text-center mb-5 hero-title">再生事例 (Before/After)</h2>
+          <h2 class="text-center mb-2 fw-bold">再生事例 (Before / After)</h2>
+          <p class="text-center text-secondary mb-5">
+            古い家の良さを残しつつ、快適な住まいへ。
+          </p>
 
-          <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
-            <div class="row g-0">
-              <div class="col-md-6 position-relative">
-                <img
-                  src="https://picsum.photos/600/400?random=10"
-                  class="img-fluid w-100 h-100"
-                  style="object-fit: cover; min-height: 250px"
-                  alt="Before After"
-                  loading="lazy"
-                />
-                <div
-                  class="position-absolute top-50 start-50 translate-middle bg-white px-3 py-1 rounded-pill shadow opacity-75 fw-bold"
-                >
-                  Image Sample
+          <div class="card border-0 shadow rounded-4 overflow-hidden mb-5">
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <div class="col-lg-7">
+                  <div class="row g-0 h-100">
+                    <div class="col-6 position-relative border-end">
+                      <span
+                        class="badge rounded-pill badge-before m-3 px-3 py-2 shadow"
+                        >Before</span
+                      >
+                      <img
+                        src="./images/real-estate/before01.JPG"
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                        style="min-height: 300px; filter: grayscale(80%)"
+                        alt="施工前の和室"
+                      />
+                    </div>
+                    <div class="col-6 position-relative">
+                      <span
+                        class="badge rounded-pill badge-after m-3 px-3 py-2 shadow"
+                        >After</span
+                      >
+                      <img
+                        src="./images/real-estate/after01.JPG"
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                        style="min-height: 300px"
+                        alt="施工後の洋室"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-6 d-flex align-items-center">
-                <div class="card-body p-4 p-lg-5">
-                  <h5 class="fw-bold text-success mb-2">
-                    築50年の木造平屋を再生
-                  </h5>
-                  <h3 class="fw-bold mb-3">三郷町の古民家「●●邸」</h3>
-                  <p class="text-secondary">
-                    長年空き家だった平屋を、床の張り替えから壁の漆喰塗りまでDIYで施工。
-                    レトロな雰囲気を残しつつ、水回りは最新設備に入れ替え、若い世代が住みたくなる空間へ生まれ変わりました。
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-outline-secondary rounded-pill px-4 btn-sm mt-2 disabled"
-                    >詳細記事Coming Soon...</a
-                  >
+
+                <div class="col-lg-5 d-flex align-items-center bg-light">
+                  <div class="p-4 p-lg-5">
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="badge bg-white text-dark border me-2"
+                        >大和郡山市小林町</span
+                      >
+                      <span class="text-muted small">所有物件 No.1</span>
+                    </div>
+                    <h3 class="fw-bold mb-3">
+                      暗かった和室を、<br />光あふれる洋室へ。
+                    </h3>
+                    <p class="text-secondary mb-4">
+                      納戸との仕切りを撤去。明るいクロスとフローリングで洋室化。
+                      押し入れは中棚を撤去しハンガーパイプを設置。クローゼットに変更し、空間を広く使えるように工夫しました。
+                    </p>
+                    <ul class="list-unstyled text-secondary small mb-4">
+                      <li>
+                        <i class="bi bi-check-circle-fill text-success me-2"></i
+                        >畳からフローリングへ変更
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle-fill text-success me-2"></i
+                        >壁・天井の塗装とクロス貼り
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle-fill text-success me-2"></i
+                        >モニター付きインターホン設置
+                      </li>
+                    </ul>
+                    <button
+                      class="btn btn-outline-dark rounded-pill px-4 btn-sm disabled"
+                    >
+                      現在満室稼働中
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -198,39 +297,36 @@
 
       <section class="py-5" style="background-color: #f8f9fa">
         <div class="container text-center">
-          <h2 class="fw-bold mb-4 text-dark">空き家の管理・活用のご相談</h2>
+          <h2 class="fw-bold mb-4 text-dark">空き家のお悩み、ありませんか？</h2>
           <p
             class="lead mb-5 text-secondary"
             style="max-width: 700px; margin: 0 auto"
           >
-            「手放したい」「貸したい」「リフォームしたい」。<br
-              class="d-none d-md-block"
-            />
-            物件の状況に合わせて、最適なプランを一緒に考えましょう。
+            「手放したい空き家がある」「賃貸で貸せる状態かわからない」<br />
+            そんな物件をお持ちの方は、ぜひ一度ご連絡ください。<br />
+            <span class="fs-6 mt-2 d-block"
+              >※弊社での買取・借り上げが可能か検討させていただきます。<br />（仲介業務・管理受託は行っておりません）</span
+            >
           </p>
 
           <div
             class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center"
           >
             <a
-              href="mailto:info@sumairu-nara.com?subject=空き家の相談&body=ご相談内容：%0D%0A"
-              class="btn btn-orange btn-lg rounded-pill px-5 shadow"
+              href="mailto:info@sumairu-nara.com?subject=空き家についての連絡&body=ご用件（空き家情報の提供など）：%0D%0A"
+              class="btn btn-warning text-white btn-lg rounded-pill px-5 shadow hover-scale"
+              style="background-color: var(--smile-orange); border: none"
             >
-              <i class="bi bi-envelope-fill me-2"></i>メールで相談する
+              <i class="bi bi-envelope-fill me-2"></i>空き家の情報を送る
             </a>
             <a
               href="tel:09066770419"
-              class="btn btn-outline-dark btn-lg rounded-pill px-5 shadow-sm"
-              style="background-color: #fff"
+              class="btn btn-white btn-lg rounded-pill px-5 shadow-sm border"
             >
-              <i class="bi bi-telephone-fill me-2"></i>電話をかける
+              <i class="bi bi-telephone-fill me-2 text-success"></i
+              >090-6677-0419
             </a>
           </div>
-          <p class="small text-muted mt-3 mb-0">
-            ※作業中（DIY中）は電話に出られない場合がございます。<br
-              class="d-block d-md-none"
-            />留守番電話を残していただければ折り返しご連絡いたします。
-          </p>
         </div>
       </section>
     </main>
