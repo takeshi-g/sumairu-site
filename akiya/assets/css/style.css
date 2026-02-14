@@ -54,3 +54,9 @@ body {
     height: 80vh; /* スマホでは少し高さを抑える */
   }
 }
+
+/* footer */
+.hover-link:hover {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
