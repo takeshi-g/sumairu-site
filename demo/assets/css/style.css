@@ -1,0 +1,51 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f8f9fa;
+}
+.hero-section {
+  position: relative;
+  /* 1. 背景画像（Unsplashからおしゃれなデスク周りの写真を使用） */
+  background-image: url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  /* 2. 文字を見やすくするための「色のフィルター」を重ねる */
+  /* 単純な黒ではなく、少し青みがかった深いネイビーのグラデーションで洗練さを演出 */
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20, 30, 48, 0.85) 0%,
+      rgba(36, 59, 85, 0.85) 100%
+    ),
+    url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+  background-blend-mode: overlay; /* 画像と色を良い感じに混ぜ合わせる */
+  color: white;
+  padding: 7rem 0; /* 高さを出してリッチな印象にする */
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* うっすら影を落として立体感を出す */
+}
+
+.hero-section h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 文字に少し影をつけて視認性を上げる */
+  letter-spacing: 0.05em; /* 文字間を少し広げて上品に */
+}
+.card {
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-5px); /* ホバー時にふわっと浮く */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  background-color: #eee;
+}
+.badge-custom {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
