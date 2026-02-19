@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Demo | Sumairu Web Works</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap-icons-1.13.1/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <button
+      class="btn btn-dark demo-settings-btn shadow"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#demoPanel"
+      aria-controls="demoPanel"
+    >
+      <i class="bi bi-gear-fill fs-4"></i>
+    </button>
+
+    <div
+      class="offcanvas offcanvas-start text-bg-dark"
+      tabindex="-1"
+      id="demoPanel"
+      aria-labelledby="demoPanelLabel"
+    >
+      <div class="offcanvas-header border-bottom border-secondary">
+        <h5 class="offcanvas-title" id="demoPanelLabel">
+          <i class="bi bi-sliders"></i> シミュレーション設定
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="mb-4">
+          <h6 class="text-light mb-3">🎨 テーマカラー</h6>
+          <div class="d-flex gap-2 flex-wrap">
+            <button
+              class="btn color-btn"
+              style="background-color: #795548"
+              onclick="changeTheme('#795548', '#d84315')"
+              title="カフェ"
+            ></button>
+            <button
+              class="btn color-btn"
+              style="background-color: #2e7d32"
+              onclick="changeTheme('#2E7D32', '#FBC02D')"
+              title="オーガニック"
+            ></button>
+            <button
+              class="btn color-btn"
+              style="background-color: #1a237e"
+              onclick="changeTheme('#1A237E', '#C62828')"
+              title="モダン"
+            ></button>
+            <button
+              class="btn color-btn"
+              style="background-color: #e65100"
+              onclick="changeTheme('#E65100', '#F57C00')"
+              title="エネルギッシュ"
+            ></button>
+            <button
+              class="btn color-btn"
+              style="background-color: #424242"
+              onclick="changeTheme('#424242', '#8D6E63')"
+              title="エレガント"
+            ></button>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h6 class="text-light mb-3">🔀 機能の切り替え</h6>
+
+          <div class="form-check form-switch mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="toggleHero"
+            />
+            <label class="form-check-label" for="toggleHero"
+              >ヒーロー：ビデオ ⇔ カルーセル</label
+            >
+          </div>
+
+          <div class="form-check form-switch mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="toggleNews"
+            />
+            <label class="form-check-label" for="toggleNews"
+              >お知らせ：手動 ⇔ note埋め込み</label
+            >
+          </div>
+
+          <div class="form-check form-switch mb-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="toggleCal"
+            />
+            <label class="form-check-label" for="toggleCal"
+              >予約：標準表 ⇔ Googleカレンダー</label
+            >
+          </div>
+        </div>
+
+        <p class="text-muted small mt-auto">
+          ※切り替えると該当セクションへ自動スクロールします。
+        </p>
+      </div>
+    </div>
+
+    <nav
+      id="mainNav"
+      class="navbar navbar-expand-lg fixed-top transition-nav py-3"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4 nav-text-color" href="index.html">
+          <i class="bi bi-cup-hot me-2"></i>Sample Cafe
+        </a>
+
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon custom-toggler"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fw-medium">
+            <li class="nav-item">
+              <a
+                class="nav-link hover-effect active nav-text-color"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hover-effect nav-text-color" href="menu.html"
+                >Menu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hover-effect nav-text-color" href="news.html"
+                >News</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hover-effect nav-text-color" href="access.html"
+                >Access</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="hero-section"
+      class="position-relative vh-100 w-100 overflow-hidden bg-dark"
+    >
+      <div id="hero-video" class="position-absolute top-0 start-0 w-100 h-100">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-100 h-100 object-fit-cover"
+        >
+          <source src="./assets/video/top-movie.mp4" type="video/mp4" />
+        </video>
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+        ></div>
+
+        <div
+          class="position-absolute top-50 start-50 translate-middle text-center text-white w-100 px-3"
+        >
+          <h1
+            class="display-3 fw-bold mb-4 gsap-hero-item"
+            style="letter-spacing: 0.1em"
+          >
+            至福の一杯を、<br />日常に。
+          </h1>
+          <p class="lead mb-5 gsap-hero-item">
+            自家焙煎コーヒーと焼き立てパンの店
+          </p>
+          <a
+            href="menu.html"
+            class="btn btn-outline-light btn-lg rounded-pill px-5 gsap-hero-item"
+            >メニューを見る</a
+          >
+        </div>
+      </div>
+
+      <div
+        id="hero-carousel"
+        class="carousel slide carousel-fade position-absolute top-0 start-0 w-100 h-100 d-none"
+        data-bs-ride="carousel"
+        data-bs-pause="false"
+        data-bs-interval="4000"
+      >
+        <div class="carousel-inner w-100 h-100">
+          <div class="carousel-item active w-100 h-100">
+            <img
+              src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1920&q=80"
+              class="d-block w-100 h-100 object-fit-cover"
+              alt="店内"
+            />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+            ></div>
+            <div
+              class="carousel-caption d-flex flex-column justify-content-center h-100 pb-0"
+            >
+              <h2 class="display-4 fw-bold">Relaxing Space</h2>
+              <p class="lead">木の温もりを感じる、落ち着いた店内</p>
+            </div>
+          </div>
+          <div class="carousel-item w-100 h-100">
+            <img
+              src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1920&q=80"
+              class="d-block w-100 h-100 object-fit-cover"
+              alt="コーヒー"
+            />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+            ></div>
+            <div
+              class="carousel-caption d-flex flex-column justify-content-center h-100 pb-0"
+            >
+              <h2 class="display-4 fw-bold">Specialty Coffee</h2>
+              <p class="lead">厳選された豆を使用した一杯</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="position-absolute bottom-0 start-50 translate-middle-x mb-4 text-white text-center gsap-hero-item z-3"
+      >
+        <span class="small d-block mb-2" style="letter-spacing: 0.2em"
+          >SCROLL</span
+        >
+        <i class="bi bi-chevron-down fs-4 animate-bounce"></i>
+      </div>
+    </section>
+
+    <section id="news-section" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4 theme-text-main fw-bold">News & Update</h2>
+        <div id="news-manual" class="row justify-content-center">
+          <div class="col-md-8">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-transparent">
+                2026.02.20 - 春の新メニューがスタートしました！
+              </li>
+              <li class="list-group-item bg-transparent">
+                2026.02.10 - 営業時間変更のお知らせ
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="news-note" class="row justify-content-center d-none">
+          <div
+            class="col-md-8 text-center p-5 border bg-white rounded shadow-sm"
+          >
+            <h4 class="text-muted">ここに note のiframeが埋め込まれます</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule-section" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 theme-text-main fw-bold">Schedule</h2>
+        <div id="schedule-table" class="row justify-content-center">
+          <div class="col-md-8">
+            <table class="table table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>月</th>
+                  <th>火</th>
+                  <th>水</th>
+                  <th>木</th>
+                  <th>金</th>
+                  <th>土</th>
+                  <th>日</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>休</td>
+                  <td>営</td>
+                  <td>営</td>
+                  <td>営</td>
+                  <td>営</td>
+                  <td>営</td>
+                  <td>休</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="schedule-gcal" class="row justify-content-center d-none">
+          <div
+            class="col-md-8 text-center p-5 border bg-light rounded shadow-sm"
+          >
+            <h4 class="text-muted">
+              ここに Googleカレンダー のiframeが埋め込まれます
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="fixed-bottom-right">
+      <a
+        href="mailto:info@example.com"
+        class="btn btn-contact btn-mail mb-2 shadow"
+        aria-label="メール"
+        ><i class="bi bi-envelope-fill"></i
+      ></a>
+      <a
+        href="#"
+        target="_blank"
+        class="btn btn-contact btn-line mb-2 shadow"
+        aria-label="LINE"
+        ><i class="bi bi-line"></i
+      ></a>
+      <a
+        href="tel:000-0000-0000"
+        class="btn btn-contact btn-phone shadow theme-bg-accent"
+        aria-label="電話"
+        ><i class="bi bi-telephone-fill"></i
+      ></a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
