@@ -41,36 +41,38 @@
       </div>
       <div class="offcanvas-body">
         <div class="mb-4">
-          <h6 class="text-light mb-3">🎨 テーマカラー</h6>
+          <h6 class="text-light mb-3">
+            🎨 テーマカラー（メイン/サブ/アクセント）
+          </h6>
           <div class="d-flex gap-2 flex-wrap">
             <button
               class="btn color-btn"
               style="background-color: #795548"
-              onclick="changeTheme('#795548', '#d84315')"
+              onclick="changeTheme('#795548', '#F5F5DC', '#d84315')"
               title="カフェ"
             ></button>
             <button
               class="btn color-btn"
               style="background-color: #2e7d32"
-              onclick="changeTheme('#2E7D32', '#FBC02D')"
+              onclick="changeTheme('#2E7D32', '#F1F8E9', '#FBC02D')"
               title="オーガニック"
             ></button>
             <button
               class="btn color-btn"
               style="background-color: #1a237e"
-              onclick="changeTheme('#1A237E', '#C62828')"
+              onclick="changeTheme('#1A237E', '#F5F5F5', '#C62828')"
               title="モダン"
             ></button>
             <button
               class="btn color-btn"
               style="background-color: #e65100"
-              onclick="changeTheme('#E65100', '#F57C00')"
+              onclick="changeTheme('#E65100', '#FFF3E0', '#FF6D00')"
               title="エネルギッシュ"
             ></button>
             <button
               class="btn color-btn"
               style="background-color: #424242"
-              onclick="changeTheme('#424242', '#8D6E63')"
+              onclick="changeTheme('#424242', '#FAFAFA', '#8D6E63')"
               title="エレガント"
             ></button>
           </div>
@@ -260,27 +262,149 @@
         <i class="bi bi-chevron-down fs-4 animate-bounce"></i>
       </div>
     </section>
-
-    <section id="news-section" class="py-5 bg-light">
+    <section
+      id="news-section"
+      class="py-5 theme-bg-sub"
+      style="transition: background-color 0.4s ease"
+    >
       <div class="container">
         <h2 class="text-center mb-4 theme-text-main fw-bold">News & Update</h2>
-        <div id="news-manual" class="row justify-content-center">
-          <div class="col-md-8">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item bg-transparent">
-                2026.02.20 - 春の新メニューがスタートしました！
-              </li>
-              <li class="list-group-item bg-transparent">
-                2026.02.10 - 営業時間変更のお知らせ
-              </li>
-            </ul>
+
+        <div
+          id="news-manual"
+          class="row justify-content-center gsap-scroll-item"
+        >
+          <div class="col-md-10">
+            <div class="list-group list-group-flush border-top border-bottom">
+              <a
+                href="news.html"
+                class="list-group-item list-group-item-action py-4 bg-transparent d-flex flex-column flex-sm-row align-items-sm-center border-bottom-0 transition-hover"
+              >
+                <div
+                  class="me-sm-4 mb-3 mb-sm-0 text-start"
+                  style="width: 120px; flex-shrink: 0"
+                >
+                  <span
+                    class="badge bg-secondary rounded-pill mb-1 d-inline-block"
+                    >2026.02.20</span
+                  >
+                  <span
+                    class="badge theme-bg-accent rounded-pill d-inline-block"
+                    >NEW</span
+                  >
+                </div>
+                <div class="me-sm-4 mb-3 mb-sm-0" style="flex-shrink: 0">
+                  <img
+                    src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80"
+                    alt="新メニュー"
+                    class="rounded shadow-sm"
+                    style="width: 100px; height: 100px; object-fit: cover"
+                  />
+                </div>
+                <div>
+                  <h6 class="fw-bold text-dark mb-2">
+                    春の新作「桜香るストロベリーラテ」がスタートしました🌸
+                  </h6>
+                  <p class="text-muted small mb-0 d-none d-sm-block">
+                    自家製ストロベリーソースとエスプレッソの絶妙なバランス。期間限定でのご提供となりますので、ぜひお早めにご賞味ください。
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="news.html"
+                class="list-group-item list-group-item-action py-4 bg-transparent d-flex flex-column flex-sm-row align-items-sm-center border-bottom-0 transition-hover"
+              >
+                <div
+                  class="me-sm-4 mb-3 mb-sm-0 text-start"
+                  style="width: 120px; flex-shrink: 0"
+                >
+                  <span
+                    class="badge bg-secondary rounded-pill mb-1 d-inline-block"
+                    >2026.02.10</span
+                  >
+                  <span class="badge bg-danger rounded-pill d-inline-block"
+                    >重要</span
+                  >
+                </div>
+                <div>
+                  <h6 class="fw-bold text-dark mb-2">
+                    3月の営業時間変更と臨時休業のお知らせ
+                  </h6>
+                  <p class="text-muted small mb-0 d-none d-sm-block">
+                    誠に勝手ながら、店内改装のため3月15日(日)は臨時休業とさせていただきます。ご迷惑をおかけいたしますがよろしくお願いいたします。
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="news.html"
+                class="list-group-item list-group-item-action py-4 bg-transparent d-flex flex-column flex-sm-row align-items-sm-center transition-hover"
+              >
+                <div
+                  class="me-sm-4 mb-3 mb-sm-0 text-start"
+                  style="width: 120px; flex-shrink: 0"
+                >
+                  <span
+                    class="badge bg-secondary rounded-pill mb-1 d-inline-block"
+                    >2026.02.05</span
+                  >
+                </div>
+                <div>
+                  <h6 class="fw-bold text-dark mb-0">
+                    地元情報誌に当店の自家焙煎コーヒーが掲載されました！
+                  </h6>
+                </div>
+              </a>
+            </div>
+
+            <div class="text-center mt-5">
+              <a
+                href="news.html"
+                class="btn btn-outline-dark rounded-pill px-5 py-2"
+                >お知らせ一覧を見る <i class="bi bi-arrow-right ms-1"></i
+              ></a>
+            </div>
           </div>
         </div>
-        <div id="news-note" class="row justify-content-center d-none">
-          <div
-            class="col-md-8 text-center p-5 border bg-white rounded shadow-sm"
-          >
-            <h4 class="text-muted">ここに note のiframeが埋め込まれます</h4>
+        <div
+          id="news-note"
+          class="row justify-content-center d-none gsap-scroll-item"
+        >
+          <div class="col-md-8">
+            <div class="text-center mb-4">
+              <span
+                class="badge bg-success px-3 py-2 rounded-pill mb-2 shadow-sm"
+                >運用費0円 / 自動連携</span
+              >
+              <p class="text-muted small">
+                ※オーナー様のスマホからnoteを更新すると、この部分が自動的に最新記事に切り替わります。
+              </p>
+            </div>
+
+            <div class="bg-white p-3 p-sm-4 rounded shadow-sm border">
+              <h5 class="fw-bold mb-4 text-dark text-center">
+                <i class="bi bi-journal-text me-2"></i>公式note 最新の記事
+              </h5>
+
+              <div id="dynamic-note-container" class="text-center">
+                <div class="spinner-border text-secondary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2 text-muted small">最新の記事を取得中...</p>
+              </div>
+
+              <div class="mt-4 pt-3 border-top text-center">
+                <a
+                  href="https://note.com/sumairu_nara"
+                  target="_blank"
+                  class="btn btn-outline-dark rounded-pill px-4 btn-sm transition-hover"
+                >
+                  noteで過去の記事も見る
+                  <i class="bi bi-box-arrow-up-right ms-1"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -345,14 +469,14 @@
       ></a>
       <a
         href="tel:000-0000-0000"
-        class="btn btn-contact btn-phone shadow theme-bg-accent"
+        class="btn btn-contact btn-phone shadow"
         aria-label="電話"
         ><i class="bi bi-telephone-fill"></i
       ></a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>

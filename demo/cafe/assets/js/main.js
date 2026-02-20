@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 🎨 1. テーマカラーの変更処理
-  // グローバルに呼び出せるよう window オブジェクトに登録
-  window.changeTheme = function (mainColor, accentColor) {
+  // 🎨 1. テーマカラーの変更処理（3色対応にアップデート）
+  window.changeTheme = function (mainColor, subColor, accentColor) {
     document.documentElement.style.setProperty("--main-color", mainColor);
+    document.documentElement.style.setProperty("--sub-color", subColor);
     document.documentElement.style.setProperty("--accent-color", accentColor);
   };
 
@@ -70,4 +70,71 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 0.5, // 画面読み込み後、0.5秒待ってから開始
     });
   }
+
+  // --- 📝 noteの最新記事を動的に取得するプログラム（キャッシュ完全回避版） ---
+  async function loadLatestNote() {
+    const noteId = "sumairu_nara";
+    const container = document.getElementById("dynamic-note-container");
+
+    if (!container) return;
+
+    // noteのRSS URL（毎秒違うURLになるよう現在時刻を付与）
+    const rssUrl = `https://note.com/${noteId}/rss?_=${new Date().getTime()}`;
+
+    // より安定した中継サービス「corsproxy.io」を使用します
+    const apiUrl = `https://corsproxy.io/?${encodeURIComponent(rssUrl)}`;
+
+    try {
+      const response = await fetch(apiUrl);
+      const textData = await response.text();
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(textData, "application/xml");
+
+      // 記事（item）のリストを取得
+      const items = xmlDoc.querySelectorAll("item");
+
+      if (items.length > 0) {
+        // 一番新しい記事（0番目）を取得
+        const latestItem = items[0];
+
+        const title = latestItem.querySelector("title").textContent;
+        const link = latestItem.querySelector("link").textContent;
+        const pubDate = latestItem.querySelector("pubDate").textContent;
+
+        // アイキャッチ画像の取得（noteのRSS特有のタグ <media:thumbnail> を探す）
+        let thumbnail =
+          "https://placehold.co/600x300/f8f9fa/a3a3a3?text=No+Image";
+        const mediaNodes = latestItem.getElementsByTagName("media:thumbnail");
+        if (mediaNodes.length > 0) {
+          thumbnail = mediaNodes[0].textContent;
+        }
+
+        // 取得した日付をフォーマット（YYYY.MM.DD）
+        const date = new Date(pubDate);
+        const formattedDate = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, "0")}.${String(date.getDate()).padStart(2, "0")}`;
+
+        // HTMLを生成してコンテナに流し込む
+        container.innerHTML = `
+          <a href="${link}" target="_blank" class="text-decoration-none text-dark d-block text-start transition-hover border rounded overflow-hidden">
+            <img src="${thumbnail}" class="w-100 object-fit-cover" style="height: 200px;" alt="note thumbnail">
+            <div class="p-3">
+              <span class="badge bg-secondary mb-2">${formattedDate}</span>
+              <h6 class="fw-bold mb-2 line-clamp-2">${title}</h6>
+              <p class="text-muted small mb-0">記事を読む <i class="bi bi-chevron-right"></i></p>
+            </div>
+          </a>
+        `;
+      } else {
+        container.innerHTML =
+          '<p class="text-muted">記事が見つかりませんでした。</p>';
+      }
+    } catch (error) {
+      console.error("note記事の取得に失敗しました:", error);
+      container.innerHTML =
+        '<p class="text-danger small">最新記事の取得に失敗しました。<br>通信環境をご確認ください。</p>';
+    }
+  }
+
+  // ページ読み込み時に実行
+  loadLatestNote();
 });
