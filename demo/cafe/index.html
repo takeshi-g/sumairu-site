@@ -124,53 +124,7 @@
       </div>
     </div>
 
-    <nav
-      id="mainNav"
-      class="navbar navbar-expand-lg fixed-top transition-nav py-3"
-    >
-      <div class="container">
-        <a class="navbar-brand fw-bold fs-4 nav-text-color" href="index.html">
-          <i class="bi bi-cup-hot me-2"></i>Sample Cafe
-        </a>
-
-        <button
-          class="navbar-toggler border-0 shadow-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon custom-toggler"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto fw-medium">
-            <li class="nav-item">
-              <a
-                class="nav-link hover-effect active nav-text-color"
-                aria-current="page"
-                href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hover-effect nav-text-color" href="menu.html"
-                >Menu</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hover-effect nav-text-color" href="news.html"
-                >News</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hover-effect nav-text-color" href="access.html"
-                >Access</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="header-container"></div>
 
     <section
       id="hero-section"
@@ -410,44 +364,183 @@
       </div>
     </section>
 
-    <section id="schedule-section" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-4 theme-text-main fw-bold">Schedule</h2>
+    <section id="schedule-section" class="py-5 bg-white gsap-scroll-item">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold theme-text-main display-6">Schedule</h2>
+          <p class="text-muted">営業日・イベントカレンダー</p>
+        </div>
+
         <div id="schedule-table" class="row justify-content-center">
           <div class="col-md-8">
-            <table class="table table-bordered text-center">
-              <thead class="table-light">
-                <tr>
-                  <th>月</th>
-                  <th>火</th>
-                  <th>水</th>
-                  <th>木</th>
-                  <th>金</th>
-                  <th>土</th>
-                  <th>日</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>休</td>
-                  <td>営</td>
-                  <td>営</td>
-                  <td>営</td>
-                  <td>営</td>
-                  <td>営</td>
-                  <td>休</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="text-center mb-4">
+              <span
+                class="badge bg-secondary px-3 py-2 rounded-pill mb-2 shadow-sm"
+                >デザイン重視パターン</span
+              >
+              <p class="text-muted small">
+                ※デザインを細かく調整でき、お店の雰囲気にぴったり合わせられます。
+              </p>
+            </div>
+
+            <div class="table-responsive shadow-sm rounded border">
+              <table class="table table-bordered text-center mb-0 align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th class="text-danger">日</th>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th class="text-primary">土</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-danger bg-light">
+                      1<br /><span class="small text-muted">休業</span>
+                    </td>
+                    <td>
+                      2<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      3<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      4<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      5<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      6<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td class="text-primary">
+                      7<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-danger bg-light">
+                      8<br /><span class="small text-muted">休業</span>
+                    </td>
+                    <td>
+                      9<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      10<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      11<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      12<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      13<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td class="text-primary">
+                      14<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-danger bg-light">
+                      15<br /><span class="small text-muted">休業</span>
+                    </td>
+                    <td class="theme-bg-sub">
+                      16<br /><span class="small text-danger fw-bold"
+                        >臨時休業</span
+                      >
+                    </td>
+                    <td>
+                      17<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      18<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      19<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td>
+                      20<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                    <td class="text-primary">
+                      21<br /><span class="small text-success fw-bold"
+                        >営業</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mt-3 text-end">
+              <p class="small text-muted mb-0">※ 定休日：毎週日曜日</p>
+            </div>
           </div>
         </div>
+
         <div id="schedule-gcal" class="row justify-content-center d-none">
-          <div
-            class="col-md-8 text-center p-5 border bg-light rounded shadow-sm"
-          >
-            <h4 class="text-muted">
-              ここに Googleカレンダー のiframeが埋め込まれます
-            </h4>
+          <div class="col-md-10">
+            <div class="text-center mb-4">
+              <span
+                class="badge bg-success px-3 py-2 rounded-pill mb-2 shadow-sm"
+                >運用費0円 / 自動連携</span
+              >
+              <p class="text-muted small">
+                ※オーナー様のスマホ（Googleカレンダー）に予定を入れるだけで、ホームページに自動反映されます。
+              </p>
+            </div>
+
+            <div class="shadow-sm rounded border gcal-container">
+              <iframe
+                src="https://calendar.google.com/calendar/embed?src=08cd3841f9e0dea91a3bd71c855a4045f4c21274016b598340432fee2ff4b4b6%40group.calendar.google.com&ctz=Asia%2FTokyo"
+                style="border: 0"
+                frameborder="0"
+                scrolling="no"
+              ></iframe>
+            </div>
+
+            <div class="mt-3 text-center">
+              <a
+                href="#"
+                class="btn btn-outline-dark rounded-pill px-4 btn-sm transition-hover"
+              >
+                カレンダーをアプリで開く
+                <i class="bi bi-calendar-event ms-1"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -474,6 +567,89 @@
         ><i class="bi bi-telephone-fill"></i
       ></a>
     </div>
+
+    <section id="access-section" class="py-5 bg-light gsap-scroll-item">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold theme-text-main display-6">Access</h2>
+          <p class="text-muted">店舗情報とアクセス</p>
+        </div>
+
+        <div class="row g-5 align-items-center justify-content-center">
+          <div class="col-lg-5">
+            <h4
+              class="fw-bold mb-4 border-bottom border-secondary pb-3 d-inline-block"
+            >
+              <i class="bi bi-cup-hot me-2"></i>Sample Cafe
+            </h4>
+
+            <ul class="list-unstyled mb-5">
+              <li class="mb-4 d-flex">
+                <i class="bi bi-geo-alt-fill text-danger fs-4 me-3 mt-1"></i>
+                <div>
+                  <strong class="d-block mb-1">住所</strong>
+                  〒636-0800<br />
+                  奈良県生駒郡三郷町〇〇 1-2-3
+                </div>
+              </li>
+              <li class="mb-4 d-flex">
+                <i
+                  class="bi bi-telephone-fill theme-text-accent fs-4 me-3 mt-1"
+                ></i>
+                <div>
+                  <strong class="d-block mb-1">電話番号</strong>
+                  0745-00-0000
+                </div>
+              </li>
+              <li class="mb-4 d-flex">
+                <i class="bi bi-clock-fill text-secondary fs-4 me-3 mt-1"></i>
+                <div>
+                  <strong class="d-block mb-1">営業時間</strong>
+                  10:00 - 18:00（L.O. 17:30）<br />
+                  <span class="text-muted small">※定休日：毎週日曜日</span>
+                </div>
+              </li>
+              <li class="mb-4 d-flex">
+                <i
+                  class="bi bi-car-front-fill text-secondary fs-4 me-3 mt-1"
+                ></i>
+                <div>
+                  <strong class="d-block mb-1">駐車場</strong>
+                  店舗前に専用駐車場 5台完備<br />
+                  <span class="text-muted small"
+                    >※満車の場合は近隣のコインパーキングをご利用ください。</span
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <a
+              href="https://maps.app.goo.gl/"
+              target="_blank"
+              class="btn btn-outline-dark rounded-pill px-4 py-2 transition-hover shadow-sm"
+            >
+              <i class="bi bi-map-fill me-2"></i>Googleマップアプリで開く
+            </a>
+          </div>
+
+          <div class="col-lg-7">
+            <div
+              class="ratio ratio-4x3 shadow-sm rounded border overflow-hidden"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.01671358784!2d135.6934893!3d34.597371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013b0c58e57929%3A0x6b6e4e86a076a084!2z5LiJ6YO355S65b255aC0!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

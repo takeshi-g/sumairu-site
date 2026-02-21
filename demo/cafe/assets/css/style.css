@@ -219,9 +219,22 @@ body {
     margin-top: 10px;
     transition: background-color 0.4s;
   }
-  /* スクロール後は白背景にする */
-  .nav-scrolled .navbar-collapse {
-    background-color: #ffffff;
+  /* --- スクロール後の透過ナビゲーション（グラスモーフィズム仕様） --- */
+  .nav-scrolled {
+    /* サブカラー（--sub-color）を70%の濃さ（30%透過）で適用 */
+    background-color: color-mix(
+      in srgb,
+      var(--sub-color) 30%,
+      transparent
+    ) !important;
+
+    /* 背景をすりガラスのように美しくぼかす（高級感の要！） */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* iPhone/Safari対応 */
+
+    /* やわらかい影を落として浮遊感を出す */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.4s ease;
   }
 }
 
@@ -274,4 +287,31 @@ body {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* --- Googleカレンダー用レスポンシブスタイル --- */
+.gcal-container {
+  position: relative;
+  padding-bottom: 80%; /* スマホ閲覧時の縦横比（少し縦長） */
+  height: 0;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+@media (min-width: 768px) {
+  .gcal-container {
+    padding-bottom: 50%; /* PC閲覧時の縦横比（横長） */
+  }
+}
+
+.gcal-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hover-opacity-100:hover {
+  opacity: 1 !important;
 }

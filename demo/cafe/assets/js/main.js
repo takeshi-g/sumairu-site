@@ -1,13 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 🎨 1. テーマカラーの変更処理（3色対応にアップデート）
+  // ====================================================
+  // 1. 共通パーツ（ヘッダー・フッター）の読み込み処理
+  // ====================================================
+  async function loadPartials() {
+    try {
+      // 1-1. ヘッダーの読み込み
+      const headerContainer = document.getElementById("header-container");
+      if (headerContainer) {
+        const response = await fetch("./assets/partials/header.html");
+        const html = await response.text();
+        headerContainer.innerHTML = html;
+
+        // ヘッダーがHTMLに挿入された「後」にスクロール設定を行う
+        setupNavbarScroll();
+      }
+
+      // 1-2. フッターの読み込み（今回追加した部分）
+      const footerContainer = document.getElementById("footer-container");
+      if (footerContainer) {
+        const response = await fetch("./assets/partials/footer.html");
+        const html = await response.text();
+        footerContainer.innerHTML = html;
+      }
+    } catch (error) {
+      console.error("共通パーツの読み込みに失敗しました:", error);
+    }
+  }
+
+  // 透過ヘッダーのスクロール検知
+  function setupNavbarScroll() {
+    const navbar = document.getElementById("mainNav");
+    if (!navbar) return;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("nav-scrolled");
+      } else {
+        navbar.classList.remove("nav-scrolled");
+      }
+    });
+  }
+
+  // パーツ読み込み実行
+  loadPartials();
+
+  // ====================================================
+  // 2. テーマカラーの変更処理（グローバル関数）
+  // ====================================================
   window.changeTheme = function (mainColor, subColor, accentColor) {
     document.documentElement.style.setProperty("--main-color", mainColor);
     document.documentElement.style.setProperty("--sub-color", subColor);
     document.documentElement.style.setProperty("--accent-color", accentColor);
   };
 
-  // 🔀 2. セクション切り替え処理の共通関数
-  // (スイッチのID, 表示エリアAのID, 表示エリアBのID, スクロール先セクションのID)
+  // ====================================================
+  // 3. セクション切り替え処理（営業デモ用トグル）
+  // ====================================================
   function setupToggle(switchId, elementA_Id, elementB_Id, sectionId) {
     const toggleSwitch = document.getElementById(switchId);
     const elA = document.getElementById(elementA_Id);
@@ -17,16 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggleSwitch.addEventListener("change", function () {
       if (this.checked) {
-        // スイッチON: パターンBを表示
         elA.classList.add("d-none");
         elB.classList.remove("d-none");
       } else {
-        // スイッチOFF: パターンAを表示
         elA.classList.remove("d-none");
         elB.classList.add("d-none");
       }
 
-      // 切り替えたセクションへスムーズにスクロールして変化を見せる（上部ナビゲーションの被りを防ぐため少しずらす）
       const section = document.getElementById(sectionId);
       if (section) {
         const y = section.getBoundingClientRect().top + window.scrollY - 80;
@@ -35,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 各スイッチのイベント設定を実行
+  // トグルの実行
   setupToggle("toggleHero", "hero-video", "hero-carousel", "hero-section");
   setupToggle("toggleNews", "news-manual", "news-note", "news-section");
   setupToggle(
@@ -44,64 +89,70 @@ document.addEventListener("DOMContentLoaded", () => {
     "schedule-gcal",
     "schedule-section",
   );
-  // --- 透過ヘッダーのスクロール検知 ---
-  const navbar = document.getElementById("mainNav");
 
-  // スクロールイベントを監視
-  window.addEventListener("scroll", () => {
-    // 50px以上スクロールしたら 'nav-scrolled' クラスを付与
-    if (window.scrollY > 50) {
-      navbar.classList.add("nav-scrolled");
-    } else {
-      // 一番上に戻ったらクラスを外して透明に戻す
-      navbar.classList.remove("nav-scrolled");
-    }
-  });
-
-  // --- 🪄 GSAP ヒーローエリアのアニメーション ---
-  // .gsap-hero-item というクラスがついた要素を順番に下からフワッと表示させます
+  // ====================================================
+  // 4. GSAP アニメーション処理
+  // ====================================================
+  // ヒーローエリアのフワッとした表示
   if (typeof gsap !== "undefined") {
     gsap.from(".gsap-hero-item", {
-      y: 40, // 40px下からスタート
-      opacity: 0, // 透明からスタート
-      duration: 1.2, // 1.2秒かけてアニメーション
-      stagger: 0.3, // 0.3秒ずつズラして表示（これがプロっぽさの秘訣です）
-      ease: "power3.out", // 滑らかな減速のイージング
-      delay: 0.5, // 画面読み込み後、0.5秒待ってから開始
+      y: 40,
+      opacity: 0,
+      duration: 1.2,
+      stagger: 0.3,
+      ease: "power3.out",
+      delay: 0.5,
     });
   }
 
-  // --- 📝 noteの最新記事を動的に取得するプログラム（キャッシュ完全回避版） ---
+  // スクロール連動表示（ScrollTrigger）
+  if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+    const scrollItems = document.querySelectorAll(".gsap-scroll-item");
+    if (scrollItems.length > 0) {
+      gsap.utils.toArray(scrollItems).forEach((item) => {
+        gsap.from(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+        });
+      });
+    }
+  }
+
+  // ====================================================
+  // 5. noteの最新記事 動的取得処理 (corsproxy.io使用)
+  // ====================================================
   async function loadLatestNote() {
     const noteId = "sumairu_nara";
     const container = document.getElementById("dynamic-note-container");
-
     if (!container) return;
 
-    // noteのRSS URL（毎秒違うURLになるよう現在時刻を付与）
     const rssUrl = `https://note.com/${noteId}/rss?_=${new Date().getTime()}`;
-
-    // より安定した中継サービス「corsproxy.io」を使用します
     const apiUrl = `https://corsproxy.io/?${encodeURIComponent(rssUrl)}`;
 
     try {
       const response = await fetch(apiUrl);
+      if (!response.ok)
+        throw new Error(`HTTP error! status: ${response.status}`);
+
       const textData = await response.text();
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(textData, "application/xml");
-
-      // 記事（item）のリストを取得
       const items = xmlDoc.querySelectorAll("item");
 
       if (items.length > 0) {
-        // 一番新しい記事（0番目）を取得
         const latestItem = items[0];
-
         const title = latestItem.querySelector("title").textContent;
         const link = latestItem.querySelector("link").textContent;
         const pubDate = latestItem.querySelector("pubDate").textContent;
 
-        // アイキャッチ画像の取得（noteのRSS特有のタグ <media:thumbnail> を探す）
         let thumbnail =
           "https://placehold.co/600x300/f8f9fa/a3a3a3?text=No+Image";
         const mediaNodes = latestItem.getElementsByTagName("media:thumbnail");
@@ -109,11 +160,9 @@ document.addEventListener("DOMContentLoaded", () => {
           thumbnail = mediaNodes[0].textContent;
         }
 
-        // 取得した日付をフォーマット（YYYY.MM.DD）
         const date = new Date(pubDate);
         const formattedDate = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, "0")}.${String(date.getDate()).padStart(2, "0")}`;
 
-        // HTMLを生成してコンテナに流し込む
         container.innerHTML = `
           <a href="${link}" target="_blank" class="text-decoration-none text-dark d-block text-start transition-hover border rounded overflow-hidden">
             <img src="${thumbnail}" class="w-100 object-fit-cover" style="height: 200px;" alt="note thumbnail">
@@ -135,6 +184,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ページ読み込み時に実行
+  // 実行
   loadLatestNote();
 });
