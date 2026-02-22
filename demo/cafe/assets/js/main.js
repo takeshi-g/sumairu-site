@@ -45,12 +45,36 @@ document.addEventListener("DOMContentLoaded", () => {
   loadPartials();
 
   // ====================================================
-  // 2. テーマカラーの変更処理（グローバル関数）
+  // 2. テーマカラーの変更・保存・復元処理（localStorage対応）
   // ====================================================
+
+  // ① 保存されている色があれば、ページ読み込み時に復元する関数
+  function restoreTheme() {
+    const savedMain = localStorage.getItem("themeMain");
+    const savedSub = localStorage.getItem("themeSub");
+    const savedAccent = localStorage.getItem("themeAccent");
+
+    if (savedMain && savedSub && savedAccent) {
+      document.documentElement.style.setProperty("--main-color", savedMain);
+      document.documentElement.style.setProperty("--sub-color", savedSub);
+      document.documentElement.style.setProperty("--accent-color", savedAccent);
+    }
+  }
+
+  // ページを開いた瞬間に、色の復元を実行する
+  restoreTheme();
+
+  // ② 色を変更し、同時にブラウザ（localStorage）に保存する関数
   window.changeTheme = function (mainColor, subColor, accentColor) {
+    // 画面の色を変える
     document.documentElement.style.setProperty("--main-color", mainColor);
     document.documentElement.style.setProperty("--sub-color", subColor);
     document.documentElement.style.setProperty("--accent-color", accentColor);
+
+    // 次のページでも使えるように、ブラウザに色を記憶させる
+    localStorage.setItem("themeMain", mainColor);
+    localStorage.setItem("themeSub", subColor);
+    localStorage.setItem("themeAccent", accentColor);
   };
 
   // ====================================================

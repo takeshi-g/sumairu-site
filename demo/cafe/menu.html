@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Sample Cafe - Sumairu Web Works</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap-icons-1.13.1/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="bg-light">
+    <div id="header-container"></div>
+
+    <section
+      class="position-relative d-flex align-items-center justify-content-center page-hero bg-menu-hero"
+    >
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"
+      ></div>
+      <div
+        class="position-relative text-center text-white gsap-scroll-item z-1"
+      >
+        <h1 class="display-4 fw-bold mb-3" style="letter-spacing: 0.1em">
+          Menu
+        </h1>
+        <p class="lead mb-0">自家焙煎コーヒーと、こだわりのフード</p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="mb-5 gsap-scroll-item">
+          <h2
+            class="theme-text-main fw-bold border-bottom border-2 pb-2 mb-4 d-inline-block"
+          >
+            Coffee & Drink
+          </h2>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm transition-hover">
+                <div class="position-relative overflow-hidden menu-img-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80"
+                    class="w-100 h-100 object-fit-cover"
+                    alt="ハンドドリップコーヒー"
+                  />
+                  <span
+                    class="position-absolute top-0 start-0 m-3 badge theme-bg-accent px-3 py-2 rounded-pill shadow-sm"
+                    >Recommend</span
+                  >
+                </div>
+                <div class="card-body p-4">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <h5 class="fw-bold mb-0">ハンドドリップコーヒー</h5>
+                    <span class="fs-5 fw-bold theme-text-main">¥ 650</span>
+                  </div>
+                  <p class="text-muted small mb-0">
+                    世界中から厳選したスペシャルティコーヒー豆を使用。ご注文ごとに丁寧にハンドドリップで抽出します。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm transition-hover">
+                <div class="position-relative overflow-hidden menu-img-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
+                    class="w-100 h-100 object-fit-cover"
+                    alt="ストロベリーラテ"
+                  />
+                </div>
+                <div class="card-body p-4">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <h5 class="fw-bold mb-0">季節のフルーツラテ</h5>
+                    <span class="fs-5 fw-bold theme-text-main">¥ 720</span>
+                  </div>
+                  <p class="text-muted small mb-0">
+                    自家製のフルーツシロップと濃厚なミルクの絶妙なバランス。季節によってフレーバーが変わります。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm transition-hover">
+                <div class="position-relative overflow-hidden menu-img-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1557006021-b85faa2bc5e2?auto=format&fit=crop&w=600&q=80"
+                    class="w-100 h-100 object-fit-cover"
+                    alt="抹茶ラテ"
+                  />
+                </div>
+                <div class="card-body p-4">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-2"
+                  >
+                    <h5 class="fw-bold mb-0">濃厚 抹茶ラテ</h5>
+                    <span class="fs-5 fw-bold theme-text-main">¥ 680</span>
+                  </div>
+                  <p class="text-muted small mb-0">
+                    京都の老舗茶園から取り寄せた宇治抹茶を贅沢に使用。ほろ苦さとミルクの甘みが引き立ちます。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gsap-scroll-item">
+          <h2
+            class="theme-text-main fw-bold border-bottom border-2 pb-2 mb-4 d-inline-block"
+          >
+            Food & Sweets
+          </h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div
+                class="card border-0 shadow-sm transition-hover d-flex flex-sm-row overflow-hidden h-100"
+              >
+                <div class="w-sm-50menu-img-wrap-horizontal">
+                  <img
+                    src="https://images.unsplash.com/photo-1481070414801-51fd732d7184?auto=format&fit=crop&w=600&q=80"
+                    class="w-100 h-100 object-fit-cover"
+                    alt="ランチプレート"
+                  />
+                </div>
+                <div
+                  class="card-body p-4 w-sm-50 d-flex flex-column justify-content-center"
+                >
+                  <h5 class="fw-bold mb-2">彩り野菜のランチプレート</h5>
+                  <p class="text-muted small mb-3">
+                    地元農家から仕入れた新鮮な野菜をたっぷり使った、ヘルシーでボリューム満点の一皿です。
+                  </p>
+                  <span class="fs-5 fw-bold theme-text-main">¥ 1,200</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div
+                class="card border-0 shadow-sm transition-hover d-flex flex-sm-row overflow-hidden h-100"
+              >
+                <div class="w-sm-50menu-img-wrap-horizontal">
+                  <img
+                    src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=80"
+                    class="w-100 h-100 object-fit-cover"
+                    alt="チーズケーキ"
+                  />
+                </div>
+                <div
+                  class="card-body p-4 w-sm-50 d-flex flex-column justify-content-center"
+                >
+                  <h5 class="fw-bold mb-2">自家製ベイクドチーズケーキ</h5>
+                  <p class="text-muted small mb-3">
+                    クリームチーズをたっぷり使い、しっとり濃厚に焼き上げました。コーヒーとの相性は抜群です。
+                  </p>
+                  <span class="fs-5 fw-bold theme-text-main">¥ 580</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <div class="fixed-bottom-right z-3">
+      <a
+        href="mailto:info@example.com"
+        class="btn btn-contact btn-mail mb-2 shadow"
+        aria-label="メール"
+        ><i class="bi bi-envelope-fill"></i
+      ></a>
+      <a
+        href="#"
+        target="_blank"
+        class="btn btn-contact btn-line mb-2 shadow"
+        aria-label="LINE"
+        ><i class="bi bi-line"></i
+      ></a>
+      <a
+        href="tel:000-0000-0000"
+        class="btn btn-contact btn-phone shadow"
+        aria-label="電話"
+        ><i class="bi bi-telephone-fill"></i
+      ></a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
