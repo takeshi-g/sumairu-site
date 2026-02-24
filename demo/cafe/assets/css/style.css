@@ -173,12 +173,19 @@ body {
   background-color: transparent; /* 初期は透明 */
 }
 
-/* 2. スクロール後にJSで付与されるクラス */
+/* 2. スクロール後にJSで付与されるクラス（完全版グラスモーフィズム） */
 .nav-scrolled {
-  background-color: #ffffff !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* ふんわり影をつける */
-  padding-top: 0.8rem !important; /* スクロール後は少しスリムにする演出 */
+  background-color: color-mix(
+    in srgb,
+    var(--sub-color) 30%,
+    transparent
+  ) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  padding-top: 0.8rem !important;
   padding-bottom: 0.8rem !important;
+  transition: all 0.4s ease;
 }
 
 /* 3. 文字色の制御（初期は動画/画像の上なので白） */
@@ -218,23 +225,6 @@ body {
     border-radius: 8px;
     margin-top: 10px;
     transition: background-color 0.4s;
-  }
-  /* --- スクロール後の透過ナビゲーション（グラスモーフィズム仕様） --- */
-  .nav-scrolled {
-    /* サブカラー（--sub-color）を70%の濃さ（30%透過）で適用 */
-    background-color: color-mix(
-      in srgb,
-      var(--sub-color) 30%,
-      transparent
-    ) !important;
-
-    /* 背景をすりガラスのように美しくぼかす（高級感の要！） */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* iPhone/Safari対応 */
-
-    /* やわらかい影を落として浮遊感を出す */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
-    transition: all 0.4s ease;
   }
 }
 
@@ -356,4 +346,44 @@ body {
 /* Shopページ専用の背景画像（カフェの焙煎機や豆のイメージ） */
 .bg-shop-hero {
   background-image: url("https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=1920&q=80");
+}
+
+/* Instagramボタンの「座布団」と文字色の設定 */
+.btn-insta {
+  /* インスタ特有のグラデーション背景 */
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  ) !important;
+
+  /* アイコンの色を白に固定 */
+  color: #ffffff !important;
+
+  /* 枠線を消して影を強調 */
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ホバーした時に少し明るくして「押せる感」を出す */
+.btn-insta:hover {
+  opacity: 0.9;
+  color: #ffffff !important;
+}
+
+/* --- フローティングボタンの表示制御 --- */
+
+/* 1. 基本は「非表示」にする（PCなど大画面時） */
+#floating-container {
+  display: none;
+}
+
+/* 2. 画面幅が「991.98px以下（スマホ・タブレット）」の時だけ表示する */
+@media (max-width: 991.98px) {
+  #floating-container {
+    display: block;
+  }
 }

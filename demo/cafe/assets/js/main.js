@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ====================================================
-  // 1. 共通パーツ（ヘッダー・フッター）の読み込み処理
+  // 1. 共通パーツ（ヘッダー・フッター・フローティング）の読み込み処理
   // ====================================================
   async function loadPartials() {
     try {
@@ -15,12 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
         setupNavbarScroll();
       }
 
-      // 1-2. フッターの読み込み（今回追加した部分）
+      // 1-2. フッターの読み込み
       const footerContainer = document.getElementById("footer-container");
       if (footerContainer) {
         const response = await fetch("./assets/partials/footer.html");
         const html = await response.text();
         footerContainer.innerHTML = html;
+      }
+
+      // 1-3. フローティングボタンの読み込み（今回追加！）
+      const floatingContainer = document.getElementById("floating-container");
+      if (floatingContainer) {
+        const response = await fetch("./assets/partials/floating.html");
+        const html = await response.text();
+        floatingContainer.innerHTML = html;
       }
     } catch (error) {
       console.error("共通パーツの読み込みに失敗しました:", error);
@@ -104,9 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // トグルの実行
+  // トグルの実行（※不要になった toggleNews の処理を削除しました）
   setupToggle("toggleHero", "hero-video", "hero-carousel", "hero-section");
-  setupToggle("toggleNews", "news-manual", "news-note", "news-section");
   setupToggle(
     "toggleCal",
     "schedule-table",
@@ -149,65 +156,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
-
-  // ====================================================
-  // 5. noteの最新記事 動的取得処理 (corsproxy.io使用)
-  // ====================================================
-  async function loadLatestNote() {
-    const noteId = "sumairu_nara";
-    const container = document.getElementById("dynamic-note-container");
-    if (!container) return;
-
-    const rssUrl = `https://note.com/${noteId}/rss?_=${new Date().getTime()}`;
-    const apiUrl = `https://corsproxy.io/?${encodeURIComponent(rssUrl)}`;
-
-    try {
-      const response = await fetch(apiUrl);
-      if (!response.ok)
-        throw new Error(`HTTP error! status: ${response.status}`);
-
-      const textData = await response.text();
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(textData, "application/xml");
-      const items = xmlDoc.querySelectorAll("item");
-
-      if (items.length > 0) {
-        const latestItem = items[0];
-        const title = latestItem.querySelector("title").textContent;
-        const link = latestItem.querySelector("link").textContent;
-        const pubDate = latestItem.querySelector("pubDate").textContent;
-
-        let thumbnail =
-          "https://placehold.co/600x300/f8f9fa/a3a3a3?text=No+Image";
-        const mediaNodes = latestItem.getElementsByTagName("media:thumbnail");
-        if (mediaNodes.length > 0) {
-          thumbnail = mediaNodes[0].textContent;
-        }
-
-        const date = new Date(pubDate);
-        const formattedDate = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, "0")}.${String(date.getDate()).padStart(2, "0")}`;
-
-        container.innerHTML = `
-          <a href="${link}" target="_blank" class="text-decoration-none text-dark d-block text-start transition-hover border rounded overflow-hidden">
-            <img src="${thumbnail}" class="w-100 object-fit-cover" style="height: 200px;" alt="note thumbnail">
-            <div class="p-3">
-              <span class="badge bg-secondary mb-2">${formattedDate}</span>
-              <h6 class="fw-bold mb-2 line-clamp-2">${title}</h6>
-              <p class="text-muted small mb-0">記事を読む <i class="bi bi-chevron-right"></i></p>
-            </div>
-          </a>
-        `;
-      } else {
-        container.innerHTML =
-          '<p class="text-muted">記事が見つかりませんでした。</p>';
-      }
-    } catch (error) {
-      console.error("note記事の取得に失敗しました:", error);
-      container.innerHTML =
-        '<p class="text-danger small">最新記事の取得に失敗しました。<br>通信環境をご確認ください。</p>';
-    }
-  }
-
-  // 実行
-  loadLatestNote();
 });

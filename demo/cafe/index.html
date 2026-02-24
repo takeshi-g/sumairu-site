@@ -98,18 +98,6 @@
               class="form-check-input"
               type="checkbox"
               role="switch"
-              id="toggleNews"
-            />
-            <label class="form-check-label" for="toggleNews"
-              >お知らせ：手動 ⇔ note埋め込み</label
-            >
-          </div>
-
-          <div class="form-check form-switch mb-3">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              role="switch"
               id="toggleCal"
             />
             <label class="form-check-label" for="toggleCal"
@@ -311,54 +299,6 @@
                 </div>
               </a>
             </div>
-
-            <div class="text-center mt-5">
-              <a
-                href="news.html"
-                class="btn btn-outline-dark rounded-pill px-5 py-2"
-                >お知らせ一覧を見る <i class="bi bi-arrow-right ms-1"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div
-          id="news-note"
-          class="row justify-content-center d-none gsap-scroll-item"
-        >
-          <div class="col-md-8">
-            <div class="text-center mb-4">
-              <span
-                class="badge bg-success px-3 py-2 rounded-pill mb-2 shadow-sm"
-                >運用費0円 / 自動連携</span
-              >
-              <p class="text-muted small">
-                ※オーナー様のスマホからnoteを更新すると、この部分が自動的に最新記事に切り替わります。
-              </p>
-            </div>
-
-            <div class="bg-white p-3 p-sm-4 rounded shadow-sm border">
-              <h5 class="fw-bold mb-4 text-dark text-center">
-                <i class="bi bi-journal-text me-2"></i>公式note 最新の記事
-              </h5>
-
-              <div id="dynamic-note-container" class="text-center">
-                <div class="spinner-border text-secondary" role="status">
-                  <span class="visually-hidden">Loading...</span>
-                </div>
-                <p class="mt-2 text-muted small">最新の記事を取得中...</p>
-              </div>
-
-              <div class="mt-4 pt-3 border-top text-center">
-                <a
-                  href="https://note.com/sumairu_nara"
-                  target="_blank"
-                  class="btn btn-outline-dark rounded-pill px-4 btn-sm transition-hover"
-                >
-                  noteで過去の記事も見る
-                  <i class="bi bi-box-arrow-up-right ms-1"></i>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -546,28 +486,6 @@
       </div>
     </section>
 
-    <div class="fixed-bottom-right">
-      <a
-        href="mailto:info@example.com"
-        class="btn btn-contact btn-mail mb-2 shadow"
-        aria-label="メール"
-        ><i class="bi bi-envelope-fill"></i
-      ></a>
-      <a
-        href="#"
-        target="_blank"
-        class="btn btn-contact btn-line mb-2 shadow"
-        aria-label="LINE"
-        ><i class="bi bi-line"></i
-      ></a>
-      <a
-        href="tel:000-0000-0000"
-        class="btn btn-contact btn-phone shadow"
-        aria-label="電話"
-        ><i class="bi bi-telephone-fill"></i
-      ></a>
-    </div>
-
     <section id="access-section" class="py-5 bg-light gsap-scroll-item">
       <div class="container py-5">
         <div class="text-center mb-5">
@@ -648,7 +566,7 @@
         </div>
       </div>
     </section>
-
+    <div id="floating-container"></div>
     <div id="footer-container"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
