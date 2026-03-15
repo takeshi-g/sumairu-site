@@ -103,3 +103,31 @@ body {
   background-color: #05a044;
   color: white;
 }
+
+.gsap-fade-up {
+  will-change: transform, opacity;
+}
+
+/* 洗練されたすりガラス風ボタン */
+.btn-elegant {
+  background: rgba(26, 26, 26, 0.85); /* 少し透ける黒 */
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px); /* すりガラス効果 */
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-elegant:hover {
+  background: #fff;
+  color: #1a1a1a;
+  transform: translateY(-4px); /* フワッと浮く */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* 影が広がる */
+  border: 1px solid #fff;
+}
+
+/* アニメーションの処理を軽くして滑らかにするおまじない */
+.gsap-card,
+.gsap-fade-up {
+  will-change: transform, opacity;
+}
