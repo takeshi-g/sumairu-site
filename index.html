@@ -3,262 +3,165 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="奈良県三郷町のWeb制作と空き家再生「すまいる」。地域密着でホームページ制作やDIYによる古民家活用を行い、暮らしを豊かにするお手伝いをします。"
+    <title>Web制作 | すまいる Web Works (奈良)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
     />
-    <meta
-      property="og:title"
-      content="三郷町・奈良のWeb制作と空き家再生|すまいる"
-    />
-    <meta
-      property="og:description"
-      content="奈良県三郷町を拠点に、Web制作と空き家再生を展開。地域とともに育むパートナー。"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sumari-nara.com/" />
-    <meta
-      property="og:image"
-      content="https://sumari-nara.com/images/ogp-image.jpg"
-    />
-    <title>
-      三郷町・奈良県のホームページ作成・Web制作なら格安の『すまいる』|空き家再生
-    </title>
-    <link rel="icon" href="assets/images/favicon.ico" />
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
-      href="assets/bootstrap-icons-1.13.1/bootstrap-icons.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="assets/css/custom.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-
-  <body class="d-flex flex-column min-vh-100">
-    <div id="common-header"></div>
-    <main class="flex-grow-1">
-      <section
-        class="hero-video-section position-relative overflow-hidden text-white d-flex align-items-center"
-        style="min-height: 80vh"
+  <body>
+    <section class="hero-section d-flex align-items-center">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content text-center px-3">
+        <div class="gsap-hero-item">
+          <p class="section-title mb-4">Sumairu Web Works</p>
+          <h1 class="display-4 main-copy mb-5">
+            街の素敵なお店を、<br class="d-md-none" />Webでもっと素敵な存在に。
+          </h1>
+          <p
+            class="lead sub-copy mb-5 mx-auto"
+            style="max-width: 700px; font-size: 1.1rem"
+          >
+            奈良で愛されるお店のための、デザインと集客が両立するWebサイト制作。<br />
+            古いホームページからのリニューアルや、初めてのサイト開設も。<br />
+            専門知識は一切不要で、洗練されたデジタル空間をお作りします。
+          </p>
+          <a
+            href="./demo/"
+            class="btn btn-dark btn-lg rounded-pill px-5 py-3 shadow-sm transition-hover"
+          >
+            <i class="bi bi-laptop me-2"></i>デモサイトを体験する
+          </a>
+        </div>
+      </div>
+      <div
+        class="position-absolute bottom-0 start-50 translate-middle-x mb-4 text-center gsap-hero-item z-3"
       >
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          poster="assets/images/hero-poster.jpg"
-          class="position-absolute w-100 h-100"
-          style="
-            object-fit: cover;
-            z-index: 0;
-            filter: brightness(0.7);
-            background-color: #000;
-          "
+        <span
+          class="small d-block mb-2"
+          style="letter-spacing: 0.2em; color: #555"
+          >SCROLL</span
         >
-          <source src="assets/video/sumairu-deer-hero.mp4" type="video/mp4" />
+        <i class="bi bi-chevron-down fs-5" style="color: #555"></i>
+      </div>
+    </section>
 
-          <img src="assets/images/deer02.jpg" alt="奈良の鹿" />
-        </video>
+    <section
+      class="py-5 bg-light"
+      style="padding-top: 6rem !important; padding-bottom: 6rem !important"
+    >
+      <div class="container">
+        <div class="text-center gsap-fade-up">
+          <span class="section-title">Why Choose Us</span>
+          <h2 class="section-heading h2">すまいるが選ばれる3つの理由</h2>
+        </div>
 
-        <div class="container position-relative" style="z-index: 1">
-          <div class="row">
-            <div class="col-lg-8">
-              <span
-                class="badge rounded-pill mb-3 px-3 py-2"
-                style="background-color: var(--smile-orange)"
-                >奈良県 三郷町 密着</span
-              >
-              <h1 class="display-3 fw-bold mb-4 serif-font">
-                ホーム(家)なら、<br />
-                すまいる。
-              </h1>
-              <p class="lead mb-5 opacity-90">
-                「すまいる」は、Web制作と空き家再生を通じて、<br
-                  class="d-none d-md-block"
-                />
-                地域とともに、あなただけの暮らしを健やかに育むパートナーです。
+        <div class="row g-4 mt-2">
+          <div class="col-md-4 gsap-fade-up">
+            <div class="feature-card">
+              <i class="bi bi-palette2 feature-icon"></i>
+              <h4 class="h5 fw-bold mb-3">
+                お店の空気を伝える<br />洗練されたデザイン
+              </h4>
+              <p class="text-muted small mb-0">
+                カフェ、サロン、雑貨店など、そのお店が持つ独自の雰囲気やこだわりを、美しい余白とタイポグラフィでWeb上に表現します。訪問者の心を惹きつける第一印象を作ります。
               </p>
-              <div class="d-flex gap-3">
-                <a
-                  href="web.html"
-                  class="btn btn-orange btn-lg rounded-pill px-5 shadow"
-                  >Web制作プラン・料金<i
-                    class="bi bi-arrow-right-circle ms-2"
-                  ></i
-                ></a>
-                <a
-                  href="mailto:info@sumairu-nara.com?subject=お問い合わせ（すまいるWebサイトより）&body=ご相談内容をご記入ください：%0D%0A"
-                  class="btn btn-outline-light btn-lg rounded-pill px-5"
-                  >メールで無料相談</a
-                >
-              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 gsap-fade-up" style="transition-delay: 0.1s">
+            <div class="feature-card">
+              <i class="bi bi-phone feature-icon"></i>
+              <h4 class="h5 fw-bold mb-3">
+                パソコン不要。<br />スマホで完結する手軽さ
+              </h4>
+              <p class="text-muted small mb-0">
+                「更新が面倒」というお悩みを解決します。普段お使いのGoogleカレンダーに予定を入れるだけで、サイト上の営業日カレンダーが自動更新されるなど、現場の負担にならないスマートな仕組みを構築します。
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 gsap-fade-up" style="transition-delay: 0.2s">
+            <div class="feature-card">
+              <i class="bi bi-graph-up-arrow feature-icon"></i>
+              <h4 class="h5 fw-bold mb-3">
+                利益に貢献する<br />経営者目線のサイト設計
+              </h4>
+              <p class="text-muted small mb-0">
+                見栄えだけでなく、長期的な運用コストを最小限に抑える設計をご提案します。自らも実業を手がける経営者の視点から、無駄な経費を削ぎ落とし、お店の利益に直結するWeb戦略を一緒に考えます。
+              </p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
+    <section
+      class="py-5 text-white"
+      style="
+        background-color: #1a1a1a;
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+      "
+    >
+      <div class="container text-center gsap-fade-up">
+        <span class="section-title text-white-50">Simulation Demo</span>
+        <h2 class="section-heading h2 text-white mb-4">
+          完成のイメージを、<br class="d-md-none" />まずは実際に触って体験。
+        </h2>
+        <p
+          class="lead mb-5 mx-auto text-white-50"
+          style="max-width: 600px; font-size: 1rem"
+        >
+          「うちの店ならどんな雰囲気になるだろう？」<br />
+          ワンクリックでお店のテーマカラーを着せ替えたり、カレンダーの連動機能を確認できるシミュレーションサイトをご用意しました。
+        </p>
         <div
-          class="position-absolute bottom-0 start-0 w-100"
-          style="
-            height: 50px;
-            background: linear-gradient(to top, var(--smile-base), transparent);
-          "
-        ></div>
-      </section>
-
-      <section class="py-5">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div
-                class="card h-100 border-0 shadow-sm rounded-4 position-relative card-hover-effect overflow-hidden"
-              >
-                <div class="card-body d-flex flex-column p-4">
-                  <div class="mb-3 text-center">
-                    <i
-                      class="bi bi-laptop fs-1"
-                      style="color: var(--smile-green)"
-                    ></i>
-                  </div>
-                  <h3 class="fw-bold mb-3">Web制作・運営</h3>
-                  <p class="text-secondary mb-4">
-                    「まずは、じっくりお話を伺うことから。」<br />
-                    奈良・三郷町周辺を拠点に、対面でのコンセプト作りを大切にしています。
-                    個人事業ならではのフットワークの軽さと低予算で、あなたのビジネスの「最初の一歩」を丁寧に形にします。
-                  </p>
-                  <p class="fw-bold" style="color: var(--smile-orange)">
-                    詳しく見る<i class="bi bi-arrow-right move-arrow"></i>
-                  </p>
-                  <div class="mt-auto">
-                    <img
-                      src="assets/images/web01.jpg"
-                      loading="lazy"
-                      class="img-fluid rounded-3"
-                      alt="Web制作イメージ"
-                    />
-                  </div>
-                  <a href="web.html" class="stretched-link"></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div
-                class="card h-100 border-0 shadow-sm rounded-4 position-relative card-hover-effect overflow-hidden"
-              >
-                <div class="card-body d-flex flex-column p-4">
-                  <div class="mb-3 text-center">
-                    <i
-                      class="bi bi-house-heart fs-1"
-                      style="color: var(--smile-orange)"
-                    ></i>
-                  </div>
-                  <h3 class="fw-bold mb-3">空き家再生・賃貸</h3>
-                  <p class="text-secondary mb-4">
-                    奈良の古い空き家を自ら取得し、現代のライフスタイルに合わせて再生。
-                    「負債」を「資産」へ変え、街に新しい灯をともす活動を行っています。
-                  </p>
-                  <p class="fw-bold" style="color: var(--smile-orange)">
-                    詳しく見る<i class="bi bi-arrow-right move-arrow"></i>
-                  </p>
-                  <div class="mt-auto">
-                    <img
-                      src="assets/images/house01.jpg"
-                      loading="lazy"
-                      class="img-fluid rounded-3"
-                      alt="空き家再生イメージ"
-                    />
-                  </div>
-                  <a href="real-estate.html" class="stretched-link"></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          class="ratio ratio-16x9 mx-auto shadow-lg rounded overflow-hidden mb-5"
+          style="max-width: 800px; border: 1px solid #333"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+            alt="デモサイトイメージ"
+            class="object-fit-cover w-100 h-100 opacity-75"
+          />
         </div>
-      </section>
-      <section class="py-5" style="background-color: #f1f5f9">
-        <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-10">
-              <div class="p-4 p-md-5 bg-white shadow-sm rounded-4 text-center">
-                <span
-                  class="badge rounded-pill mb-3 px-3 py-2"
-                  style="background-color: var(--smile-green); opacity: 0.8"
-                  >すまいる便り</span
-                >
-                <h2 class="serif-font mb-4">
-                  活動の舞台裏を、日々綴っています。
-                </h2>
-                <p class="text-secondary mb-5 mx-auto" style="max-width: 700px">
-                  三郷町での空き家再生プロジェクトの進捗や、Webサイト運営に役立つちょっとしたヒントなど。<br
-                    class="d-none d-md-block"
-                  />
-                  私たちの「今」をnoteで発信しています。
-                </p>
-                <a
-                  href="https://note.com/sumairu_nara"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-accent btn-lg rounded-pill px-5 shadow"
-                >
-                  <i class="bi bi-pencil-square me-2"></i>最新の投稿を読む
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="partners" class="py-5 bg-white">
-        <div class="container text-center">
-          <h2 class="serif-font mb-5 fs-4 tracking-widest">Partners</h2>
-          <div class="row justify-content-center g-4">
-            <div class="col-6 col-md-3">
-              <div class="partner-logo-wrapper shadow-sm rounded">
-                <img
-                  src="https://picsum.photos/400/400?random=1"
-                  loading="lazy"
-                  alt="協賛社A"
-                />
-              </div>
-            </div>
+        <a
+          href="./demo/"
+          class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 transition-hover"
+        >
+          デモサイトを開く <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </section>
 
-            <div class="col-6 col-md-3">
-              <div class="partner-logo-wrapper shadow-sm rounded">
-                <img
-                  src="https://picsum.photos/400/400?random=2"
-                  loading="lazy"
-                  alt="協賛社B"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="floating-contact">
+      <a
+        href="tel:0745-00-0000"
+        class="btn btn-dark rounded-circle shadow-lg d-flex align-items-center justify-content-center"
+        style="width: 60px; height: 60px"
+        title="電話をかける"
+      >
+        <i class="bi bi-telephone-fill fs-4"></i>
+      </a>
+      <a
+        href="#"
+        class="btn btn-line rounded-circle shadow-lg d-flex align-items-center justify-content-center"
+        style="width: 60px; height: 60px"
+        title="LINEで相談"
+      >
+        <i class="bi bi-line fs-3"></i>
+      </a>
+    </div>
 
-      <section class="py-5" style="background-color: #fff">
-        <div class="container">
-          <div class="row justify-content-center text-center">
-            <div class="col-lg-8">
-              <h2 class="hero-title mb-4">
-                デジタルとリアルの両面から、<br />あなたの「すまいる」を支えたい。
-              </h2>
-              <p class="lead text-secondary mb-4">
-                Webの世界は便利ですが、最後は「人」と「場所」の信頼が大切です。<br />
-                私は奈良の地で不動産という実体のある資産を管理しながら、その経験をWeb制作に活かしています。
-              </p>
-              <p>
-                「ネットで集客したいが、誰に頼めばいいかわからない」<br />
-                「地元の事情をわかっている人に管理を任せたい」<br />
-                そんな悩みを持つ方々の、一番身近な相談相手を目指しています。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <div id="common-footer"></div>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/common-loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

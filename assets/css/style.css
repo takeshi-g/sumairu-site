@@ -1,207 +1,105 @@
-/* Google Fonts の読み込み（明朝体とゴシック体） */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap");
-
-:root {
-  /* 色の定義 */
-  --smile-green: #2d5a27;
-  --smile-orange: #d97706;
-  --smile-base: #fdfcf0;
-  --smile-text: #4a4238;
-}
-
-/* メインのキャッチコピーに明朝体を適用 */
-.hero-title {
-  font-family: "Noto Serif JP", serif;
-  color: var(--smile-green);
-  line-height: 1.4;
-  letter-spacing: 0.05em;
-}
-
-/* 説明文などは読みやすいゴシック体 */
+/* 基本設定 */
 body {
-  font-family: "Noto Sans JP", sans-serif;
-}
-
-body {
-  background-color: var(--smile-base);
-  color: var(--smile-text);
   font-family:
     "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
     Meiryo, sans-serif;
+  color: #333;
+  letter-spacing: 0.05em;
 }
 
-/* メインカラーのボタン */
-.btn-primary {
-  background-color: var(--smile-green);
-  border-color: var(--smile-green);
-}
-.btn-primary:hover {
-  background-color: #23471e;
-  border-color: #23471e;
+/* ヒーローセクション */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background-image: url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* パララックス効果 */
 }
 
-/* アクセントカラーのボタン（お問い合わせなど） */
-.btn-accent {
-  background-color: var(--smile-orange);
-  color: #fff;
-  border: none;
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* タイトル周りの装飾 */
+.main-copy {
+  font-weight: 300;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+.sub-copy {
+  color: #555;
+  line-height: 1.8;
+}
+
+/* セクション共通 */
+.section-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-heading {
   font-weight: bold;
-}
-.btn-accent:hover {
-  background-color: #b36205;
-  color: #fff;
+  margin-bottom: 3rem;
+  color: #222;
 }
 
-/* ヘッダーの文字色などを調整 */
-.navbar-brand {
-  color: var(--smile-green) !important;
-}
-
-.hero-video-section {
-  background-color: #000; /* 動画読み込み前の背景色 */
-}
-
-.serif-font {
-  font-family: "Sawarabi Mincho", serif; /* 奈良らしい和風の明朝体を推奨 */
-}
-
-/* オレンジのボタン（変数を活用） */
-.btn-orange {
-  background-color: var(--smile-orange);
-  color: white;
-  border: none;
-}
-.btn-orange:hover {
-  background-color: #e67e00; /* 少し濃いオレンジ */
-  color: white;
-}
-
-/* タイトルに少し影をつけて読みやすくする */
-.hero-video-section h1 {
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* カードのホバーエフェクト */
-.card-hover-effect {
+/* 特徴カード */
+.feature-card {
+  padding: 2.5rem 2rem;
+  background: #fff;
+  border-radius: 12px;
+  height: 100%;
   transition:
     transform 0.3s ease,
-    shadow 0.3s ease;
-  background-color: #fff; /* 背景を白に固定 */
+    box-shadow 0.3s ease;
+  border: 1px solid #eee;
 }
 
-.card-hover-effect:hover {
-  transform: translateY(-10px); /* 10px上に浮く */
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important; /* 影を強くする */
-  cursor: pointer;
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* 画像のサイズを統一する（任意） */
-.card-body img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover; /* 画像の比率を保ったまま枠に収める */
+.feature-icon {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
 }
 
-/* 1. アイコンに「ゆっくり動く準備」をさせる */
-.move-arrow {
-  display: inline-block; /* 動かすために必要な設定 */
-  transition: transform 0.3s; /* 0.3秒かけて滑らかに動かす */
-}
-
-/* 2. カード（card-hover-effect）にマウスが乗ったら、矢印を右に動かす */
-.card-hover-effect:hover .move-arrow {
-  transform: translateX(8px); /* 右に8px移動させる */
-}
-
-/* 価格カード全体のスタイル */
-.pricing-card {
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-/* ホバー時に少し大きく見せる */
-.pricing-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
-}
-
-/* プラン内容のチェックマーク */
-.pricing-card ul li {
-  font-size: 0.95rem;
-  color: #444;
-}
-
-/* 独自ドメインプラン（右側）を少し目立たせる */
-.pricing-card.shadow-lg {
-  z-index: 1; /* 左のカードより少し前に出す */
-}
-
-/* ロゴを囲む枠を正方形にする */
-.partner-logo-wrapper {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* 縦横比を1:1に固定 */
+/* フローティングボタン */
+.floating-contact {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
   display: flex;
-  align-items: center; /* 垂直方向中央 */
-  justify-content: center; /* 水平方向中央 */
-  background-color: #fff;
-  padding: 15px; /* ロゴの周りの余白 */
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.partner-logo-wrapper {
-  width: 100%;
-  /* PCでの最大サイズを制限（大きすぎるのを防ぐ） */
-  max-width: 250px;
-  margin: 0 auto; /* 中央寄せ */
-  aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  padding: 20px; /* 余白を少し広げると高級感が出ます */
-  overflow: hidden;
-}
-
-.partner-logo-wrapper img {
-  /* 画像を枠いっぱいに表示させる設定 */
-  width: 80%; /* 枠に対しての画像の大きさ */
-  height: auto;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-
-.hero-video-section {
-  background-color: #000; /* 動画読み込み前の背景色 */
-}
-
-.serif-font {
-  font-family: "Sawarabi Mincho", serif; /* 奈良らしい和風の明朝体を推奨 */
-}
-
-/* オレンジのボタン（変数を活用） */
-.btn-orange {
-  background-color: var(--smile-orange);
-  color: white;
-  border: none;
-}
-.btn-orange:hover {
-  background-color: #e67e00; /* 少し濃いオレンジ */
+.btn-line {
+  background-color: #06c755;
   color: white;
 }
 
-/* タイトルに少し影をつけて読みやすくする */
-.hero-video-section h1 {
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-@media (min-width: 992px) {
-  /* PC表示の時だけ */
-  .scale-up {
-    transform: scale(1.05); /* 少し大きく */
-    z-index: 10;
-    border: 2px solid var(--smile-orange) !important; /* 枠線を強調 */
-  }
+.btn-line:hover {
+  background-color: #05a044;
+  color: white;
 }
