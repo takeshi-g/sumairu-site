@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+  const headerContainer = document.getElementById("header-container");
+  if (headerContainer) {
+    fetch("./assets/partials/header.html")
+      .then((r) => r.text())
+      .then((html) => (headerContainer.innerHTML = html));
+  }
+
+  const footerContainer = document.getElementById("footer-container");
+  if (footerContainer) {
+    fetch("./assets/partials/footer.html")
+      .then((r) => r.text())
+      .then((html) => (footerContainer.innerHTML = html));
+  }
   // GSAPとScrollTriggerの登録
   gsap.registerPlugin(ScrollTrigger);
 

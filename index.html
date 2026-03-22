@@ -4,40 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web制作 | すまいる Web Works (奈良)</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      href="./assets/bootstrap-icons-1.13.1/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <section class="hero-section d-flex align-items-center">
+    <div id="header-container"></div>
+
+    <section
+      class="hero-section d-flex align-items-center position-relative pt-5"
+      style="min-height: 100vh"
+    >
       <div class="hero-overlay"></div>
-      <div class="container hero-content text-center px-3">
+      <div class="container hero-content text-center px-3 z-2">
         <div class="gsap-hero-item">
           <p class="section-title mb-4">Sumairu Web Works</p>
-          <h1 class="display-4 main-copy mb-5">
+          <h1 class="display-4 main-copy mb-5 fw-bold">
             街の素敵なお店を、<br class="d-md-none" />Webでもっと素敵な存在に。
           </h1>
           <p
             class="lead sub-copy mb-5 mx-auto"
-            style="max-width: 700px; font-size: 1.1rem"
+            style="max-width: 700px; font-size: 1.1rem; line-height: 1.8"
           >
             奈良で愛されるお店のための、デザインと集客が両立するWebサイト制作。<br />
             古いホームページからのリニューアルや、初めてのサイト開設も。<br />
             専門知識は一切不要で、洗練されたデジタル空間をお作りします。
           </p>
-
-          <a
-            href="./demo/"
-            class="btn btn-elegant btn-lg rounded-pill px-5 py-3"
-          >
-            <i class="bi bi-laptop me-2"></i>デモサイトを体験する
-          </a>
         </div>
       </div>
       <div
@@ -45,56 +40,104 @@
       >
         <span
           class="small d-block mb-2"
-          style="letter-spacing: 0.2em; color: #555"
+          style="letter-spacing: 0.2em; color: #fff"
           >SCROLL</span
         >
-        <i class="bi bi-chevron-down fs-5" style="color: #555"></i>
+        <i class="bi bi-chevron-down fs-5 text-white animate-bounce"></i>
       </div>
     </section>
 
     <section
+      id="demo-section"
+      class="py-5 bg-white"
+      style="padding-top: 6rem !important; padding-bottom: 6rem !important"
+    >
+      <div class="container">
+        <div class="row align-items-center gx-lg-5">
+          <div class="col-lg-6 mb-5 mb-lg-0 gsap-fade-up">
+            <div class="position-relative">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                alt="デモサイトイメージ"
+                class="img-fluid rounded shadow-lg border"
+              />
+
+              <div
+                class="position-absolute top-0 start-0 translate-middle badge bg-dark text-white rounded-pill px-3 py-2 fs-6 shadow border border-light"
+              >
+                <i class="bi bi-shop me-1"></i> ホームページのサンプル
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 gsap-fade-up">
+            <span class="section-title text-muted">Our Works / Demo</span>
+            <h2 class="h2 fw-bold mb-4">
+              実際の動作を体験できる<br />デモサイトをご用意しています
+            </h2>
+            <p class="text-muted mb-4" style="line-height: 1.8">
+              「どんなサイトができるの？」「スマホでの見え方は？」<br />
+              言葉だけでは伝わりにくい部分を、実際に触って確かめられる架空のカフェサイトをご用意しました。美しいすりガラスのナビゲーションや、集客に繋がる動線をぜひスマートフォンからもご体験ください。
+            </p>
+            <a
+              href="./demo/"
+              class="btn btn-dark btn-lg rounded-pill px-5 py-3 shadow-sm transition-hover"
+            >
+              <i class="bi bi-laptop me-2"></i>デモサイトを触ってみる
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="features-section"
       class="py-5 bg-light"
       style="padding-top: 6rem !important; padding-bottom: 6rem !important"
     >
       <div class="container">
         <div class="text-center gsap-fade-up">
           <span class="section-title">Why Choose Us</span>
-          <h2 class="section-heading h2">すまいるが選ばれる3つの理由</h2>
+          <h2 class="section-heading h2 fw-bold">
+            すまいるが選ばれる3つの理由
+          </h2>
         </div>
-
         <div class="row g-4 mt-2 features-row">
           <div class="col-md-4 gsap-card">
-            <div class="feature-card">
-              <i class="bi bi-palette2 feature-icon"></i>
+            <div class="feature-card bg-white p-4 rounded shadow-sm h-100">
+              <i
+                class="bi bi-palette2 feature-icon fs-1 text-dark mb-3 d-block"
+              ></i>
               <h4 class="h5 fw-bold mb-3">
                 お店の空気を伝える<br />洗練されたデザイン
               </h4>
               <p class="text-muted small mb-0">
-                カフェ、サロン、雑貨店など、そのお店が持つ独自の雰囲気やこだわりを、美しい余白とタイポグラフィでWeb上に表現します。訪問者の心を惹きつける第一印象を作ります。
+                カフェ、サロン、雑貨店など、そのお店が持つ独自の雰囲気やこだわりを、美しい余白とタイポグラフィでWeb上に表現します。
               </p>
             </div>
           </div>
-
           <div class="col-md-4 gsap-card">
-            <div class="feature-card">
-              <i class="bi bi-phone feature-icon"></i>
+            <div class="feature-card bg-white p-4 rounded shadow-sm h-100">
+              <i
+                class="bi bi-phone feature-icon fs-1 text-dark mb-3 d-block"
+              ></i>
               <h4 class="h5 fw-bold mb-3">
                 パソコン不要。<br />スマホで完結する手軽さ
               </h4>
               <p class="text-muted small mb-0">
-                「更新が面倒」というお悩みを解決します。普段お使いのGoogleカレンダーに予定を入れるだけで、サイト上の営業日カレンダーが自動更新されるなど、現場の負担にならないスマートな仕組みを構築します。
+                「更新が面倒」というお悩みを解決します。普段お使いのスマホアプリやカレンダーと連携し、現場の負担にならないスマートな仕組みを構築します。
               </p>
             </div>
           </div>
-
           <div class="col-md-4 gsap-card">
-            <div class="feature-card">
-              <i class="bi bi-graph-up-arrow feature-icon"></i>
+            <div class="feature-card bg-white p-4 rounded shadow-sm h-100">
+              <i
+                class="bi bi-graph-up-arrow feature-icon fs-1 text-dark mb-3 d-block"
+              ></i>
               <h4 class="h5 fw-bold mb-3">
                 利益に貢献する<br />経営者目線のサイト設計
               </h4>
               <p class="text-muted small mb-0">
-                見栄えだけでなく、長期的な運用コストを最小限に抑える設計をご提案します。自らも実業を手がける経営者の視点から、無駄な経費を削ぎ落とし、お店の利益に直結するWeb戦略を一緒に考えます。
+                見栄えだけでなく、長期的な運用コストを最小限に抑える設計をご提案します。無駄な経費を削ぎ落とし、お店の利益に直結する戦略を一緒に考えます。
               </p>
             </div>
           </div>
@@ -103,6 +146,7 @@
     </section>
 
     <section
+      id="contact-section"
       class="py-5 text-white"
       style="
         background-color: #1a1a1a;
@@ -112,7 +156,7 @@
     >
       <div class="container text-center gsap-fade-up">
         <span class="section-title text-white-50">Contact & Consultation</span>
-        <h2 class="section-heading h2 text-white mb-4">
+        <h2 class="section-heading h2 text-white mb-4 fw-bold">
           「うちの店なら、どうなる？」<br
             class="d-md-none"
           />まずは雑談から始めませんか。
@@ -129,7 +173,7 @@
           class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4"
         >
           <a
-            href="#"
+            href="https://lin.ee/JJgz4ee"
             class="btn btn-lg rounded-pill px-5 py-3 shadow-sm transition-hover"
             style="background-color: #06c755; color: white; border: none"
           >
@@ -148,28 +192,35 @@
       </div>
     </section>
 
-    <div class="floating-contact">
+    <div id="footer-container"></div>
+
+    <div class="floating-contact z-3">
       <a
-        href="tel:0745-00-0000"
-        class="btn btn-dark rounded-circle shadow-lg d-flex align-items-center justify-content-center"
-        style="width: 60px; height: 60px"
+        href="tel:090-6677-0419"
+        class="btn btn-dark rounded-circle shadow-lg d-flex align-items-center justify-content-center mb-2 transition-hover"
+        style="width: 55px; height: 55px"
         title="電話をかける"
       >
-        <i class="bi bi-telephone-fill fs-4"></i>
+        <i class="bi bi-telephone-fill fs-5"></i>
       </a>
       <a
-        href="#"
-        class="btn btn-line rounded-circle shadow-lg d-flex align-items-center justify-content-center"
-        style="width: 60px; height: 60px"
+        href="https://lin.ee/JJgz4ee"
+        class="btn rounded-circle shadow-lg d-flex align-items-center justify-content-center transition-hover"
+        style="
+          width: 55px;
+          height: 55px;
+          background-color: #06c755;
+          color: white;
+        "
         title="LINEで相談"
       >
-        <i class="bi bi-line fs-3"></i>
+        <i class="bi bi-line fs-4"></i>
       </a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
