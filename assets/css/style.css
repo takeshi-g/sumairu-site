@@ -131,3 +131,23 @@ body {
 .gsap-fade-up {
   will-change: transform, opacity;
 }
+
+/* =========================================
+   アクセントカラー（ネイビー）設定
+   ========================================= */
+/* 文字色用 */
+.text-accent {
+  color: #1b365d !important;
+}
+
+/* 背景色用（バッジなど） */
+.bg-accent {
+  background-color: #1b365d !important;
+  color: #ffffff !important;
+}
+
+/* 枠線用（白抜きバッジなど） */
+.border-accent {
+  border: 1px solid #1b365d !important;
+  color: #1b365d !important;
+}
