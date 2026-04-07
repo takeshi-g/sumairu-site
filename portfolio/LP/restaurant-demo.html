@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>【デモ】和食居酒屋 結び | 飲食店向けLP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* 飲食店向けカスタムスタイル（和モダン・シズル感） */
+      :root {
+        --primary-color: #3e2723; /* 深い木目色（ダークブラウン） */
+        --accent-color: #b71c1c; /* 食欲をそそる深紅 */
+        --gold-color: #cda434; /* 高級感を出す和のゴールド */
+        --bg-light: #fdfbf7; /* 温かみのあるオフホワイト */
+        --text-main: #212121;
+      }
+      body {
+        font-family: "Noto Serif JP", serif;
+        color: var(--text-main);
+        background-color: var(--bg-light);
+        letter-spacing: 0.08em;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-weight: 700;
+      }
+
+      /* ヘッダー */
+      .navbar-custom {
+        background-color: rgba(62, 39, 35, 0.95);
+        transition: all 0.3s ease;
+      }
+      .navbar-brand,
+      .nav-link {
+        color: #ffffff !important;
+      }
+      .nav-link:hover {
+        color: var(--gold-color) !important;
+      }
+
+      /* ヒーローエリア */
+      .hero-section {
+        height: 100vh;
+        /* 美味しそうな和食のイメージ */
+        background-image: url("https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.3)
+        );
+      }
+      .hero-text {
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        writing-mode: vertical-rl; /* 日本語の縦書き表現で和風を強調 */
+        text-orientation: upright;
+        height: 60vh;
+        font-size: 2.5rem;
+        letter-spacing: 0.3em;
+        line-height: 2;
+      }
+
+      /* ボタンカスタマイズ */
+      .btn-reserve {
+        background-color: var(--accent-color);
+        color: white;
+        border: 1px solid var(--accent-color);
+        border-radius: 0;
+        padding: 15px 40px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .btn-reserve:hover {
+        background-color: #fff;
+        color: var(--accent-color);
+      }
+
+      /* セクション共通 */
+      .section-title {
+        color: var(--primary-color);
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: var(--accent-color);
+        margin: 15px auto 0;
+      }
+
+      /* メニューカード */
+      .menu-card {
+        border: none;
+        background: transparent;
+      }
+      .menu-img-wrapper {
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .menu-img {
+        transition: transform 0.5s ease;
+      }
+      .menu-card:hover .menu-img {
+        transform: scale(1.05);
+      }
+      .price {
+        color: var(--accent-color);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      /* 店舗情報背景 */
+      .bg-dark-wood {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom py-3">
+      <div class="container">
+        <a class="navbar-brand fs-4" href="#">
+          <i class="bi bi-shop me-2" style="color: var(--gold-color)"></i
+          >和食居酒屋 結び
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-list fs-1 text-white"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#kodawari">こだわり</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#menu">お品書き</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#shop">店舗情報</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a
+                href="tel:00000000000"
+                class="btn btn-reserve btn-sm px-4 py-2"
+              >
+                <i class="bi bi-telephone-fill me-1"></i> ご予約
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-overlay"></div>
+      <div
+        class="container position-relative z-2 d-flex justify-content-center justify-content-md-end pe-md-5 gsap-fade-up"
+      >
+        <h1 class="hero-text m-0">心ほどける、<br />旬の味わい。</h1>
+      </div>
+    </header>
+
+    <section id="kodawari" class="py-5">
+      <div class="container" style="padding-top: 4rem; padding-bottom: 4rem">
+        <h2 class="section-title gsap-fade-up">当店について</h2>
+        <div class="row align-items-center gx-lg-5 mt-5">
+          <div class="col-lg-6 mb-4 mb-lg-0 gsap-fade-up">
+            <img
+              src="https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=800&q=80"
+              alt="料理の仕込み"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+          <div class="col-lg-6 gsap-fade-up" style="animation-delay: 0.2s">
+            <h3 class="mb-4" style="color: var(--accent-color)">
+              地元食材と、<br />全国から厳選した銘酒。
+            </h3>
+            <p style="line-height: 2">
+              毎日市場から仕入れる新鮮な魚介と、地元農家から届く季節の野菜。<br />
+              素材の持ち味を最大限に引き出す、熟練の職人技で一皿一皿丁寧にお仕上げいたします。<br /><br />
+              料理長自ら厳選した全国各地の日本酒とともに、心ゆくまで「和」の奥深さをお愉しみください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-5" style="background-color: #f5f0e6">
+      <div class="container" style="padding-top: 4rem; padding-bottom: 4rem">
+        <h2 class="section-title gsap-fade-up">名物お品書き</h2>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-4 gsap-fade-up">
+            <div class="card menu-card h-100">
+              <div class="menu-img-wrapper mb-3">
+                <img
+                  src="./images/otsukuri.jpg"
+                  alt="お造り盛り合わせ"
+                  class="img-fluid menu-img w-100"
+                  style="height: 250px; object-fit: cover"
+                />
+              </div>
+              <div class="card-body px-0 text-center">
+                <h4 class="mb-2">旬のお造り 五種盛り</h4>
+                <p class="small text-muted mb-2">
+                  毎朝市場から直送される、鮮度抜群の海の幸を贅沢に。
+                </p>
+                <p class="price">¥ 1,980</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 gsap-fade-up" style="animation-delay: 0.1s">
+            <div class="card menu-card h-100">
+              <div class="menu-img-wrapper mb-3">
+                <img
+                  src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+                  alt="炭火焼き鳥"
+                  class="img-fluid menu-img w-100"
+                  style="height: 250px; object-fit: cover"
+                />
+              </div>
+              <div class="card-body px-0 text-center">
+                <h4 class="mb-2">特選地鶏の炭火焼き</h4>
+                <p class="small text-muted mb-2">
+                  備長炭で豪快に焼き上げた、香ばしさと溢れる肉汁。
+                </p>
+                <p class="price">¥ 1,280</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 gsap-fade-up" style="animation-delay: 0.2s">
+            <div class="card menu-card h-100">
+              <div class="menu-img-wrapper mb-3">
+                <img
+                  src="./images/nihonshu.jpg"
+                  alt="日本酒"
+                  class="img-fluid menu-img w-100"
+                  style="height: 250px; object-fit: cover"
+                />
+              </div>
+              <div class="card-body px-0 text-center">
+                <h4 class="mb-2">全国の銘酒・地酒</h4>
+                <p class="small text-muted mb-2">
+                  季節の料理に合わせた一杯を、スタッフがご提案します。
+                </p>
+                <p class="price">一合 ¥ 880〜</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 gsap-fade-up">
+          <p class="mb-4 text-muted small">
+            ※コース料理や飲み放題プランもご用意しております。
+          </p>
+          <a href="tel:00000000000" class="btn btn-reserve">
+            <i class="bi bi-telephone-fill me-2"></i>
+            お席のご予約・ご相談はこちら
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="py-5 bg-dark-wood">
+      <div class="container" style="padding-top: 4rem; padding-bottom: 4rem">
+        <h2 class="section-title gsap-fade-up" style="color: var(--gold-color)">
+          店舗情報
+        </h2>
+
+        <div class="row justify-content-center mt-5 gsap-fade-up">
+          <div class="col-lg-10">
+            <div class="row border border-secondary p-4 p-md-5">
+              <div class="col-md-6 mb-4 mb-md-0">
+                <h3 class="mb-4" style="color: var(--gold-color)">
+                  和食居酒屋 結び
+                </h3>
+                <table class="table table-borderless text-white mb-0">
+                  <tbody>
+                    <tr>
+                      <th style="width: 100px" class="py-2">
+                        <i class="bi bi-geo-alt me-2"></i>住所
+                      </th>
+                      <td class="py-2">
+                        〒000-0000<br />奈良県生駒郡三郷町町 1-2-3<br />王寺駅
+                        北口より徒歩5分
+                      </td>
+                    </tr>
+                    <tr>
+                      <th class="py-2">
+                        <i class="bi bi-clock me-2"></i>営業時間
+                      </th>
+                      <td class="py-2">17:00 - 23:30 (L.O. 23:00)</td>
+                    </tr>
+                    <tr>
+                      <th class="py-2">
+                        <i class="bi bi-calendar-x me-2"></i>定休日
+                      </th>
+                      <td class="py-2">日曜日・祝日</td>
+                    </tr>
+                    <tr>
+                      <th class="py-2">
+                        <i class="bi bi-people me-2"></i>お席
+                      </th>
+                      <td class="py-2">
+                        カウンター 8席<br />個室・半個室あり（最大12名様）
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="w-100 h-100 bg-light text-dark p-5 d-flex flex-column align-items-center justify-content-center text-center"
+                  style="min-height: 250px; border-radius: 5px"
+                >
+                  <i class="bi bi-map fs-1 mb-2" style="color: #ccc"></i>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.072434547455!2d135.69681864017002!3d34.60232982418391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001258cb23aef31%3A0x88485613a4da9436!2z5LiJ6YO355S65b255aC0!5e0!3m2!1sja!2sjp!4v1775599089312!5m2!1sja!2sjp"
+                    width="100%"
+                    height="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="text-center py-4"
+      style="background-color: #1a1a1a; color: #888"
+    >
+      <div class="container">
+        <p
+          class="small mb-3 text-danger fw-bold border border-danger d-inline-block p-2 rounded"
+        >
+          ※本サイトはWeb制作サービス出品用のデモサイト（架空の飲食店）です。<br />
+          ※実際の予約やお問い合わせはできません。実在の店舗とは関係ありません。
+        </p>
+        <p class="small mb-0">
+          &copy; Demo Site for Portfolio. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ふわっと表示アニメーション
+        gsap.utils.toArray(".gsap-fade-up").forEach((elem) => {
+          gsap.fromTo(
+            elem,
+            { y: 30, autoAlpha: 0 },
+            {
+              y: 0,
+              autoAlpha: 1,
+              duration: 1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: elem,
+                start: "top 85%",
+              },
+            },
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

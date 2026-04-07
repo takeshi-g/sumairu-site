@@ -151,3 +151,32 @@ body {
   border: 1px solid #1b365d !important;
   color: #1b365d !important;
 }
+
+/* デモカード専用のホバーエフェクト */
+.demo-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.demo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+.demo-img-wrapper {
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0; /* Bootstrapの rounded-4 (1rem) に合わせる */
+}
+.demo-img {
+  transition: transform 0.5s ease;
+}
+.demo-card:hover .demo-img {
+  transform: scale(1.05);
+}
+/* カード全体をリンクにする設定 */
+.demo-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.demo-card-link:hover {
+  color: inherit;
+}

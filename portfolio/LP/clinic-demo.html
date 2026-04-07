@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>【デモ】すこやか整体院 | 整骨院・整体院向けLP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* デモ専用のカスタムスタイル（清潔感・ブルーグリーン基調） */
+      :root {
+        --primary-color: #2b7a78; /* 誠実さを表すティールグリーン */
+        --secondary-color: #def2f1; /* 背景用の淡いグリーン */
+        --accent-color: #fe9000; /* 注意を引く温かいオレンジ（ボタン等） */
+        --text-main: #333333;
+      }
+      body {
+        font-family: "Noto Sans JP", sans-serif;
+        color: var(--text-main);
+        background-color: #ffffff;
+        letter-spacing: 0.05em;
+      }
+      /* ヘッダー */
+      .navbar-custom {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-bottom: 2px solid var(--primary-color);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      .navbar-brand {
+        color: var(--primary-color) !important;
+        font-weight: 700;
+      }
+      /* ヒーローエリア */
+      .hero-section {
+        padding-top: 100px;
+        background-color: var(--secondary-color);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-title {
+        color: var(--primary-color);
+        font-weight: 700;
+        line-height: 1.4;
+      }
+      .hero-image {
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      /* ボタンカスタマイズ */
+      .btn-accent {
+        background-color: var(--accent-color);
+        color: white;
+        font-weight: 700;
+        border-radius: 50px;
+        padding: 15px 30px;
+        box-shadow: 0 4px 15px rgba(254, 144, 0, 0.3);
+        transition: all 0.3s ease;
+      }
+      .btn-accent:hover {
+        background-color: #e58200;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(254, 144, 0, 0.4);
+      }
+      /* セクションタイトル */
+      .section-title {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 2rem;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 3rem;
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent-color);
+        border-radius: 3px;
+      }
+      /* お悩みチェックボックス */
+      .trouble-list li {
+        background: white;
+        border: 2px solid var(--secondary-color);
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+      .trouble-list i {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom py-2">
+      <div class="container">
+        <a class="navbar-brand fs-4" href="#">
+          <i class="bi bi-heart-pulse-fill me-2"></i>すこやか整体院
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link fw-bold px-3" href="#trouble">こんなお悩み</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold px-3" href="#features">当院の特徴</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold px-3" href="#menu">料金表</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a href="tel:00000000000" class="btn btn-accent btn-sm px-4 py-2">
+                <i class="bi bi-telephone-fill me-1"></i> ご予約
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="container pt-4">
+        <div class="row align-items-center">
+          <div
+            class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start gsap-fade-up"
+          >
+            <p
+              class="badge bg-white text-primary border border-primary px-3 py-2 rounded-pill mb-3 fw-bold"
+            >
+              三郷町 徒歩3分
+            </p>
+            <h1 class="hero-title display-5 mb-4">
+              痛みの「根本原因」を整え、<br />
+              笑顔の日常を取り戻す。
+            </h1>
+            <p class="lead mb-5 text-muted">
+              ボキボキしない、身体に優しい整体。<br />
+              国家資格保有者が丁寧に施術いたします。
+            </p>
+            <a href="tel:00000000000" class="btn btn-accent fs-5">
+              <i class="bi bi-telephone-fill me-2"></i>
+              初回無料相談・ご予約はこちら
+            </a>
+          </div>
+          <div
+            class="col-lg-6 text-center gsap-fade-up"
+            style="animation-delay: 0.2s"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+              alt="整体の施術風景"
+              class="img-fluid hero-image border border-5 border-white"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trouble" class="py-5 bg-white">
+      <div class="container" style="padding-top: 4rem; padding-bottom: 3rem">
+        <div class="text-center gsap-fade-up">
+          <h2 class="section-title">こんなお悩み、ありませんか？</h2>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-8 gsap-fade-up">
+            <ul class="list-unstyled trouble-list">
+              <li class="d-flex align-items-center">
+                <i class="bi bi-check-square-fill me-3"></i>
+                デスクワークで肩こり・頭痛がひどい
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bi bi-check-square-fill me-3"></i>
+                朝起きる時、腰にピキッと痛みが走る
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bi bi-check-square-fill me-3"></i>
+                マッサージに行っても、すぐ元の状態に戻ってしまう
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bi bi-check-square-fill me-3"></i>
+                姿勢が悪い（猫背・巻き肩）と言われる
+              </li>
+            </ul>
+            <p
+              class="text-center mt-4 fw-bold fs-5"
+              style="color: var(--primary-color)"
+            >
+              一つでも当てはまる方は、当院にお任せください！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="features"
+      class="py-5"
+      style="background-color: var(--secondary-color)"
+    >
+      <div class="container" style="padding-top: 4rem; padding-bottom: 4rem">
+        <div class="text-center gsap-fade-up">
+          <h2 class="section-title">当院が選ばれる3つの理由</h2>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-md-4 gsap-fade-up">
+            <div
+              class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+            >
+              <div class="mb-3">
+                <i
+                  class="bi bi-clipboard2-pulse fs-1"
+                  style="color: var(--accent-color)"
+                ></i>
+              </div>
+              <h4 class="fw-bold mb-3">丁寧なカウンセリング</h4>
+              <p class="text-muted small mb-0">
+                いきなり施術はいたしません。生活習慣や姿勢のクセをしっかり分析し、痛みの「本当の原因」を見つけ出します。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 gsap-fade-up" style="animation-delay: 0.1s">
+            <div
+              class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+            >
+              <div class="mb-3">
+                <i
+                  class="bi bi-person-arms-up fs-1"
+                  style="color: var(--accent-color)"
+                ></i>
+              </div>
+              <h4 class="fw-bold mb-3">痛みの少ない優しい施術</h4>
+              <p class="text-muted small mb-0">
+                バキバキと音を鳴らす強い施術ではなく、心地よい力加減で骨格と筋肉のバランスを整えていきます。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 gsap-fade-up" style="animation-delay: 0.2s">
+            <div
+              class="card h-100 border-0 shadow-sm rounded-4 text-center p-4"
+            >
+              <div class="mb-3">
+                <i
+                  class="bi bi-house-heart fs-1"
+                  style="color: var(--accent-color)"
+                ></i>
+              </div>
+              <h4 class="fw-bold mb-3">再発を防ぐセルフケア指導</h4>
+              <p class="text-muted small mb-0">
+                施術後の良い状態を長く保つために、ご自宅で簡単にできるストレッチや姿勢の指導を行います。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-5 bg-white">
+      <div class="container" style="padding-top: 4rem; padding-bottom: 4rem">
+        <div class="text-center gsap-fade-up">
+          <h2 class="section-title">施術料金</h2>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-6 gsap-fade-up">
+            <div class="card border-2 border-primary shadow-sm rounded-4">
+              <div
+                class="card-header text-center text-white py-3 border-0"
+                style="background-color: var(--primary-color)"
+              >
+                <h3 class="m-0 fs-5 fw-bold">全身骨格調整コース</h3>
+              </div>
+              <div class="card-body p-4 text-center">
+                <p class="text-muted mb-2">肩こり・腰痛など、慢性的な不調に</p>
+                <div
+                  class="d-flex justify-content-center align-items-baseline mb-3"
+                >
+                  <span class="fs-6 me-2">通常料金</span>
+                  <span
+                    class="display-5 fw-bold"
+                    style="color: var(--text-main)"
+                    >¥6,600</span
+                  >
+                  <span class="text-muted ms-1">/回</span>
+                </div>
+                <hr class="my-4" />
+                <p class="fw-bold text-danger mb-1">【初回限定キャンペーン】</p>
+                <p class="small mb-3">カウンセリング＋検査＋施術で</p>
+                <p class="fs-3 fw-bold text-danger mb-4">
+                  ¥2,980 <span class="fs-6 fw-normal text-muted">(税込)</span>
+                </p>
+
+                <a href="tel:00000000000" class="btn btn-accent w-100 py-3">
+                  <i class="bi bi-telephone-fill me-2"></i>今すぐ電話で予約する
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center py-5" style="background-color: #f8f9fa">
+      <div class="container">
+        <h3 class="fw-bold mb-3" style="color: var(--primary-color)">
+          すこやか整体院
+        </h3>
+        <p
+          class="small mb-4 text-danger fw-bold border border-danger d-inline-block p-3 bg-white rounded"
+        >
+          ※本サイトはWeb制作サービス出品用のデモサイト（架空の整体院）です。<br />
+          ※実際の予約やお問い合わせはできません。実在の店舗とは一切関係ありません。
+        </p>
+        <p class="small mb-0 text-muted">
+          &copy; Demo Site for Portfolio. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+        // ふわっと表示アニメーション
+        gsap.utils.toArray(".gsap-fade-up").forEach((elem) => {
+          gsap.fromTo(
+            elem,
+            { y: 30, autoAlpha: 0 },
+            {
+              y: 0,
+              autoAlpha: 1,
+              duration: 1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: elem,
+                start: "top 85%",
+              },
+            },
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
