@@ -1,0 +1,167 @@
+:root {
+  --main-yellow: #ffb300; /* より濃く、温かみのある黄色（琥珀色系） */
+  --light-yellow: #fff8e1; /* 背景用の少し濃いめのクリーム色 */
+  --text-color: #5d4037; /* 女性らしい柔らかいブラウンのテキスト */
+  --line-green: #06c755;
+}
+
+html {
+  scroll-behavior: smooth; /* ナビゲーションからの移動を滑らかに */
+  scroll-padding-top: 80px; /* 固定ナビゲーションの高さ分ずらす */
+}
+
+body {
+  font-family: "Zen Maru Gothic", sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-yellow);
+  padding-top: 70px; /* 固定ナビゲーションのスペースを確保 */
+}
+
+/* ナビゲーションバー */
+.navbar-brand {
+  font-weight: 700;
+  color: var(--main-yellow) !important;
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--main-yellow) !important;
+}
+
+/* 共通セクション設定 */
+section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+h2.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h2.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-yellow);
+  border-radius: 2px;
+}
+
+/* ヒーローセクション */
+.hero {
+  height: 80vh;
+  background:
+    linear-gradient(rgba(255, 248, 225, 0.6), rgba(255, 248, 225, 0.6)),
+    url("https://placehold.jp/1920x1080.png") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--main-yellow); /* アクセントに枠線を追加 */
+}
+
+/* カードデザイン（悩みなど） */
+.card-custom {
+  border: none;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  height: 100%;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+}
+
+/* 施術の流れステップ */
+.step-box {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--main-yellow);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* フロートボタン */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.float-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.btn-line {
+  background-color: var(--line-green);
+}
+.btn-phone {
+  background-color: var(--main-yellow);
+  color: #fff;
+} /* 濃い黄色に合わせて文字を白に */
+
+/* フッター */
+footer {
+  background-color: var(--text-color);
+  color: #fff;
+  padding: 40px 0 20px;
+}
+
+footer a {
+  color: var(--main-yellow);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* GSAP初期状態（CSSで隠しておく） */
+.fade-up,
+.stagger-card {
+  opacity: 0;
+  visibility: hidden;
+}
