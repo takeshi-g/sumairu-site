@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- ナビゲーションバー（上部固定） -->
-    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="#">カイロサロン MOA</a>
         <button
@@ -142,7 +142,7 @@
         <div class="row align-items-center mt-5 fade-up">
           <div class="col-md-6 text-center mb-4 mb-md-0">
             <img
-              src="https://placehold.jp/400x300.png"
+              src="./assets/imgs/shisei.jpg"
               alt="姿勢の図"
               class="img-fluid rounded shadow-sm"
             />
@@ -235,9 +235,10 @@
             <h3 class="mb-4 text-center">カイロサロン MOA</h3>
             <div class="text-center">
               <img
-                src="https://placehold.jp/150x150.png"
+                src="./assets/imgs/moa-profile.jpg"
                 class="rounded-circle mb-3"
                 alt="院長"
+                style="width: 150px; height: 150px; object-fit: cover;"
               />
               <h5>カイロプラクター 西村 真央</h5>
               <p class="text-start mt-3 text-muted">
@@ -280,14 +281,8 @@
               <!-- Bootstrapの ratio クラスでスマホでも綺麗に収まるようにする -->
               <div class="ratio ratio-4x3">
                 <!-- ↓この iframe を、実際のGoogleカレンダーから取得したコードに差し替えます -->
-                <iframe
-                  src="https://calendar.google.com/calendar/embed?src=08cd3841f9e0dea91a3bd71c855a4045f4c21274016b598340432fee2ff4b4b6%40group.calendar.google.com&ctz=Asia%2FTokyo"
-                  style="border: 0"
-                  width="800"
-                  height="600"
-                  frameborder="0"
-                  scrolling="no"
-                ></iframe>
+
+                <iframe src="https://calendar.google.com/calendar/embed?src=08cd3841f9e0dea91a3bd71c855a4045f4c21274016b598340432fee2ff4b4b6%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
               </div>
             </div>
           </div>
