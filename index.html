@@ -48,7 +48,77 @@
         <i class="bi bi-chevron-down fs-5 text-white animate-bounce"></i>
       </div>
     </section>
+    <section class="container py-5">
+      <div class="text-center gsap-fade-up mb-5">
+        <span class="section-title text-muted">Partners</span>
+        <h2 class="h2 fw-bold mb-3">パートナー / 制作実績</h2>
+        <p class="text-muted" style="line-height: 1.8">
+          「作って終わり」ではなく、対面でお話を伺いながら二人三脚で作り上げたWebサイトの数々。お客さまの抱える課題を解決し、日々の運用まで見据えた「すまいる」こだわりの制作パートナー実績をご紹介します。
+        </p>
+      </div>
 
+      <!-- グリッド設定：スマホで1列、タブレット(md)で2列、PC(lg)で3列に自動調整 -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- ▼▼ 1件目のパートナーカード ここから ▼▼ -->
+        <div class="col gsap-fade-up">
+          <!-- h-100でカードの高さを揃え、shadow-smで薄い影をつける -->
+          <div class="card h-100 shadow-sm custom-hover-card border-0">
+            <!-- 画像 -->
+            <!-- object-fit-cover で画像の縦横比を保ちつつトリミング -->
+            <img
+              src="./partners/chiromao/assets/imgs/moa-hero02.jpg"
+              class="card-img-top flex-shrink-0"
+              alt="カイロサロンMOA様 ホームページ画面"
+              style="height: 220px; object-fit: cover"
+            />
+
+            <!-- d-flex flex-column でカード内を縦並びにし、ボタンを下に押しやる準備 -->
+            <div class="card-body d-flex flex-column p-4">
+              <h3 class="card-title h5 mb-3 fw-bold">カイロサロンMOA 様</h3>
+
+              <!-- タグ -->
+              <div class="mb-3">
+                <span
+                  class="badge rounded-pill text-bg-light border border-secondary-subtle text-secondary fw-normal me-1 mb-1 px-2 py-1"
+                  >#スマホ運用完結</span
+                >
+                <span
+                  class="badge rounded-pill text-bg-light border border-secondary-subtle text-secondary fw-normal me-1 mb-1 px-2 py-1"
+                  >#LINE連携</span
+                >
+                <span
+                  class="badge rounded-pill text-bg-light border border-secondary-subtle text-secondary fw-normal me-1 mb-1 px-2 py-1"
+                  >#Googleカレンダー</span
+                >
+              </div>
+
+              <!-- 紹介文（flex-grow-1 で余白を埋めてボタンを一番下へ） -->
+              <p
+                class="card-text text-muted flex-grow-1"
+                style="font-size: 0.95rem; line-height: 1.7"
+              >
+                「インターネット上にも看板を」というご要望にお応えし、管理・運用が容易なシステムを構築しました。<br />
+                サロンのパンフレットのデザインを参考に、先生のお人柄やサロンの温かい雰囲気が伝わるコンセプトをデザインに落とし込んでいます。電話発信やLINEへの導線も整備し、患者様がボタン一つで連絡できるスムーズな環境を整えました。
+              </p>
+
+              <!-- ボタン（mt-auto で上部余白を自動設定し、一番下へ固定） -->
+              <a
+                href="https://sumairu-nara.com/partners/chiromao"
+                class="btn text-white fw-bold mt-auto py-2"
+                style="background-color: #f9a825"
+                target="_blank"
+                rel="noopener"
+              >
+                サイトを見る
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- ▲▲ 1件目のパートナーカード ここまで ▲▲ -->
+
+        <!-- 今後追加する時は、上の <div class="col"> ～ </div> をコピーしてここに貼り付けるだけでOKです -->
+      </div>
+    </section>
     <section
       id="demo-section"
       class="py-5 bg-white"

@@ -1,5 +1,21 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// アニメーションの設定
+gsap.from(".custom-hover-card", {
+  y: 30, // 30px下から上に移動
+  opacity: 0, // 透明（0）から不透明（1）へ
+  duration: 0.8, // 0.8秒かけてアニメーション
+  ease: "power2.out", // 動きを滑らかにするイージング
+  stagger: 0.2, // ★ここがミソ！カードを0.2秒ずつ順番に表示させる
+  scrollTrigger: {
+    trigger: ".partners-section", // このセクションが見えたら発火
+    start: "top 80%", // セクションの上が画面の80%の高さに来た時
+    // markers: true              // ※動きの調整中、開始位置を確認したい場合はコメントアウトを外す
+  },
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
 gsap.fromTo(
   ".gsap-hero",
   { autoAlpha: 0, y: 30 },

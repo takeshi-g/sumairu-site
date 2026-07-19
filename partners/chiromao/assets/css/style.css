@@ -205,3 +205,15 @@ footer a:hover {
   opacity: 0;
   visibility: hidden;
 }
+
+/* --- カードをホバーした時に少し浮き上がらせて目立たせるための設定 --- */
+.custom-hover-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.custom-hover-card:hover {
+  transform: translateY(-5px); /* 5px上に動かす */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important; /* Bootstrapの影を上書きして少し濃くする */
+}
