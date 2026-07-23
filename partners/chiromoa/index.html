@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>カイロサロンMOA</title>
+
+    <!-- Google Fonts: 柔らかい印象のZen Maru Gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap-icons-1.13.1/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ナビゲーションバー（上部固定） -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#">カイロサロン MOA</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#nayami">お悩み</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#shisei">解決策</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#flow">施術の流れ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#price">料金表</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#info">店舗情報</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <header class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-title gsap-hero">
+          <h1 class="mb-3" style="font-size: 1.8rem; color: var(--main-yellow)">
+            すべての健康は骨盤から
+          </h1>
+          <p class="mb-0" style="font-size: 1.2rem">
+            カイロサロン MOA
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- 悩みセクション -->
+    <section id="nayami" class="bg-white">
+      <div class="container">
+        <h2 class="section-title fade-up">こんなお悩みありませんか？</h2>
+        <div class="row g-4 mt-3">
+          <div class="col-md-4 stagger-card">
+            <div class="card card-custom p-4 text-center">
+              <h4 style="color: var(--main-yellow)">
+                <i class="bi bi-emoji-frown"></i>
+              </h4>
+              <p class="mt-3 mb-0">首や肩にコリがある</p>
+            </div>
+          </div>
+          <div class="col-md-4 stagger-card">
+            <div class="card card-custom p-4 text-center">
+              <h4 style="color: var(--main-yellow)">
+                <i class="bi bi-emoji-frown"></i>
+              </h4>
+              <p class="mt-3 mb-0">腰が痛い</p>
+            </div>
+          </div>
+          <div class="col-md-4 stagger-card">
+            <div class="card card-custom p-4 text-center">
+              <h4 style="color: var(--main-yellow)">
+                <i class="bi bi-emoji-frown"></i>
+              </h4>
+              <p class="mt-3 mb-0">スマホばかり見ていて首が痛い</p>
+            </div>
+          </div>
+          <div class="col-md-4 stagger-card">
+            <div class="card card-custom p-4 text-center">
+              <h4 style="color: var(--main-yellow)">
+                <i class="bi bi-emoji-frown"></i>
+              </h4>
+              <p class="mt-3 mb-0">むくみを感じる</p>
+            </div>
+          </div>
+          <div class="col-md-4 stagger-card">
+            <div class="card card-custom p-4 text-center">
+              <h4 style="color: var(--main-yellow)">
+                <i class="bi bi-emoji-frown"></i>
+              </h4>
+              <p class="mt-3 mb-0">たるみが気になってきた</p>
+            </div>
+          </div>
+          <div class="col-md-4 stagger-card">
+            <div class="card card-custom p-4 text-center">
+              <h4 style="color: var(--main-yellow)">
+                <i class="bi bi-emoji-frown"></i>
+              </h4>
+              <p class="mt-3 mb-0">痩せにくい</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 姿勢・解決策セクション -->
+    <section id="shisei">
+      <div class="container">
+        <h2 class="section-title fade-up">それ全部姿勢のクズレが原因かも</h2>
+        <div class="row align-items-center mt-5 fade-up">
+          <div class="col-md-6 text-center mb-4 mb-md-0">
+            <img
+              src="./assets/imgs/shisei.png"
+              alt="姿勢の図"
+              class="img-fluid rounded shadow-sm"
+            />
+          </div>
+          <div class="col-md-6">
+            <h4>あなたの健康のために!</h4>
+            <p class="mt-3">
+              ぜひあなたも、当店でカイロプラクティックの良さを体感ください!
+              お客様に合った方法をご提案させていただきます
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 施術の流れセクション -->
+    <section id="flow" class="bg-white">
+      <div class="container">
+        <h2 class="section-title fade-up">施術の流れ</h2>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-lg-8">
+            <div class="step-box fade-up">
+              <h5>1. カウンセリング</h5>
+              <p class="mb-0 text-muted">
+                まずはお客様の身体の悩みや既往症などをお聞かせいただき、問診票を用いていろいろと質問させていただきます。またカイロプラクティックについて丁寧に説明いたします。
+              </p>
+            </div>
+            <div class="step-box fade-up">
+              <h5>2. 検査</h5>
+              <p class="mb-0 text-muted">
+                姿勢のチェックや、身体を動かして痛みがあるか、可動領域がどのくらいあるかなどの検査を行います。痛みの主原因を説明させていただきます。
+              </p>
+            </div>
+            <div class="step-box fade-up">
+              <h5>3. 施術</h5>
+              <p class="mb-0 text-muted">
+                骨盤の歪みや、痛みの原因となっている箇所を調整します。カイロプラクティックは痛いというのは誤解です。
+              </p>
+            </div>
+            <div class="step-box fade-up">
+              <h5>4. アフターフォロー</h5>
+              <p class="mb-0 text-muted">
+                施術後の説明や、維持の大切さについてお話しします。今後のケアスケジュールなども説明いたします。最後に施術補助材をお渡ししています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 料金表セクション -->
+    <section id="price">
+      <div class="container">
+        
+        <h2 class="section-title fade-up">料金表</h2>
+        <div class="row justify-content-center mt-5 fade-up">
+          <div class="col-md-8">
+            <div class="card card-custom p-4">
+              <table class="table table-borderless mb-0">
+                <tbody>
+                  <tr class="border-bottom">
+                    <td class="py-3 fs-5">カイロプラクティック</td>
+                    <td class="py-3 fs-5 text-end fw-bold">全身調整</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <td class="py-3 fs-5">大人・高校生</td>
+                    <td class="py-3 fs-5 text-end fw-bold">5,000</td>
+                  </tr>
+                  <tr class="border-bottom">
+                    <td class="py-3 fs-5">中学生</td>
+                    <td class="py-3 fs-5 text-end fw-bold">3,000</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 fs-5">小学生</td>
+                    <td class="py-3 fs-5 text-end fw-bold">2,500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- プロフィール・スケジュール・アクセス -->
+    <section id="info" class="bg-white">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-md-6 fade-up">
+            <h3 class="mb-4 text-center">カイロサロン MOA</h3>
+            <div class="text-center">
+              <img
+                src="./assets/imgs/moa-profile.jpg"
+                class="rounded-circle mb-3"
+                alt="院長"
+                style="width: 150px; height: 150px; object-fit: cover;"
+              />
+              <h5>カイロプラクター 西村 真央</h5>
+              <p class="text-start mt-3 text-muted">
+                カイロプラクティックで身体の歪みを整えることで、本来の美しい姿勢を取り戻してみませんか？<br />
+                様々な身体の悩みをぜひお気軽にご相談ください。
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 fade-up">
+            <h3 class="mb-4 text-center">完全予約制</h3>
+            <p>営業時間：9:00 〜 17:00</p>
+            <p>不定休</p>
+            <p>
+              住所：〒636-0144<br />
+              奈良県生駒郡斑鳩町稲葉西<br> 
+              ※プライベートサロンのため、詳細はご予約時にお伝えいたします       
+            </p>
+<p>お問い合わせ</p>
+<p>tel. 080-3105-8170<br>chiromao.235@gmail.com</p>
+              <span class="text-muted">
+                <div
+                  class="bg-light rounded mt-3 overflow-hidden shadow-sm"
+                  style="height: 300px"
+                >
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.064788668649!2d135.71175907632863!3d34.60252317295471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60012f8021d45001%3A0xaa3a16b4f3a8144b!2z44CSNjM2LTAxNDQg5aWI6Imv55yM55Sf6aeS6YOh5paR6bOp55S656iy6JGJ6KW_!5e0!3m2!1sja!2sjp!4v1783123445605!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 営業日カレンダーセクション -->
+    <section id="calendar">
+      <div class="container">
+        <h2 class="section-title fade-up">営業日カレンダー</h2>
+        <div class="row justify-content-center mt-5 fade-up">
+          <div class="col-md-8">
+            <div class="card card-custom p-3">
+              <!-- Bootstrapの ratio クラスでスマホでも綺麗に収まるようにする -->
+              <div class="ratio ratio-4x3">
+                <!-- ↓この iframe を、実際のGoogleカレンダーから取得したコードに差し替えます -->
+<iframe src="https://calendar.google.com/calendar/embed?src=8ca470345960aa62d15401b8f805d216ae5e38613d0e0fbde0cb06e3d605e9a3%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="text-center">
+      <div class="container">
+        <p class="mb-2">
+          &copy; 2026 カイロサロン MOA All Rights Reserved.
+        </p>
+        <small>Web制作・保守：<a href="https://sumairu-nara.com" target="_blank">すまいる</a></small>
+      </div>
+    </footer>
+
+    <!-- フロートボタン（修正版） -->
+    <div class="floating-buttons">
+      <a href="tel:080-3105-8170" class="float-btn btn-phone shadow"
+        ><i class="bi bi-telephone-fill"></i
+      ></a>
+      <a
+        href="https://liff.line.me/2009019302-g9Hn5InI?rule=1PpDB9bzq670ArL7d0smbQG8Cn0xDFSoUMfIO4GLEkpkoBE0GYjEWRa7XpeX"
+        target="_blank"
+        class="float-btn btn-line shadow"
+        ><i class="bi bi-line"></i
+      ></a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+   
+
+  </body>
+</html>
